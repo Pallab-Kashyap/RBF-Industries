@@ -10,9 +10,9 @@ function Hero() {
       <Image 
         src={homeImg}
         alt="jife"
-        className=" brightness-75 h-full object-cover"
+        className=" brightness-50 h-full object-cover"
       />
-      <div className="hero-overlay absolute top-0 flex justify-between items-center flex-wrap w-full h-full px-12">
+      <div className="hero-overlay absolute top-0 flex justify-center sm:justify-between items-center flex-wrap sm:flex-nowrap w-full h-full px-8 sm:px-12">
         <div className="home-page-logo">
             <Image 
                 src={logo} 
@@ -20,12 +20,11 @@ function Hero() {
                 className="sm:h-[60vh] w-auto"
             />
         </div>
-        <div>
-          <h1 className="uppercase text-2xl">Welcome to Biomass Briquettes</h1>
-          <p>Your sustainable energy partner</p>
-          <a href="#about" className="hero-btn">
-            Learn More
-          </a>
+        <div className=" sm:mb-10  text-center">
+          <h1 className="uppercase text-4xl  sm:text-5xl leading-snug sm:leading-none font-semibold text-white sm:pb-10">Welcome to Biomass</h1>
+          <h1 className="uppercase text-4xl  sm:text-5xl leading-snug sm:leading-none font-semibold text-white pb-10">Briquettes</h1>
+          <p className="text-white text-lg font-medium">Your sustainable energy partner</p>
+
         </div>
       </div>
 

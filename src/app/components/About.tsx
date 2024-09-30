@@ -4,22 +4,22 @@ function About() {
   return (
     <div className=" relative">
       <div className="about-us-heading py-5 sm:py-14 bg-[#B5D823] px-4 sm:px-12">
-        <h1 className="text-3xl sm:text-5xl font-medium  text-center">About Us</h1>
+        <h1 className="text-3xl sm:text-5xl font-medium  text-center sm:text-left">About Us</h1>
       </div>
 
       <div className="sm:flex py-8 px-8 sm:px-12">
 
-      <div className="about-image sm:absolute top-8 right-10 flex justify-center">
+      <div className="about-image sm:absolute top-10 right-10 flex justify-center">
           <img
             src="/assets/about_section_img.png"
             alt="About Us"
-            className="rounded-xl h-[50vh]"
+            className="rounded-xl h-[50vh] sm:h-[80vh]"
           />
         </div>
 
         <div className="about-text sm:w-[80ch] py-4 sm:py-8">
-          <p className="text-md text-justify">
-            Founded in 2023 by <strong>Tiwari, Ravi Bio Fuel Industries</strong>{" "}
+          <p className="text-md sm:text-lg text-justify">
+            Founded in 2023 by <strong>Dhanraj Tiwari, Ravi Bio Fuel Industries</strong>{" "}
             has swiftly established itself as a leading player in the biomass
             briquette manufacturing and trading sector. With a mission to
             promote sustainable energy solutions, the company specializes in the
