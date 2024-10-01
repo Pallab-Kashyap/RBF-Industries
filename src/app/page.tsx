@@ -3,6 +3,7 @@ import Navbar from "./components/NavBar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Blogs from "./components/Blogs/Blogs";
+import Production from "./components/Production";
 
 export default function Home() {
   return (
@@ -57,6 +58,10 @@ export default function Home() {
 
       <section id="blogs" className="blogs min-h-screen ">
         <Blogs />
+      </section>
+
+      <section id="production" className="production min-h-screen">
+        <Production />
       </section>
 
       
