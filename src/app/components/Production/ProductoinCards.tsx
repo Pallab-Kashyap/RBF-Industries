@@ -77,7 +77,7 @@ interface ProductionCardProps {
           <div className='w-10 h-10 rounded-full bg-transparent border-[1px] flex items-center justify-center text-xl font-bold border-white text-white'>
             {stepNo}
           </div>
-          <h2 className="text-2xl font-bold fade-in" data-aos="fade-up">
+          <h2 className="text-2xl font-medium fade-in" data-aos="fade-up">
             {title}
           </h2>
           <p className="fade-in text-base" data-aos="fade-up" data-aos-delay="100">
