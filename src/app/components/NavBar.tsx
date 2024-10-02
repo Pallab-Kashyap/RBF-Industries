@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import logo from "../../../public/assets/logo.png";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";

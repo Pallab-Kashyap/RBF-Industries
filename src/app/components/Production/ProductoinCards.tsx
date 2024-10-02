@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from "react";
+import Image from "next/image";
 
 interface ProductionCardProps {
   prop: {
@@ -13,6 +14,7 @@ interface ProductionCardProps {
   const ProductoinCards: React.FC<ProductionCardProps> = ({ prop }) => {
   const { title, description, image, stepNo } = prop;
 
+  
   const [completion, setCompletion] = useState(0);
   const [opacity, setOpacity] = useState('0');
   const [isActive, setIsActive] = useState(false);
@@ -98,9 +100,11 @@ interface ProductionCardProps {
 
         {/* Right side: Image */}
         <div className="flex-1 pl-16">
-          <img
+          <Image
             src={image}
             alt={title}
+            width={500}
+            height={300}
             className="w-full h-auto rounded-lg fade-in"
             data-aos="fade-up"
             data-aos-delay="200"
@@ -117,9 +121,11 @@ interface ProductionCardProps {
 
         {/* Right side: Image */}
         <div className="flex-1 w-1/2">
-          <img
+          <Image
             src={image}
             alt={title}
+            width={500}
+            height={300}
             className="w-[38vw] rounded-lg fade-in"
             data-aos="fade-up"
             data-aos-delay="200"

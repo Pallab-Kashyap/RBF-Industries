@@ -1,9 +1,11 @@
 "use client"
 
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
+import aboutImage from "../../../public/assets/about_section_img.png";
 
 function About() {
   const image = useRef(null);
@@ -64,16 +66,16 @@ function About() {
 
       <div className="sm:flex py-8 px-8 sm:px-12">
         <div className="about-image sm:absolute top-10 right-10 flex justify-center">
-          <img
+          <Image
             ref={image}
-            src="/assets/about_section_img.png"
+            src={aboutImage}
             alt="About Us"
-            className="rounded-xl h-[50vh] sm:h-[80vh]"
+            className="rounded-xl h-[50vh] sm:h-[80vh] w-auto"
           />
         </div>
 
-        <div className="about-text sm:w-[80ch] py-4 sm:py-8">
-          <p ref={text} className="text-md sm:text-lg text-justify">
+        <div className="about-text sm:w-[70ch] py-4 sm:py-8">
+          <p ref={text} className="text-md  text-justify">
             Founded in 2023 by <strong>Dhanraj Tiwari, Ravi Bio Fuel Industries</strong>{" "}
             has swiftly established itself as a leading player in the biomass
             briquette manufacturing and trading sector. With a mission to
@@ -91,9 +93,9 @@ function About() {
             fuel option for industries and households alike.
             <br />
             <br />
-            <strong>Dhanraj Tiwari's</strong> vision laid the foundation for
+            <strong>Dhanraj Tiwari&apos;s</strong> vision laid the foundation for
             this enterprise, aiming to provide an environmentally conscious
-            solution to <strong>India's growing energy demands</strong>. With a
+            solution to <strong>India&apos;s growing energy demands</strong>. With a
             focus on innovation, quality, and customer satisfaction, we are not
             only helping to <strong>reduce carbon emissions</strong> but also
             supporting local farmers by converting their waste into valuable
