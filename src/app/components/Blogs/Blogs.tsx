@@ -23,6 +23,7 @@ function Blogs() {
 
     tl.from(heading.current, {
       x: -100,
+      opacity: 0,
       duration: .4,
       // ease: "power3.out",
     })
@@ -37,7 +38,7 @@ function Blogs() {
 
   return (
     <div className="px-8 sm:px-12 sm:py-12 h-fit">
-      <div className="blogs-heading py-6 sm:pb-10">
+      <div className="blogs-heading py-6 sm:pb-12">
         <h2 ref={heading} className="text-3xl sm:text-5xl font-medium">Blogs on Biomass Briquettes</h2>
       </div>
       <div className="grid sm:grid-cols-3 gap-10 mt-2 pb-10 sm:pb-0">
