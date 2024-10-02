@@ -1,20 +1,54 @@
+"use client"
+
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { useRef } from 'react'
 import logo from '../../../public/assets/logo.png'
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 
 function Navbar() {
+
+  const logoRef = useRef(null);
+  const ctaButtonRef = useRef(null);
+  const navLinksRef = useRef(null);
+
+  useGSAP(() => {
+    gsap.from(logoRef.current, {
+      y: -200,
+      duration: .4,
+      opacity: 0,
+    })
+  }, []);
+
+  useGSAP(() => {
+    gsap.from(ctaButtonRef  .current, {
+      y: -200,
+      duration: .4,
+      opacity: 0,
+    })
+  }, []);
+
+  useGSAP(() => {
+    gsap.from(navLinksRef.current, {
+      y: -200,
+      duration: .4,
+      delay: .1,
+      opacity: 0,
+    })
+  }, []);
+
   return (
     <header className="">
           <nav className="nav flex py-3 px-4 justify-between items-center sm:px-12">
-          <div className="logo w-24 sm:w-36 ">
+          <div ref={logoRef} className="logo w-24 sm:w-36 ">
             <Image 
               src={logo}
               alt="Company Logo"
             />
           </div>
-            <ul className="nav-links sm:flex items-center gap-8 hidden ">
+            <ul ref={navLinksRef} className="nav-links sm:flex items-center gap-8 hidden ">
               <li>
                 <Link href="#about">about Us</Link>
               </li>
@@ -32,7 +66,7 @@ function Navbar() {
               </li>
             </ul>
 
-          <div className="cta-button flex items-center gap-3 sm:gap-8">
+          <div ref={ctaButtonRef} className="cta-button flex items-center gap-3 sm:gap-8">
             <p className='font-bold'>EN</p>
             <Link href="#contact" 
               className='bg-[#f57c00] text-white p-1 px-2 rounded-md sm:p-3'

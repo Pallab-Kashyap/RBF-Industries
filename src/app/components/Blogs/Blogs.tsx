@@ -1,16 +1,51 @@
-import React from "react";
+"use client"
+import React, { useRef } from "react";
 import BlogCard from "./BlogCard";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 
 function Blogs() {
+
+  const heading = useRef(null);
+  const blogCards = useRef<(HTMLDivElement | null)[]>([]);
+
+  useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: heading.current,
+        start: "top bottom",
+      },
+    });
+
+    tl.from(heading.current, {
+      x: -100,
+      duration: .4,
+      ease: "power3.out",
+    })
+    .from(blogCards.current, {
+      y: 200,
+      opacity: 0,
+      duration: .4,
+      // ease: "power3.out",
+    }, ">")
+  }, []);
+
   return (
-    <div className="px-8 sm:px-12">
+    <div className="px-8 sm:px-12 h-fit pb-10">
       <div className="blogs-heading py-6">
-        <h2 className="text-3xl font-medium">Blogs on Biomass Briquettes</h2>
+        <h2 ref={heading} className="text-3xl font-medium">Blogs on Biomass Briquettes</h2>
       </div>
       <div className="grid sm:grid-cols-3 gap-10 mt-2 pb-10 sm:pb-0">
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
+        {[1,2,3,4,5,6].map((item, index) => (
+          <BlogCard key={item} ref={(el) => {
+            blogCards.current[index] = el;
+          }} />
+        ))}
+
       </div>
     </div>
   );

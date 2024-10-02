@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 
-function BlogCard() {
+const BlogCard = forwardRef<HTMLDivElement>((props, ref) => {
   return (
-    <div className="bg-[#6456E4] rounded-xl overflow-hidden">
+    <div 
+    ref={ref}
+    className="bg-[#6456E4] rounded-xl overflow-hidden">
     {/* <img src="./assets/blog_img.png" alt="Blog Image"
     className=''
     /> */}
@@ -19,6 +21,6 @@ function BlogCard() {
     </div>
   </div>
   )
-}
+})
 
 export default BlogCard
