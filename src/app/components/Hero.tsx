@@ -11,7 +11,7 @@ function Hero() {
         src={homeImg}
         alt="Home background"
         className="brightness-50 object-cover"
-        layout="fill"
+        fill
         priority
       />
       <div className="hero-overlay absolute top-0 flex justify-center sm:justify-between items-center flex-wrap sm:flex-nowrap w-full h-full px-8 sm:px-12">

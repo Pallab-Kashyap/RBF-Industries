@@ -27,12 +27,9 @@ interface ProductionCardProps {
         const rect = card.getBoundingClientRect();
         const windowHeight = window.innerHeight || document.documentElement.clientHeight;
         
-        // Calculate the point where the completion line starts
-        const lineEntryPoint = windowHeight * 0.6; // 60% from the top of the viewport
-        // Calculate the point where the completion line ends
-        const lineExitPoint = windowHeight * 0.1; // 10% from the top of the viewport
+        const lineEntryPoint = windowHeight * 0.6;
+        const lineExitPoint = windowHeight * 0.1;
 
-        // Calculate completion progress based on line position
         if (rect.top <= lineEntryPoint && rect.bottom >= lineExitPoint) {
           const totalDistance = lineEntryPoint - lineExitPoint;
           const scrolledDistance = lineEntryPoint - rect.top;
@@ -47,7 +44,6 @@ interface ProductionCardProps {
           setIsActive(false);
         }
 
-        // Calculate card opacity separately
         let opacity = 0;
         const cardEntryPoint = windowHeight;
         const cardExitPoint = windowHeight * 0.2;
@@ -68,94 +64,108 @@ interface ProductionCardProps {
     };
 
     window.addEventListener('scroll', smoothScrollHandler, { passive: true });
-    handleScroll(); // Initial check
+    handleScroll();
 
     return () => window.removeEventListener('scroll', smoothScrollHandler);
   }, [stepNo]);
 
-  if(stepNo%2 !== 0)
   return (
-    <div id={`production-card-${stepNo}`} className={`relative production-section bg-red-${stepNo}00`} style={{opacity: opacity, transition: 'opacity 0.3s linear'}}>
-      <div className="flex min-h-[50vh]">
-
-        {/* Left side: Title and description */}
-        <div className="w-1/2 pr-16 flex-1 text-balance">
-          <h2 className="text-2xl font-bold mb-4 fade-in mt-14" data-aos="fade-up">
-            {title}
-          </h2>
-          <p className="fade-in" data-aos="fade-up" data-aos-delay="100">
-            {description}
-          </p>
-        </div>
-
-        {/* Step number circle */}
-        <div className="flex flex-col items-center ">
-          <div className={`w-16 h-16 rounded-full bg-white border-2 flex items-center justify-center text-3xl font-bold mt-10 mb-6 transition-all duration-300 ease-in-out ${isActive ? 'border-blue-500 text-blue-500' : 'border-gray-200 text-gray-600'}`}>
+    <div id={`production-card-${stepNo}`} className={`relative production-section`} style={{opacity: opacity, transition: 'opacity 0.3s linear'}}>
+      <div className="sm:flex sm:min-h-[50vh] flex-col sm:flex-row ">
+        {/* Mobile layout */}
+        <div className="sm:hidden px-4 py-6 space-y-4">
+          <div className='w-10 h-10 rounded-full bg-transparent border-[1px] flex items-center justify-center text-xl font-bold border-white text-white'>
             {stepNo}
           </div>
-          <div className="complitionLine bg-gray-300 flex-1 w-1 relative ">
-            <div id={`completion-line-${stepNo}`} className="absolute top-0 w-full bg-blue-500 " style={{height: `${completion}%`}}></div>
-          </div>
-        </div>
-
-        {/* Right side: Image */}
-        <div className="flex-1 pl-16">
-          <Image
-            src={image}
-            alt={title}
-            width={500}
-            height={300}
-            className="w-full h-auto rounded-lg fade-in"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          />
-        </div>
-
-      </div>
-    </div>
-  );
-
-  else return (
-    <div id={`production-card-${stepNo}`} className={`relative production-section bg-red-${stepNo}00`} style={{opacity: opacity, transition: 'opacity 0.3s linear'}}>
-      <div className="flex min-h-[50vh]">
-
-        {/* Right side: Image */}
-        <div className="flex-1 w-1/2">
-          <Image
-            src={image}
-            alt={title}
-            width={500}
-            height={300}
-            className="w-[38vw] rounded-lg fade-in"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          />
-        </div>
-
-        {/* Step number circle */}
-        <div className="flex flex-col items-center">
-          <div className={`w-16 h-16 rounded-full bg-white border-2 flex items-center justify-center text-3xl font-bold mt-10 mb-6 transition-all duration-300 ease-in-out ${isActive ? 'border-blue-500 text-blue-500' : 'border-gray-200 text-gray-600'}`}>
-            {stepNo}
-          </div>
-          <div className="complitionLine bg-gray-300 flex-1 w-1 relative ">
-          <div id={`completion-line-${stepNo}`} className="absolute top-0 w-full bg-blue-500 " style={{height: `${completion}%`}}></div>
-          </div>
-        </div>
-
-
-        {/* Left side: Title and description */}
-        <div className="w-1/2 flex-1 text-balance ">
-        <div className="ml-16">
-
-          <h2 className="text-2xl font-bold mb-4 fade-in mt-14" data-aos="fade-up">
+          <h2 className="text-2xl font-bold fade-in" data-aos="fade-up">
             {title}
           </h2>
-          <p className="fade-in" data-aos="fade-up" data-aos-delay="100">
+          <p className="fade-in text-base" data-aos="fade-up" data-aos-delay="100">
             {description}
           </p>
-        </div>
+          <div className="w-full pt-2">
+            <Image
+              src={image}
+              alt={title}
+              width={500}
+              height={350}
+              className="w-full h-[40vh] object-cover rounded-lg fade-in"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            />
+          </div>
         </div>
 
+        {/* Desktop layout */}
+        <div className="hidden sm:flex min-h-[50vh] flex-row">
+          {stepNo % 2 !== 0 ? (
+            <>
+              <div className="sm:w-1/2 pr-16 flex-1 sm:text-balance">
+                <h2 className="text-2xl font-bold mb-4 fade-in mt-14" data-aos="fade-up">
+                  {title}
+                </h2>
+                <p className="fade-in" data-aos="fade-up" data-aos-delay="100">
+                  {description}
+                </p>
+              </div>
+
+              <div className="flex flex-col items-center">
+                <div className={`w-16 h-16 rounded-full border-2 flex items-center justify-center text-3xl font-bold mt-10 mb-6 transition-all duration-300 ease-in-out ${isActive ? 'border-white text-white ' : 'border-gray-200 text-gray-600'}`}>
+                  {stepNo}
+                </div>
+                <div className="complitionLine bg-gray-300 flex-1 w-1 relative ">
+                  <div id={`completion-line-${stepNo}`} className="absolute top-0 w-full bg-white " style={{height: `${completion}%`}}></div>
+                </div>
+              </div>
+
+              <div className="flex-1 pl-16">
+                <Image
+                  src={image}
+                  alt={title}
+                  width={500}
+                  height={300}
+                  className="w-full h-auto rounded-lg fade-in"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                />
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="flex-1 w-1/2">
+                <Image
+                  src={image}
+                  alt={title}
+                  width={500}
+                  height={300}
+                  className="w-[38vw] rounded-lg fade-in"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                />
+              </div>
+
+              <div className="flex flex-col items-center">
+                <div className={`w-16 h-16 rounded-full  border-2 flex items-center justify-center text-3xl font-bold mt-10 mb-6 transition-all duration-300 ease-in-out ${isActive ? 'border-white text-white' : 'border-gray-200 text-gray-600'}`}>
+                  {stepNo}
+                </div>
+                <div className="complitionLine bg-gray-300 flex-1 w-1 relative ">
+                  <div id={`completion-line-${stepNo}`} className="absolute top-0 w-full bg-white " style={{height: `${completion}%`}}></div>
+                </div>
+              </div>
+
+              <div className="w-full sm:w-1/2 flex-1 text-balance ">
+                <div className="sm:ml-16">
+                  <h2 className="text-2xl font-bold mb-4 fade-in mt-14" data-aos="fade-up">
+                    {title}
+                  </h2>
+                  <p className="fade-in" data-aos="fade-up" data-aos-delay="100">
+                    {description}
+                  </p>
+                </div>
+              </div>
+            </>
+          )}
+        </div>
       </div>
     </div>
   );

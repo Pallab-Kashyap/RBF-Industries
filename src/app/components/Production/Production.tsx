@@ -1,15 +1,18 @@
+"use client"
 
-import React from 'react'
-import ProductoinCards from './ProductoinCards';
+import React, { useState, useRef } from 'react';
+import ProductionCards from './ProductoinCards';
 
 interface Step {
-  title: string,
-  description: string,
-  image: string,
-  stepNo: number,
+  title: string;
+  description: string;
+  image: string;
+  stepNo: number;
 }
-function Production() {
 
+function Production() {
+  const [currentStep, setCurrentStep] = useState(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   const steps: Step[] = [
     {
@@ -36,27 +39,78 @@ function Production() {
       image: "https://media.istockphoto.com/id/1173024714/photo/peaceful-nature-landscape-background-with-mountains-on-sunset.jpg?s=2048x2048&w=is&k=20&c=t_ikT4Kk4u7whbm3Ceby8HKRYncX21Djmrudoeg1k0c=",
       stepNo: 4,
     },
-  ]
+  ];
+
+  const handleNextCard = () => {
+    const nextStep = (currentStep + 1) % steps.length;
+    setCurrentStep(nextStep);
+    scrollRef.current?.scrollTo({
+      left: nextStep * scrollRef.current.offsetWidth,
+      behavior: 'smooth'
+    });
+  };
+
+  const handlePrevCard = () => {
+    const prevStep = (currentStep - 1 + steps.length) % steps.length;
+    setCurrentStep(prevStep);
+    scrollRef.current?.scrollTo({
+      left: prevStep * scrollRef.current.offsetWidth,
+      behavior: 'smooth'
+    });
+  };
 
   return (
     <div 
-      className="flex flex-col px-4 sm:px-12 min-h-screen b-blue-300/35 relative
+      className="flex flex-col px-4 sm:px-12 min-h-screen b-blue-300/35 relative sm:pb-10
        bg-[url('https://images.unsplash.com/photo-1516694898594-6bee63c70a04?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTM1fHxza3l8ZW58MHx8MHx8fDA%3D')]
        bg-cover 
-       ">
-
-      <div className="about-us-heading py-5 sm:py-14 ">
-        <h1 className="text-3xl sm:text-5xl font-medium text-center sm:text-left">Production Process</h1>
+       "
+    >
+      <div className="about-us-heading pt-10 pb-4  sm:py-14 px-4 sm:px-0">
+        <h1 className="text-3xl sm:text-5xl font-medium ">Production Process</h1>
       </div>
 
-      <div className="w-full max-w-6xl relative py-6">
-        {steps.map((step) => (
-          <ProductoinCards key={step.stepNo} prop={step}/>
-        ))}
+      <div className="w-full relative sm:py-6">
+        <div 
+          ref={scrollRef}
+          className="flex overflow-x-auto snap-x snap-mandatory sm:block"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
+          {steps.map((step) => (
+            <div key={step.stepNo} className="w-full flex-shrink-0 snap-center sm:w-auto">
+              <ProductionCards prop={step} />
+            </div>
+          ))}
+        </div>
+        <div className="sm:hidden flex justify-between items-center mt-4 px-4">
+          <div className="flex space-x-2">
+            {steps.map((_, index) => (
+              <div
+                key={index}
+                className={`w-2 h-2 rounded-full ${
+                  index === currentStep ? 'bg-blue-500' : 'bg-gray-300'
+                }`}
+              ></div>
+            ))}
+          </div>
+          <div className="flex space-x-4 ">
+            <button 
+              onClick={handlePrevCard}
+              className="w-10 h-10 flex items-center justify-center bg-transparent text-gray-700 rounded-full border-2 border-gray-700"
+            >
+              <span className="flex items-center justify-center w-full h-full font-bold text-2xl">&larr;</span>
+            </button>
+            <button 
+              onClick={handleNextCard}
+              className="w-10 h-10 flex items-center justify-center bg-transparent text-gray-700 rounded-full border-2 border-gray-700"
+            >
+              <span className="flex items-center justify-center w-full h-full font-bold text-2xl">&rarr;</span>
+            </button>
+          </div>
+        </div>
       </div>
-    
     </div>
-  )
+  );
 }
 
 export default Production

@@ -1,5 +1,4 @@
 
-import "@/app/Home.module.css"
 import Navbar from "./components/NavBar";
 import Hero from "./components/Hero";
 import About from "./components/About";
