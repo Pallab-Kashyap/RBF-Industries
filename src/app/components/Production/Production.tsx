@@ -96,15 +96,15 @@ function Production() {
           <div className="flex space-x-4 ">
             <button 
               onClick={handlePrevCard}
-              className="w-10 h-10 flex items-center justify-center bg-transparent text-gray-700 rounded-full border-2 border-gray-700"
+              className="w-10 h-10  text-gray-700 rounded-full border-2 border-gray-700"
             >
-              <span className="flex items-center justify-center w-full h-full font-bold text-2xl">&larr;</span>
+              <span className="w-full h-full leading-5 font-bold text-2xl">&larr;</span>
             </button>
             <button 
               onClick={handleNextCard}
-              className="w-10 h-10 flex items-center justify-center bg-transparent text-gray-700 rounded-full border-2 border-gray-700"
+              className="w-10 h-10 bg-transparent text-gray-700 rounded-full border-2 border-gray-700"
             >
-              <span className="flex items-center justify-center w-full h-full font-bold text-2xl">&rarr;</span>
+              <span className="w-full h-full leading-5 font-bold text-2xl">&rarr;</span>
             </button>
           </div>
         </div>
