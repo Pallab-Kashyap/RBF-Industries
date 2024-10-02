@@ -37,7 +37,7 @@ function About() {
     tl.from(heading.current, {
       x: -100,
       duration: .4,
-      ease: "power3.out",
+      // ease: "power3.out",
     })
     .from(text.current, {
       x: -100,

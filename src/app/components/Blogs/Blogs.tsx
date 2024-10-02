@@ -24,18 +24,19 @@ function Blogs() {
     tl.from(heading.current, {
       x: -100,
       duration: .4,
-      ease: "power3.out",
+      // ease: "power3.out",
     })
     .from(blogCards.current, {
-      y: 200,
+      y: 150,
       opacity: 0,
+      delay: .1,
       duration: .4,
       // ease: "power3.out",
     }, ">")
   }, []);
 
   return (
-    <div className="px-8 sm:px-12 h-fit pb-10">
+    <div className="px-8 sm:px-12 h-fit pb-20">
       <div className="blogs-heading py-6">
         <h2 ref={heading} className="text-3xl font-medium">Blogs on Biomass Briquettes</h2>
       </div>

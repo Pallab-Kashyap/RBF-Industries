@@ -1,14 +1,16 @@
+
 import "@/app/Home.module.css"
 import Navbar from "./components/NavBar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Blogs from "./components/Blogs/Blogs";
-import Production from "./components/Production";
+import Production from "./components/Production/Production";
+
 
 export default function Home() {
+  
   return (
     <main className="">
-
       <section className="hero flex flex-col h-screen">
         <Navbar />
         <Hero />
@@ -17,6 +19,19 @@ export default function Home() {
       <section id="about" className="about-us min-h-screen">
         <About />
       </section>
+      
+      <section id="production" className="production min-h-screen ">
+        <Production />
+      </section>
+
+      <section id="blogs" className="blogs min-h-screen">
+        <Blogs />
+      </section>
+
+    </main>
+  );
+}
+
 
       {/* <section className="benefits">
         <div className="benefit-heading">
@@ -55,16 +70,3 @@ export default function Home() {
           </div>
         </div>
       </section> */}
-
-      <section id="blogs" className="blogs min-h-screen ">
-        <Blogs />
-      </section>
-
-      <section id="production" className="production min-h-screen">
-        <Production />
-      </section>
-
-      
-    </main>
-  );
-}
