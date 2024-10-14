@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import Image from "next/image";
 
@@ -11,29 +11,32 @@ interface ProductionCardProps {
   };
 }
 
-  const ProductoinCards: React.FC<ProductionCardProps> = ({ prop }) => {
+const ProductionCards: React.FC<ProductionCardProps> = ({ prop }) => {
   const { title, description, image, stepNo } = prop;
 
-  
   const [completion, setCompletion] = useState(0);
-  const [opacity, setOpacity] = useState('0');
+  const [opacity, setOpacity] = useState("0");
   const [isActive, setIsActive] = useState(false);
 
   React.useEffect(() => {
     const handleScroll = () => {
       const card = document.getElementById(`production-card-${stepNo}`);
-      const completionLine = document.getElementById(`completion-line-${stepNo}`);
+      const completionLine = document.getElementById(
+        `completion-line-${stepNo}`
+      );
       if (card && completionLine) {
         const rect = card.getBoundingClientRect();
-        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-        
+        const windowHeight =
+          window.innerHeight || document.documentElement.clientHeight;
+
         const lineEntryPoint = windowHeight * 0.6;
         const lineExitPoint = windowHeight * 0.1;
 
         if (rect.top <= lineEntryPoint && rect.bottom >= lineExitPoint) {
           const totalDistance = lineEntryPoint - lineExitPoint;
           const scrolledDistance = lineEntryPoint - rect.top;
-          const newCompletion = Math.min(1, Math.max(0, scrolledDistance / totalDistance)) * 100;
+          const newCompletion =
+            Math.min(1, Math.max(0, scrolledDistance / totalDistance)) * 100;
           setCompletion(newCompletion);
           setIsActive(rect.top <= lineEntryPoint && rect.top > lineExitPoint);
         } else if (rect.top < lineExitPoint) {
@@ -50,7 +53,10 @@ interface ProductionCardProps {
         if (rect.top <= cardEntryPoint && rect.bottom >= cardExitPoint) {
           const totalCardDistance = cardEntryPoint - cardExitPoint;
           const scrolledCardDistance = cardEntryPoint - rect.top;
-          opacity = Math.min(1, Math.max(0, scrolledCardDistance / totalCardDistance));
+          opacity = Math.min(
+            1,
+            Math.max(0, scrolledCardDistance / totalCardDistance)
+          );
         } else if (rect.top < cardExitPoint) {
           opacity = 1;
         }
@@ -63,24 +69,32 @@ interface ProductionCardProps {
       requestAnimationFrame(handleScroll);
     };
 
-    window.addEventListener('scroll', smoothScrollHandler, { passive: true });
+    window.addEventListener("scroll", smoothScrollHandler, { passive: true });
     handleScroll();
 
-    return () => window.removeEventListener('scroll', smoothScrollHandler);
+    return () => window.removeEventListener("scroll", smoothScrollHandler);
   }, [stepNo]);
 
   return (
-    <div id={`production-card-${stepNo}`} className={`relative production-section`} style={{opacity: opacity, transition: 'opacity 0.3s linear'}}>
+    <div
+      id={`production-card-${stepNo}`}
+      className={`relative production-section`}
+      style={{ opacity: opacity, transition: "opacity 0.3s linear" }}
+    >
       <div className="sm:flex sm:min-h-[50vh] flex-col sm:flex-row ">
         {/* Mobile layout */}
         <div className="sm:hidden px-4 py-6 space-y-4">
-          <div className='w-10 h-10 rounded-full bg-transparent border-[1px] flex items-center justify-center text-xl font-bold border-white text-white'>
+          <div className="w-10 h-10 rounded-full bg-transparent border-[1px] flex items-center justify-center text-xl font-bold border-white text-white">
             {stepNo}
           </div>
           <h2 className="text-2xl font-medium fade-in" data-aos="fade-up">
             {title}
           </h2>
-          <p className="fade-in text-base" data-aos="fade-up" data-aos-delay="100">
+          <p
+            className="fade-in text-base"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             {description}
           </p>
           <div className="w-full pt-2">
@@ -101,7 +115,10 @@ interface ProductionCardProps {
           {stepNo % 2 !== 0 ? (
             <>
               <div className="sm:w-1/2 pr-16 flex-1 sm:text-balance">
-                <h2 className="text-2xl font-bold mb-4 fade-in mt-14" data-aos="fade-up">
+                <h2
+                  className="text-2xl font-bold mb-4 fade-in mt-14"
+                  data-aos="fade-up"
+                >
                   {title}
                 </h2>
                 <p className="fade-in" data-aos="fade-up" data-aos-delay="100">
@@ -110,11 +127,21 @@ interface ProductionCardProps {
               </div>
 
               <div className="flex flex-col items-center">
-                <div className={`w-16 h-16 rounded-full border-2 flex items-center justify-center text-3xl font-bold mt-10 mb-6 transition-all duration-300 ease-in-out ${isActive ? 'border-white text-white ' : 'border-gray-200 text-gray-600'}`}>
+                <div
+                  className={`w-16 h-16 rounded-full border-2 flex items-center justify-center text-3xl font-bold mt-10 mb-6 transition-all duration-300 ease-in-out ${
+                    isActive
+                      ? "border-white text-white "
+                      : "border-gray-200 text-gray-600"
+                  }`}
+                >
                   {stepNo}
                 </div>
                 <div className="complitionLine bg-gray-300 flex-1 w-1 relative ">
-                  <div id={`completion-line-${stepNo}`} className="absolute top-0 w-full bg-white " style={{height: `${completion}%`}}></div>
+                  <div
+                    id={`completion-line-${stepNo}`}
+                    className="absolute top-0 w-full bg-white "
+                    style={{ height: `${completion}%` }}
+                  ></div>
                 </div>
               </div>
 
@@ -145,20 +172,37 @@ interface ProductionCardProps {
               </div>
 
               <div className="flex flex-col items-center">
-                <div className={`w-16 h-16 rounded-full  border-2 flex items-center justify-center text-3xl font-bold mt-10 mb-6 transition-all duration-300 ease-in-out ${isActive ? 'border-white text-white' : 'border-gray-200 text-gray-600'}`}>
+                <div
+                  className={`w-16 h-16 rounded-full  border-2 flex items-center justify-center text-3xl font-bold mt-10 mb-6 transition-all duration-300 ease-in-out ${
+                    isActive
+                      ? "border-white text-white"
+                      : "border-gray-200 text-gray-600"
+                  }`}
+                >
                   {stepNo}
                 </div>
                 <div className="complitionLine bg-gray-300 flex-1 w-1 relative ">
-                  <div id={`completion-line-${stepNo}`} className="absolute top-0 w-full bg-white " style={{height: `${completion}%`}}></div>
+                  <div
+                    id={`completion-line-${stepNo}`}
+                    className="absolute top-0 w-full bg-white "
+                    style={{ height: `${completion}%` }}
+                  ></div>
                 </div>
               </div>
 
               <div className="w-full sm:w-1/2 flex-1 text-balance ">
                 <div className="sm:ml-16">
-                  <h2 className="text-2xl font-bold mb-4 fade-in mt-14" data-aos="fade-up">
+                  <h2
+                    className="text-2xl font-bold mb-4 fade-in mt-14"
+                    data-aos="fade-up"
+                  >
                     {title}
                   </h2>
-                  <p className="fade-in" data-aos="fade-up" data-aos-delay="100">
+                  <p
+                    className="fade-in"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
                     {description}
                   </p>
                 </div>
@@ -171,5 +215,4 @@ interface ProductionCardProps {
   );
 };
 
-
-export default ProductoinCards;
+export default ProductionCards;

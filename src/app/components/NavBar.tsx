@@ -42,7 +42,7 @@ function Navbar() {
   return (
     <header className="">
       <nav className="nav flex py-3 px-4 justify-between items-center sm:px-12">
-        <div ref={logoRef} className="logo w-24 sm:w-36 ">
+        <div ref={logoRef} className=" w-24 sm:w-36 ">
           <Image src={logo} alt="Company Logo" />
         </div>
         <ul
