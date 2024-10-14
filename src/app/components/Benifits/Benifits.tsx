@@ -48,8 +48,8 @@ function Benifits() {
         <h2 ref={heading} className="text-3xl sm:text-5xl font-medium">Benefits of Biomass Briquettes</h2>
       </div>
       <div className="grid sm:grid-cols-3 gap-16 pb-4">
-        {benifits.map((benefit) => (
-            <BenifitCard icon={benefit.icon} heading={benefit.heading} content={benefit.content}/>
+        {benifits.map((benefit, index) => (
+            <BenifitCard key={index} icon={benefit.icon} heading={benefit.heading} content={benefit.content}/>
         ))}
       </div>
       </div>

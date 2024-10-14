@@ -82,7 +82,7 @@ function Clients() {
       <h1 className="text-center text-4xl p-6 text-white">Our Past Clients</h1>
       <div className="flex justify-evenly  gap-4 overflow-hidden">
         {displayedLogos.map((logo, index) => (
-          <div className="overflow-hidden  flex-1 flex justify-center">
+          <div key={index} className="overflow-hidden  flex-1 flex justify-center">
             <img
               key={index}
               src={logo.logo}
