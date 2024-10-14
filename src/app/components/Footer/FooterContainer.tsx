@@ -7,7 +7,7 @@ const HomePage: React.FC = () => {
   return (
     <div className="">
       <Clients />
-      <div className="sm:flex  justify-between px-4 sm:px-12 py-6">
+      <div className="sm:flex  justify-between px-4 sm:px-12 py-6 pt-10">
         <Footer />
         <ContactForm />
       </div>
