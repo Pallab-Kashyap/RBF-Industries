@@ -1,8 +1,8 @@
 "use client"
 
-import Image from "next/image";
+
 import React, { useEffect, useState } from "react";
-import { useGSAP } from "@gsap/react";
+
 import gsap from "gsap";
 
 interface ClientsList {
@@ -10,7 +10,7 @@ interface ClientsList {
 }
 function Clients() {
 
-  let logos: ClientsList[] = [
+  const logos: ClientsList[] = [
     { logo: "/assets/logo.png" },
     { logo: "/assets/logo.png" },
     { logo: "/assets/logo.png" },
@@ -38,7 +38,7 @@ function Clients() {
   },[])
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  let logosPerSet = displaySize > 500 ? 6 : 3
+  const logosPerSet = displaySize > 500 ? 6 : 3
 
   useEffect(() => {
     const rotateLogos = () => {

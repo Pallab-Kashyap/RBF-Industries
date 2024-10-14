@@ -9,36 +9,36 @@ function Benifits() {
 
     const heading = useRef(null);
 
-    let benifits = [
+    const benifits = [
         {
             icon : '/assets/logo.png',
             heading : 'IoT - Internet of Things',
-            content : 'Intelligent Assistant.'
+            content : 'Centralized management of physical assets and buildings.'
         },
         {
             icon : '/assets/logo.png',
             heading : 'IoT - Internet of Things',
-            content : 'Intelligent Assistant.'
+            content : 'Centralized management of physical assets and buildings.'
         },
         {
             icon : '/assets/logo.png',
             heading : 'IoT - Internet of Things',
-            content : 'Intelligent Assistant.'
+            content : 'Centralized management of physical assets and buildings.'
         },
         {
             icon : '/assets/logo.png',
             heading : 'IoT - Internet of Things',
-            content : 'Intelligent Assistant.'
+            content : 'Centralized management of physical assets and buildings.'
         },
         {
             icon : '/assets/logo.png',
             heading : 'IoT - Internet of Things',
-            content : 'Intelligent Assistant.'
+            content : 'Centralized management of physical assets and buildings.'
         },
         {
             icon : '/assets/logo.png',
             heading : 'IoT - Internet of Things',
-            content : 'Intelligent Assistant.'
+            content : 'Centralized management of physical assets and buildings..'
         },
     ]
 
