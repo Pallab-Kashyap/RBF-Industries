@@ -25,12 +25,12 @@ export default function Home() {
         <Production />
       </section>
 
-      <section id="blogs" className="blogs min-h-screen">
-        <Blogs />
-      </section>
-
       <section id="benifits" className="benifits min-h-screen">
         <Benifits />
+      </section>
+
+      <section id="blogs" className="blogs min-h-screen">
+        <Blogs />
       </section>
 
       <section id="footer" className="footer">
