@@ -5,7 +5,6 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-
 function Blogs() {
 
   const heading = useRef(null);
@@ -37,7 +36,7 @@ function Blogs() {
   }, []);
 
   return (
-    <div className="px-8 sm:px-12 sm:py-12 h-fit">
+    <div className="px-8 sm:px-12 py-6 sm:py-12 h-fit">
       <div className="blogs-heading py-4 sm:pb-12">
         <h2 ref={heading} className="text-3xl sm:text-5xl font-medium">Blogs on Biomass Briquettes</h2>
       </div>

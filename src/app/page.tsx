@@ -1,4 +1,3 @@
-
 import Navbar from "./components/NavBar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -7,9 +6,7 @@ import Production from "./components/Production/Production";
 import Benifits from "./components/Benifits/Benifits";
 import FooterContainer from "./components/Footer/FooterContainer";
 
-
 export default function Home() {
-  
   return (
     <main className="">
       <section className="hero flex flex-col h-screen">
@@ -17,29 +14,34 @@ export default function Home() {
         <Hero />
       </section>
 
-      <section id="about" className="about-us min-h-screen">
+      <section
+        id="about"
+        className="about-us min-h-screen max-w-[1280px] m-auto"
+      >
         <About />
       </section>
-      
-      <section id="production" className="production min-h-screen ">
+
+      <section
+        id="production"
+        className="production min-h-screen max-w-[1280px] m-auto"
+      >
         <Production />
       </section>
 
-      <section id="benifits" className="benifits min-h-screen">
-        <Benifits />
+      <section id="blogs" className="blogs min-h-screen max-w-[1280px] m-auto">
+        <Blogs />
       </section>
 
-      <section id="blogs" className="blogs min-h-screen">
-        <Blogs />
+      <section
+        id="benifits"
+        className="benifits min-h-screen max-w-[1280px] m-auto"
+      >
+        <Benifits />
       </section>
 
       <section id="footer" className="footer">
         <FooterContainer />
       </section>
-
     </main>
   );
 }
-
-
-

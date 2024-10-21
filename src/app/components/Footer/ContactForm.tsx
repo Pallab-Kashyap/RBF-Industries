@@ -28,7 +28,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="flex mt-10 sm:mt-0">
+    <div className="flex">
       <div className='hidden sm:block'>
         <img 
           // src={contactImg}

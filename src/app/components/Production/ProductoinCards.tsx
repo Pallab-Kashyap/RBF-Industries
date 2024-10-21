@@ -136,10 +136,10 @@ const ProductionCards: React.FC<ProductionCardProps> = ({ prop }) => {
                 >
                   {stepNo}
                 </div>
-                <div className="complitionLine bg-gray-300 flex-1 w-1 relative ">
+                <div className="completionLine bg-gray-600 flex-1 w-1 relative ">
                   <div
                     id={`completion-line-${stepNo}`}
-                    className="absolute top-0 w-full bg-white "
+                    className="absolute top-0 w-full bg-white"
                     style={{ height: `${completion}%` }}
                   ></div>
                 </div>

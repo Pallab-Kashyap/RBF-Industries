@@ -4,7 +4,7 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="">
+    <footer className="mt-10 sm:mt-0">
       <div className='pb-10 flex justify-center sm:block'>
         <Image 
           src={'/assets/logo.png'}

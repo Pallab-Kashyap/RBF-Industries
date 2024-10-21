@@ -61,10 +61,7 @@ function Production() {
 
   return (
     <div 
-      className="flex flex-col px-4 sm:px-12 min-h-screen b-blue-300/35 relative sm:pb-10
-       bg-[url('https://images.unsplash.com/photo-1516694898594-6bee63c70a04?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTM1fHxza3l8ZW58MHx8MHx8fDA%3D')]
-       bg-cover 
-       "
+      className="flex flex-col px-4 sm:px-12 py-6 sm:py-12 min-h-screen b-blue-300/35 relative sm:pb-10 text-white bg-[#1B4449]"
     >
       <div className="about-us-heading pt-10 pb-4  sm:py-14 px-4 sm:px-0">
         <h1 className="text-3xl sm:text-5xl font-medium ">Production Process</h1>
@@ -96,13 +93,13 @@ function Production() {
           <div className="flex space-x-4 ">
             <button 
               onClick={handlePrevCard}
-              className="w-10 h-10  text-gray-700 rounded-full border-2 border-gray-700"
+              className="w-10 h-10  text-white rounded-full border-2 border-whtie"
             >
               <span className="w-full h-full leading-5 font-bold text-2xl">&larr;</span>
             </button>
             <button 
               onClick={handleNextCard}
-              className="w-10 h-10 bg-transparent text-gray-700 rounded-full border-2 border-gray-700"
+              className="w-10 h-10 bg-transparent text-white rounded-full border-2 border-white"
             >
               <span className="w-full h-full leading-5 font-bold text-2xl">&rarr;</span>
             </button>
