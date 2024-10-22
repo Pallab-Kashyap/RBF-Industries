@@ -41,7 +41,7 @@ function Navbar() {
 
   useGSAP(() => {
     gsap.from(menu.current, {
-      y: -200,
+      x: 200,
       duration: 0.5,
     });
   }, [displayMenu]);
