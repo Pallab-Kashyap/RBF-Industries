@@ -6,14 +6,13 @@ import React, { useRef, useState } from "react";
 import logo from "../../../public/assets/logo.png";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { useSearchParams } from "next/navigation";
 
 function Navbar() {
   const logoRef = useRef(null);
   const ctaButtonRef = useRef(null);
   const navLinksRef = useRef(null);
   const menu = useRef(null);
-  const [displayMenu, setDisplayMenu] = useState<Boolean>(false);
+  const [displayMenu, setDisplayMenu] = useState(false);
 
   useGSAP(() => {
     gsap.from(logoRef.current, {
