@@ -1,5 +1,6 @@
 "use client"
 
+import { sendMail } from '@/utils/mailService';
 import React, { useState } from 'react';
 
 
@@ -25,6 +26,8 @@ const ContactForm: React.FC = () => {
     e.preventDefault();
     // Handle form submission
     console.log('Form submitted:', formData);
+
+    sendMail()
   };
 
   return (

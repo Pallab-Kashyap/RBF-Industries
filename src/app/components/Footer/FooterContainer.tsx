@@ -8,11 +8,11 @@ const HomePage: React.FC = () => {
   return (
     <div className="">
       <Clients />
-      <div className="sm:flex  justify-between px-4 sm:px-12 py-6 pt-10">
+      <div className="sm:flex  justify-between px-4 sm:px-12 py-6 pt-10 max-w-[1280px] m-auto">
         <ContactForm />
         <Footer />
       </div>
-      <div className="sm:flex justify-between px-8 sm:px-12 mt-8 border-t pb-6  border-gray-300 py-6">
+      <div className="sm:flex justify-between px-8 sm:px-12 mt-8 border-t pb-6  border-gray-300 py-6 max-w-[1280px] m-auto">
         <p className="text-[14px] text-gray-600 mb-4 sm:mb-0">
           © 2024 Nextbitt. All rights reserved.
         </p>

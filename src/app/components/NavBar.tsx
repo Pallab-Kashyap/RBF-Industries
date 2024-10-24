@@ -41,14 +41,14 @@ function Navbar() {
 
   useGSAP(() => {
     gsap.from(menu.current, {
-      y: -200,
+      x: 300,
       duration: 0.5,
     });
   }, [displayMenu]);
 
   return (
     <header className="">
-      <nav className="nav flex py-3 px-4 justify-between items-center sm:px-12 relative z-20 ">
+      <nav className="nav flex py-3 px-4 justify-between items-center sm:px-12 relative z-20 max-w-[1280px] m-auto">
         <div ref={logoRef} className=" w-24 sm:w-36">
           <Image src={logo} alt="Company Logo" />
         </div>
