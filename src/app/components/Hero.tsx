@@ -14,7 +14,7 @@ function Hero() {
         fill
         priority
       />
-      <div className="hero-overlay absolute top-0 flex justify-center sm:justify-between items-center flex-wrap sm:flex-nowrap w-full h-full px-8 sm:px-12 max-w-[1280px] m-auto">
+      <div className="hero-overlay absolute top-0 flex justify-center sm:justify-between items-center flex-wrap sm:flex-nowrap w-full h-full px-8 sm:px-12 2xl:max-w-[1280px] 2xl:right-40">
         <div className="home-page-logo">
             <Image 
                 src={logo} 

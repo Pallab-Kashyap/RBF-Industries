@@ -16,25 +16,25 @@ export default function Home() {
 
       <section
         id="about"
-        className="about-us min-h-screen max-w-[1280px] m-auto"
+        className="about-us min-h-screen "
       >
         <About />
       </section>
 
       <section
         id="production"
-        className="production min-h-screen max-w-[1280px] m-auto"
+        className="production min-h-screen "
       >
         <Production />
       </section>
 
-      <section id="blogs" className="blogs min-h-screen max-w-[1280px] m-auto">
+      <section id="blogs" className="blogs min-h-screen">
         <Blogs />
       </section>
 
       <section
         id="benifits"
-        className="benifits min-h-screen max-w-[1280px] m-auto"
+        className="benifits min-h-screen "
       >
         <Benifits />
       </section>

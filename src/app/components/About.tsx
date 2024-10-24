@@ -61,11 +61,11 @@ function About() {
   return (
     <div className="relative">
       <div className="about-us-heading py-5 sm:py-14 bg-[#B5D823] px-4 sm:px-12">
-        <h1 ref={heading} className="text-3xl sm:text-5xl font-medium text-center sm:text-left">About Us</h1>
+        <h1 ref={heading} className="text-3xl sm:text-5xl font-medium text-center sm:text-left max-w-[1280px] m-auto">About Us</h1>
       </div>
 
-      <div className="sm:flex py-8 px-8 sm:px-12">
-        <div className="about-image sm:absolute top-10 right-10 flex justify-center">
+      <div className="sm:flex py-8 px-8 sm:px-12 2xl:px-0 max-w-[1280px] m-auto">
+        <div className="about-image sm:absolute top-10 right-10 2xl:right-40 flex justify-center">
           <Image
             ref={image}
             src={aboutImage}

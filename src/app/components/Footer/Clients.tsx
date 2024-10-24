@@ -78,11 +78,11 @@ function Clients() {
 
 
   return (
-    <div  className='bg-[#1B4449] p-4'>
+    <div  className='bg-[#1B4449] p-4 xl:px-0'>
       <h1 className="text-center text-4xl p-6 text-white">Our Past Clients</h1>
-      <div className="flex justify-evenly  gap-4 overflow-hidden">
+      <div className="flex justify-evenly 2xl:justify-between gap-4 overflow-hidden max-w-[1280px] m-auto">
         {displayedLogos.map((logo, index) => (
-          <div key={index} className="overflow-hidden  flex-1 flex justify-center">
+          <div key={index} className="overflow-hidden flex-1 flex justify-center">
             <img
               key={index}
               src={logo.logo}
