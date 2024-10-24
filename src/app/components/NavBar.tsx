@@ -41,7 +41,11 @@ function Navbar() {
 
   useGSAP(() => {
     gsap.from(menu.current, {
+<<<<<<< HEAD
       x: 300,
+=======
+      x: 200,
+>>>>>>> d0776535deda6f287e29beddcb280aa7d1615cdb
       duration: 0.5,
     });
   }, [displayMenu]);
