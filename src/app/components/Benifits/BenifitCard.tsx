@@ -14,8 +14,8 @@ const BenifitCard: React.FC<BenefitStr> = ({ icon, heading, content }) => {
           <Image 
             src={icon}
             alt='logo'
-            height={100}
-            width={100}
+            height={35}
+            width={35}
           />
           <h3 className='text-2xl mt-2'>{heading}</h3>
           <p>{content}</p>

@@ -18,31 +18,31 @@ function Production() {
     {
       title: "Obtaining Raw Material",
       description:
-        "The first step in our production process involves sourcing high-quality raw materials from trusted suppliers.",
+        "Our production process begins by sourcing premium-grade raw materials from reliable, trusted suppliers. We prioritize quality to ensure our end products meet the highest standards",
       image:
         "https://media.istockphoto.com/id/1173024714/photo/peaceful-nature-landscape-background-with-mountains-on-sunset.jpg?s=2048x2048&w=is&k=20&c=t_ikT4Kk4u7whbm3Ceby8HKRYncX21Djmrudoeg1k0c=",
       stepNo: 1,
     },
     {
-      title: "Production",
+      title: "Material Evaluation",
       description:
-        "The first step in our production process involves sourcing high-quality raw materials from trusted suppliers.",
+        "Our experts carefully assess the raw materials, conducting stringent quality checks to ensure they meet our specifications. Only materials that pass this evaluation are prepared for the next stage of processing.",
       image:
         "https://media.istockphoto.com/id/1173024714/photo/peaceful-nature-landscape-background-with-mountains-on-sunset.jpg?s=2048x2048&w=is&k=20&c=t_ikT4Kk4u7whbm3Ceby8HKRYncX21Djmrudoeg1k0c=",
       stepNo: 2,
     },
     {
-      title: "Production",
+      title: "Mixing and Production",
       description:
-        "The first step in our production process involves sourcing high-quality raw materials from trusted suppliers.",
+        "Approved materials are mixed to create the ideal composition for briquette formation. They are then fed into our state-of-the-art briquette pressing machines, resulting in durable, high-quality briquettes that meet our performance standards.",
       image:
         "https://media.istockphoto.com/id/1173024714/photo/peaceful-nature-landscape-background-with-mountains-on-sunset.jpg?s=2048x2048&w=is&k=20&c=t_ikT4Kk4u7whbm3Ceby8HKRYncX21Djmrudoeg1k0c=",
       stepNo: 3,
     },
     {
-      title: "Production",
+      title: "Packaging and Dispatch",
       description:
-        "The first step in our production process involves sourcing high-quality raw materials from trusted suppliers.",
+        "The finished briquettes are packaged securely and dispatched through our network of trusted transport partners, ensuring safe and timely delivery to our clients.",
       image:
         "https://media.istockphoto.com/id/1173024714/photo/peaceful-nature-landscape-background-with-mountains-on-sunset.jpg?s=2048x2048&w=is&k=20&c=t_ikT4Kk4u7whbm3Ceby8HKRYncX21Djmrudoeg1k0c=",
       stepNo: 4,
@@ -68,9 +68,9 @@ function Production() {
   };
 
   return (
-    <div className="flex flex-col px-4 sm:px-12 py-6 sm:py-12 min-h-screen b-blue-300/35 relative sm:pb-10 text-white bg-[#1B4449]">
+    <div className="flex flex-col px-4 sm:px-12 py-6 min-h-screen b-blue-300/35 relative sm:pb-10 text-white bg-[#1B4449]">
       {/* <div className="max-w-[1280px] m-auto"> */}
-        <div className="about-us-heading pt-10 pb-4  sm:py-14 px-4 sm:px-0">
+        <div className="about-us-heading pt-10 pb-4  sm:py-10 px-4 sm:px-0">
           <h1 className="text-3xl sm:text-5xl font-medium ">
             Production Process
           </h1>

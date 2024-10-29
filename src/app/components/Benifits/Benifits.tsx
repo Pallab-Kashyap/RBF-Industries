@@ -8,34 +8,34 @@ function Benifits() {
 
   const benifits = [
     {
-      icon: "/assets/logo.png",
-      heading: "IoT - Internet of Things",
-      content: "Centralized management of physical assets and buildings.",
+      icon: "/assets/benefits1.svg",
+      heading: "Reduced Emissions",
+      content: "Biomass briquettes emit less CO₂,improving air quality in factories.",
     },
     {
-      icon: "/assets/logo.png",
-      heading: "IoT - Internet of Things",
-      content: "Centralized management of physical assets and buildings.",
+      icon: "/assets/benefits1.svg",
+      heading: "Cost Savings",
+      content: "Lower fuel costs compared to coal,helping reduce overall expenses.",
     },
     {
-      icon: "/assets/logo.png",
-      heading: "IoT - Internet of Things",
-      content: "Centralized management of physical assets and buildings.",
+      icon: "/assets/benefits3.svg",
+      heading: "Cleaner Workplace",
+      content: "Lower ash and dust output keep the factory environment cleaner.",
     },
     {
-      icon: "/assets/logo.png",
-      heading: "IoT - Internet of Things",
-      content: "Centralized management of physical assets and buildings.",
+      icon: "/assets/benefits4.svg",
+      heading: "Efficient Combustion",
+      content: "High combustion efficiency translates to more energy per unit, lowering fuel consumption.",
     },
     {
-      icon: "/assets/logo.png",
-      heading: "IoT - Internet of Things",
-      content: "Centralized management of physical assets and buildings.",
+      icon: "/assets/benefits5.svg",
+      heading: "Versatile Fuel Source",
+      content: "Can be used in various industrial boilers with minimal modifications.",
     },
     {
-      icon: "/assets/logo.png",
-      heading: "IoT - Internet of Things",
-      content: "Centralized management of physical assets and buildings..",
+      icon: "/assets/benefits6.svg",
+      heading: "Improves Company Reputation",
+      content: "Environmentally responsible choice aligns with green industry standards.",
     },
   ];
 

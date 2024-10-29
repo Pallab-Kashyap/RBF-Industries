@@ -13,19 +13,23 @@ const Clients = () => {
   ];
 
   const marqueeRef = useRef(null);
-  const [duration, setduration] = useState(40);
+  const [displaySize, setDisplaySize] = useState(window.innerWidth);
 
-
+  useEffect(()=>{
+    setDisplaySize(window.innerWidth)
+  },[])
 
   useEffect(() => {
     
+    const duration = displaySize < 600 ? 18 : 40
+
     const container = marqueeRef.current;
 
     if (!container) return;
 
     const animation = gsap.to(container, {
       xPercent: -50,
-      duration: 40,
+      duration,
       ease: "none",
       repeat: -1,
     });
