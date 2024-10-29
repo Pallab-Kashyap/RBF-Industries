@@ -40,7 +40,7 @@ function Blogs() {
   return (
     <div className="px-8 sm:px-12 py-6 sm:py-12 h-fit">
       <div className="max-w-[1280px] m-auto">
-        <div className="blogs-heading py-4 sm:pb-12">
+        <div className="blogs-heading py-8 pb-10 sm:pb-12">
           <h2 ref={heading} className="text-3xl sm:text-5xl font-medium">
             Blogs on Biomass Briquettes
           </h2>
