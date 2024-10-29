@@ -19,7 +19,7 @@ function Hero() {
             <Image 
                 src={logo} 
                 alt="Company logo"
-                className="sm:h-[60vh] w-auto"
+                className="h-[45vh] sm:h-[60vh] w-auto"
                 width={500}
                 height={500}
                 priority
