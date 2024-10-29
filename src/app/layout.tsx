@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Analytics } from '@vercel/analytics/react'
 import Head from "next/head";
-import { url } from "inspector";
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
