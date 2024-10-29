@@ -4,12 +4,12 @@ import gsap from "gsap";
 
 const Clients = () => {
   const logos = [
-    { logo: "/assets/logo.png" },
-    { logo: "/assets/logo.png" },
-    { logo: "/assets/logo.png" },
-    { logo: "/assets/logo.png" },
-    { logo: "/assets/logo.png" },
-    { logo: "/assets/logo.png" },
+    { logo: "/assets/logo.svg" },
+    { logo: "/assets/logo.svg" },
+    { logo: "/assets/logo.svg" },
+    { logo: "/assets/logo.svg" },
+    { logo: "/assets/logo.svg" },
+    { logo: "/assets/logo.svg" },
   ];
 
   const marqueeRef = useRef(null);

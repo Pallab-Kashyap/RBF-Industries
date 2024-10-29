@@ -41,7 +41,7 @@ const ContactForm: React.FC = () => {
           className='h-full object-cover rounded-l-xl'
         />
       </div>
-      <div className=" bg-gray-800 rounded-xl sm:rounded-l-none shadow-lg px-6 py-4 mx-auto sm:mx-none w-full sm:w-auto">
+      <div className=" bg-gray-800 rounded-xl sm:rounded-l-none shadow-lg px-6 py-8 sm:py-4 mx-auto sm:mx-none w-full sm:w-auto">
         <h4 className="text-2xl font-bold text-white mb-3 text-center sm:text-left">Contact Us</h4>
         <form onSubmit={handleSubmit} className="space-y-6 ">
           

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useRef, useState } from "react";
-import logo from "../../../public/assets/logo.png";
+import logo from "../../../public/assets/logo.svg";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 

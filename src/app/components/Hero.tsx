@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import logo from "../../../public/assets/Layer_1.png"
+import logo from "../../../public/assets/homoLogo.svg"
 import homeImg from "../../../public/assets/home_page_img.png"
 
 function Hero() {
