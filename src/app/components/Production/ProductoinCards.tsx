@@ -88,13 +88,11 @@ const ProductionCards: React.FC<ProductionCardProps> = ({ prop }) => {
           <div className="w-10 h-10 rounded-full bg-transparent border-[1px] flex items-center justify-center text-xl font-bold border-white text-white">
             {stepNo}
           </div>
-          <h2 className="text-2xl font-medium fade-in" data-aos="fade-up">
+          <h2 className="text-2xl font-medium">
             {title}
           </h2>
           <p
-            className="fade-in text-base"
-            data-aos="fade-up"
-            data-aos-delay="100"
+            className=" text-base"
           >
             {description}
           </p>
@@ -104,9 +102,7 @@ const ProductionCards: React.FC<ProductionCardProps> = ({ prop }) => {
               alt={title}
               width={500}
               height={350}
-              className="w-full h-[40vh] object-cover rounded-lg fade-in"
-              data-aos="fade-up"
-              data-aos-delay="200"
+              className="w-full h-[40vh] object-cover rounded-lg"
             />
           </div>
         </div>
@@ -117,12 +113,11 @@ const ProductionCards: React.FC<ProductionCardProps> = ({ prop }) => {
             <>
               <div className="sm:w-1/2 pr-16 flex-1 sm:text-balance">
                 <h2
-                  className="text-2xl font-bold mb-4 fade-in mt-14"
-                  data-aos="fade-up"
+                  className="text-2xl font-bold mb-4 mt-14"
                 >
                   {title}
                 </h2>
-                <p className="fade-in" data-aos="fade-up" data-aos-delay="100">
+                <p className="" >
                   {description}
                 </p>
               </div>
@@ -152,9 +147,7 @@ const ProductionCards: React.FC<ProductionCardProps> = ({ prop }) => {
                   alt={title}
                   width={500}
                   height={300}
-                  className="w-full h-auto rounded-lg fade-in"
-                  data-aos="fade-up"
-                  data-aos-delay="200"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
             </>
@@ -166,9 +159,7 @@ const ProductionCards: React.FC<ProductionCardProps> = ({ prop }) => {
                   alt={title}
                   width={500}
                   height={300}
-                  className="w-[38vw] rounded-lg fade-in"
-                  data-aos="fade-up"
-                  data-aos-delay="200"
+                  className="w-[38vw] rounded-lg"
                 />
               </div>
 
@@ -194,15 +185,12 @@ const ProductionCards: React.FC<ProductionCardProps> = ({ prop }) => {
               <div className="w-full sm:w-1/2 flex-1 text-balance ">
                 <div className="sm:ml-16">
                   <h2
-                    className="text-2xl font-bold mb-4 fade-in mt-14"
-                    data-aos="fade-up"
+                    className="text-2xl font-bold mb-4 mt-14"
                   >
                     {title}
                   </h2>
                   <p
-                    className="fade-in"
-                    data-aos="fade-up"
-                    data-aos-delay="100"
+                    className=""
                   >
                     {description}
                   </p>

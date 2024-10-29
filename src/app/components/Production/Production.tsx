@@ -68,8 +68,8 @@ function Production() {
   };
 
   return (
-    <div className="flex flex-col px-4 sm:px-12 py-6 min-h-screen b-blue-300/35 relative sm:pb-10 text-white bg-[#1B4449]">
-      {/* <div className="max-w-[1280px] m-auto"> */}
+    <div className="flex flex-col px-4 sm:px-12 2xl:px-[150px] py-6 min-h-screen b-blue-300/35 relative sm:pb-10 text-white bg-[#1B4449]">
+      
         <div className="about-us-heading pt-10 pb-4  sm:py-10 px-4 sm:px-0">
           <h1 className="text-3xl sm:text-5xl font-medium ">
             Production Process
@@ -122,8 +122,7 @@ function Production() {
             </div>
           </div>
         </div>
-      {/* </div> */}
-    </div>
+      </div>
   );
 }
 
