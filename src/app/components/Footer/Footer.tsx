@@ -4,8 +4,8 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="mt-10 sm:mt-0">
-      <div className='pb-10 flex justify-center sm:block'>
+    <footer className="mt-10 sm:mt-0 ">
+      <div className='pb-10 sm:block hidden'>
         <Image 
           src={'/assets/logo.png'}
           alt = 'logo'
@@ -13,10 +13,10 @@ const Footer: React.FC = () => {
           height={150}
         />
       </div>
-      <div className="flex sm:gap-12 gap-6">
+      <div className="flex flex-col gap-8 sm:flex-row sm:gap-12 px-4 sm:px-0">
         {/* Products Section */}
-        <div className="text-center md:text-left">
-          <h4 className="font-semibold text-lg mb-5">PRODUCTS</h4>
+        <div className="text-left">
+          <h4 className="font-semibold text-lg mb-3">PRODUCTS</h4>
           <ul className="space-y-3">
             <li>Biomass Briquettes</li>
             <li>Sawdust</li>
@@ -25,8 +25,8 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Company Section */}
-        <div className="text-center md:text-left">
-          <h4 className="font-semibold text-lg mb-5">COMPANY</h4>
+        <div className="text-left">
+          <h4 className="font-semibold text-lg mb-3">COMPANY</h4>
           <ul className="space-y-3">
             <li>About Us</li>
             <li>Benefits</li>
@@ -35,8 +35,8 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Social Networks Section */}
-        <div className="text-center md:text-left">
-          <h4 className="font-semibold text-lg mb-5">SOCIAL </h4>
+        <div className="text-left">
+          <h4 className="font-semibold text-lg mb-3">SOCIAL </h4>
           <ul className="space-y-3">
             <li>About Us</li>
             <li>Benefits</li>

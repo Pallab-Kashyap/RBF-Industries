@@ -82,6 +82,7 @@ const ProductionCards: React.FC<ProductionCardProps> = ({ prop }) => {
       style={{ opacity: opacity, transition: "opacity 0.3s linear" }}
     >
       <div className="sm:flex sm:min-h-[50vh] flex-col sm:flex-row ">
+        
         {/* Mobile layout */}
         <div className="sm:hidden px-4 py-6 space-y-4">
           <div className="w-10 h-10 rounded-full bg-transparent border-[1px] flex items-center justify-center text-xl font-bold border-white text-white">
@@ -181,7 +182,7 @@ const ProductionCards: React.FC<ProductionCardProps> = ({ prop }) => {
                 >
                   {stepNo}
                 </div>
-                <div className="complitionLine bg-gray-300 flex-1 w-1 relative ">
+                <div className="complitionLine bg-gray-600 flex-1 w-1 relative ">
                   <div
                     id={`completion-line-${stepNo}`}
                     className="absolute top-0 w-full bg-white "
