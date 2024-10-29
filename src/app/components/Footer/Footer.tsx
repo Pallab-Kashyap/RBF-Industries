@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
     <footer className="mt-10 sm:mt-0 ">
       <div className='pb-10 sm:block hidden'>
         <Image 
-          src={'/assets/logo.png'}
+          src={'/assets/logo.svg'}
           alt = 'logo'
           width={150}
           height={150}
