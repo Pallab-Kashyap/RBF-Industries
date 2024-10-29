@@ -66,7 +66,7 @@ function Navbar() {
             <Link href="#blogs">Blogs</Link>
           </li>
           <li>
-            <Link href="#benifits">Benifits</Link>
+            <Link href="#benefits">Benefits</Link>
           </li>
           <li>
             <Link href="#footer">Our Clients</Link>
@@ -77,10 +77,9 @@ function Navbar() {
           ref={ctaButtonRef}
           className="cta-button flex items-center gap-3 sm:gap-8"
         >
-          <p className="font-bold">EN</p>
           <Link
             href="#footer"
-            className="bg-[#f57c00] text-white p-1 px-2 rounded-md sm:p-3 hidden sm:block"
+            className="bg-[#0FB300] text-white p-1 px-2 rounded-md sm:p-3 hidden sm:block"
           >
             Contact Us
           </Link>
@@ -112,7 +111,7 @@ function Navbar() {
                 <Link href="#blogs">Blogs</Link>
               </li>
               <li className="border-b-2 border-gray-400/25 w-full py-4">
-                <Link href="#benifits">Benifits</Link>
+                <Link href="#benefits">Benefits</Link>
               </li>
               <li className=" w-full py-4">
                 <Link href="#footer">Our Clients</Link>
@@ -121,7 +120,7 @@ function Navbar() {
             <div className="text-center py-4">
               <Link
                 href="#footer"
-                className="bg-[#f57c00] text-white rounded-md p-3 px-10 align-middle"
+                className="bg-[#0FB300] text-white rounded-md p-3 px-10 align-middle"
               >
                 Contact Us
               </Link>

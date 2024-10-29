@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Analytics } from '@vercel/analytics/react'
 import Head from "next/head";
+import { url } from "inspector";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -16,6 +17,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.rbfindustries.in'),
+  keywords: ["ravi bio fuel industries", "ravi", "rbf industries", "rbf", "Biofuel Hyderabad", "biomass briquettes", "industrial fuel", "eco-friendly biofuel", "biomass fuel for factories"],
   title: "Ravi Bio Fuel Industries",
   description: "Based in Hyderabad, we provide sustainable biomass briquettes for industrial fuel needs. Our eco-friendly biofuel solutions offer efficient, cleaner-burning energy for factories, helping reduce carbon footprints. Choose us for high-quality biomass briquettes and support a sustainable future.",
 };
@@ -37,8 +40,7 @@ export default function RootLayout({
           name="keywords"
           content="Biofuel Hyderabad, biomass briquettes, industrial fuel, eco-friendly biofuel, renewable energy, sustainable fuel, biomass fuel for factories"
         />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://rbf-industries-53j5-1p8kz5i99-pallab-kashyaps-projects.vercel.app/" />
+       
         {/* Add the favicon link */}
         <link rel="icon" href="/favicon.ico" />
       </Head>

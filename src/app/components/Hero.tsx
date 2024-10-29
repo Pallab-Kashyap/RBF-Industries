@@ -26,8 +26,9 @@ function Hero() {
             />
         </div>
         <div className="sm:mb-10 text-center">
-          <h1 className="uppercase text-4xl sm:text-5xl leading-snug sm:leading-none font-semibold text-white sm:pb-10">Welcome to Biomass</h1>
-          <h1 className="uppercase text-4xl sm:text-5xl leading-snug sm:leading-none font-semibold text-white pb-10">Briquettes</h1>
+          <h1 className="uppercase text-4xl sm:text-5xl leading-snug sm:leading-none font-semibold text-white sm:pb-6 sm:mr-0">Welcome to</h1>
+          <h1 className="uppercase text-4xl sm:text-5xl leading-snug sm:leading-none font-semibold text-white pb-6">Ravi Bio Fuel</h1>
+          <h1 className="uppercase text-4xl sm:text-5xl leading-snug sm:leading-none font-semibold text-white pb-10">industries</h1>
           <p className="text-white text-lg font-medium">Your sustainable energy partner</p>
         </div>
       </div>

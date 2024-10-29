@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
-import BenifitCard from "./BenifitCard";
+import BenifitCard from "./BenefitCard";
 
 function Benifits() {
   const heading = useRef(null);

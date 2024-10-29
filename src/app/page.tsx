@@ -3,7 +3,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Blogs from "./components/Blogs/Blogs";
 import Production from "./components/Production/Production";
-import Benifits from "./components/Benifits/Benifits";
+import Benifits from "./components/Benefits/Benefits";
 import FooterContainer from "./components/Footer/FooterContainer";
 
 export default function Home() {
@@ -33,8 +33,8 @@ export default function Home() {
       </section>
 
       <section
-        id="benifits"
-        className="benifits min-h-screen "
+        id="benefits"
+        className="benefits min-h-screen "
       >
         <Benifits />
       </section>
