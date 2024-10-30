@@ -1,19 +1,27 @@
 "use client"
 
-import { sendMail } from '@/utils/mailService';
+import  sendMail  from '@/utils/mailService';
 import React, { useState } from 'react';
 
 
 interface ContactFormData {
-  name: string;
+  firstName: string;
+  lastName: string;
   email: string;
+  phone: string;
   message: string;
 }
 
+// const ContactForm: React.FC<any> = ({setShowPopup, setPopMessage}) => {
 const ContactForm: React.FC = () => {
+
+  const [ emailState, setEmailState ] = useState(false)
+
   const [formData, setFormData] = useState<ContactFormData>({
-    name: '',
+    firstName: '',
+    lastName: '',
     email: '',
+    phone: "",
     message: '',
   });
 
@@ -22,12 +30,15 @@ const ContactForm: React.FC = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    setEmailState(true)
 
-    sendMail()
+    const res = await sendMail(formData)
+    const popMsg = res.status ? 'Email sent successfully we will contact you soon' : 'Oops something went wrong please try later'
+    // setPopMessage(popMsg)
+    setEmailState(false)
+    // setShowPopup(true)
   };
 
   return (
@@ -48,35 +59,25 @@ const ContactForm: React.FC = () => {
           <div className='flex flex-col sm:flex-row gap-5'>
           <input
             type="text"
-            name="name"
-            placeholder="Name"
-            value={formData.name}
+            name="firstName"
+            placeholder="First Name"
+            value={formData.firstName}
             onChange={handleInputChange}
             className=" px-4 py-1 bg-gray-700 text-white rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
           <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={formData.email}
+            type="text"
+            name="lastName"
+            placeholder="Last Name"
+            value={formData.lastName}
             onChange={handleInputChange}
             className=" px-4 py-1 bg-gray-700 text-white rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            required
           />
           </div>
 
           <div className='flex flex-col sm:flex-row gap-5'>
           <input
-            type="text"
-            name="name"
-            placeholder="Name"
-            value={formData.name}
-            onChange={handleInputChange}
-            className=" px-4 py-1 bg-gray-700 text-white rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            required
-          />
-          <input
             type="email"
             name="email"
             placeholder="Email"
@@ -85,11 +86,19 @@ const ContactForm: React.FC = () => {
             className=" px-4 py-1 bg-gray-700 text-white rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
+          <input
+            type="number"
+            name="phone"
+            placeholder="Mobile No."
+            value={formData.phone}
+            onChange={handleInputChange}
+            className=" px-4 py-1 bg-gray-700 text-white rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
           </div>
 
           <textarea
             name="message"
-            placeholder="Your message"
+            placeholder="Your Message"
             value={formData.message}
             onChange={handleInputChange}
             className="w-full p-4 h-20 bg-gray-700 text-white rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -97,9 +106,15 @@ const ContactForm: React.FC = () => {
           ></textarea>
           <button
             type="submit"
-            className="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md"
+            className={`w-full ${emailState ? '' : 'py-3'} bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md`}
           >
-            Submit
+            { emailState ?  
+            (
+              <div className='flex justify-center'>
+                <img src="/assets/mailLoadingAnimation.gif" alt="" className='h-12'/>
+              </div>
+            )
+            : 'Submit'}
           </button>
         </form>
       </div>

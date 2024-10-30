@@ -1,45 +1,75 @@
-// pages/index.tsx
+"use client"
+
 import Footer from "./Footer";
 import ContactForm from "./ContactForm";
 import Clients from "./Clients";
 import Link from "next/link";
+// import PopupMessage from "@/utils/PopupMessage";
+// import { useState } from "react";
 
 const HomePage: React.FC = () => {
+
+  // const [showPopup, setShowPopup] = useState(true);
+  // const [popMessage, setPopMessage] = useState('fjiowfa oaijfeio afeoi i afeoiw')
+
   return (
     <>
       <Clients />
-      <div className="sm:flex justify-between px-4 sm:px-12 2xl:px-0 py-8 max-w-[1280px] m-auto ">
+      <div className="sm:flex justify-between px-4 sm:px-12 2xl:px-0 py-8 max-w-[1280px] m-auto">
+        {/* <ContactForm setShowPopup={setShowPopup} setPopMessage={setPopMessage}/> */}
         <ContactForm />
         <Footer />
       </div>
+        {/* {showPopup && (
+        <PopupMessage
+          message={popMessage}
+          duration={5000} 
+          onClose={() => setShowPopup(false)}
+        />
+      )} */}
       <div className="sm:flex justify-between px-8 sm:px-12  border-t pb-6 border-gray-300 py-6 ">
         <p className="text-[14px] text-gray-600 mb-4 sm:mb-0">
-          © 2024 Nextbitt. All rights reserved.
+          © 2024 Ravi Bio Fuel Industries. All rights reserved.
         </p>
         <div className="flex flex-col sm:flex-row gap-1 sm:gap-4 flex-wrap justify-evenly">
           <div>
-            <Link href="#about" className="text-[14px] text-gray-600 hover:underline">
-              Customer support
+            <Link
+              href="#hero"
+              className="text-[14px] text-gray-600 hover:underline"
+            >
+              Home
             </Link>
           </div>
           <div>
-            <a href="/about" className="text-[13px] text-gray-600 hover:underline">
-              Whistleblower Channel
+            <a
+              href="#about"
+              className="text-[13px] text-gray-600 hover:underline"
+            >
+              About Us
             </a>
           </div>
           <div>
-            <a href="#" className="text-[13px] text-gray-600 hover:underline">
-              Privacy and Cookies Policy
+            <a
+              href="#production"
+              className="text-[13px] text-gray-600 hover:underline"
+            >
+              Production Process
             </a>
           </div>
           <div>
-            <a href="#" className="text-[13px] text-gray-600 hover:underline">
-              Management System Policy
+            <a
+              href="#blogs"
+              className="text-[13px] text-gray-600 hover:underline"
+            >
+              Blogs on Biomass Briquettes
             </a>
           </div>
           <div>
-            <a href="#" className="text-[13px] text-gray-600 hover:underline">
-              Compliment, Suggestion and Complaint Book
+            <a
+              href="#benefits"
+              className="text-[13px] text-gray-600 hover:underline"
+            >
+              Benefits of Biomass Briquettes
             </a>
           </div>
         </div>
