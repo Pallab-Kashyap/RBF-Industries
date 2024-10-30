@@ -80,7 +80,7 @@ const ContactForm: React.FC = () => {
           <input
             type="text"
             name="lastName"
-            placeholder="Last Name"
+            placeholder="Last Name (optional)"
             value={formData.lastName}
             onChange={handleInputChange}
             className=" px-4 py-1 bg-gray-700 text-white rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -100,7 +100,7 @@ const ContactForm: React.FC = () => {
           <input
             type="number"
             name="phone"
-            placeholder="Mobile No."
+            placeholder="Mobile No. (optional)"
             value={formData.phone}
             onChange={handleInputChange}
             className=" px-4 py-1 bg-gray-700 text-white rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
