@@ -36,6 +36,8 @@ const ContactForm: React.FC = () => {
 
     await sendMail(formData)
     // const popMsg = res.status ? 'Email sent successfully we will contact you soon' : 'Oops something went wrong please try later'
+    // const res = await sendMail(formData)
+   // const popMsg = res.status ? 'Email sent successfully we will contact you soon' : 'Oops something went wrong please try later'
     // setPopMessage(popMsg)
     setEmailState(false)
     // setShowPopup(true)
