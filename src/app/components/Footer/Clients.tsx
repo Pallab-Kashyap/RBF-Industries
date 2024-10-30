@@ -1,15 +1,27 @@
 "use client";
-import { useEffect, useRef} from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import {
+  client1,
+  client2,
+  client3,
+  client4,
+  client5,
+  client6,
+  client7,
+} from "@/../public/assets/clients/Clients";
+import Image from "next/image";
 
 const Clients = () => {
+
   const logos = [
-    { logo: "/assets/logo.svg" },
-    { logo: "/assets/logo.svg" },
-    { logo: "/assets/logo.svg" },
-    { logo: "/assets/logo.svg" },
-    { logo: "/assets/logo.svg" },
-    { logo: "/assets/logo.svg" },
+    { logo: client1 },
+    { logo: client2 },
+    { logo: client3 },
+    { logo: client4 },
+    { logo: client5 },
+    { logo: client6 },
+    { logo: client7 },
   ];
 
   const marqueeRef = useRef(null);
@@ -20,7 +32,6 @@ const Clients = () => {
   // },[])
 
   useEffect(() => {
-    
     // const duration = displaySize < 600 ? 18 : 40
 
     const container = marqueeRef.current;
@@ -41,7 +52,9 @@ const Clients = () => {
 
   return (
     <div className="bg-[#1B4449] p-4 sm:px-12 2xl:px-0">
-      <h1 className="text-center text-2xl sm:text-4xl p-3 sm:p-6 text-white">Our Past Clients</h1>
+      <h1 className="text-center text-2xl sm:text-4xl p-3 sm:p-6 text-white">
+        Our Past Clients
+      </h1>
 
       <div className="relative overflow-hidden  max-w-[1280px] sm:mx-auto ">
         <div
@@ -54,12 +67,11 @@ const Clients = () => {
               key={`first-${index}`}
               className="flex flex-shrink-0 items-center justify-center sm:w-48 mx-4"
             >
-              <img
+              <Image
                 src={logo.logo}
                 alt={`Client logo ${index}`}
                 className="sm:h-24 sm:w-24 h-16 w-16 object-contain"
               />
-              <p className="text-white">{index}</p>
             </div>
           ))}
           {/* {DUP} */}
@@ -68,12 +80,11 @@ const Clients = () => {
               key={`first-${index}`}
               className="flex flex-shrink-0 items-center justify-center sm:w-48 mx-4"
             >
-              <img
+              <Image
                 src={logo.logo}
                 alt={`Client logo ${index}`}
                 className="sm:h-24 sm:w-24 h-16 w-16 object-contain"
               />
-              <p className="text-white">{index}</p>
             </div>
           ))}
           {/* {DUP} */}
@@ -82,12 +93,11 @@ const Clients = () => {
               key={`first-${index}`}
               className="flex flex-shrink-0 items-center justify-center sm:w-48 mx-4"
             >
-              <img
+              <Image
                 src={logo.logo}
                 alt={`Client logo ${index}`}
                 className="sm:h-24 sm:w-24 h-16 w-16 object-contain"
               />
-              <p className="text-white">{index}</p>
             </div>
           ))}
           {/* {DUP} */}
@@ -96,12 +106,11 @@ const Clients = () => {
               key={`first-${index}`}
               className="flex flex-shrink-0 items-center justify-center sm:w-48 mx-4"
             >
-              <img
+              <Image
                 src={logo.logo}
                 alt={`Client logo ${index}`}
                 className="sm:h-24 sm:w-24 h-16 w-16 object-contain"
               />
-              <p className="text-white">{index}</p>
             </div>
           ))}
           {/* {DUP} */}
@@ -110,15 +119,13 @@ const Clients = () => {
               key={`first-${index}`}
               className="flex flex-shrink-0 items-center justify-center sm:w-48 mx-4"
             >
-              <img
+              <Image
                 src={logo.logo}
                 alt={`Client logo ${index}`}
                 className="sm:h-24 sm:w-24 h-16 w-16 object-contain"
               />
-              <p className="text-white">{index}</p>
             </div>
           ))}
-          
         </div>
       </div>
     </div>

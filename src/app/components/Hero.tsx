@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import logo from "../../../public/assets/homoLogo.svg"
-import homeImg from "../../../public/assets/home_page_img.png"
+import homeImg from "../../../public/assets/hero-background.jpg"
 
 function Hero() {
   return (
