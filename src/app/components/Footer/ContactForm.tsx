@@ -12,7 +12,13 @@ interface ContactFormData {
   message: string;
 }
 
-const ContactForm: React.FC<any> = ({setShowPopup, setPopMessage}) => {
+interface ContactFormProps {
+  setShowPopup: (value: boolean) => void;
+  setPopMessage: (message: boolean) => void;
+}
+
+
+const ContactForm: React.FC<ContactFormProps> = ({setShowPopup, setPopMessage}) => {
 
   const [ emailState, setEmailState ] = useState(false)
 
@@ -34,7 +40,7 @@ const ContactForm: React.FC<any> = ({setShowPopup, setPopMessage}) => {
     setEmailState(true)
 
 
-    const res = await sendMail(formData)
+    const res: {status : boolean} = await sendMail(formData)
    
     setPopMessage(res.status)
     setEmailState(false)

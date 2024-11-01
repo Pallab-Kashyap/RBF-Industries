@@ -13,7 +13,7 @@ const sendMail = async (data) => {
 
    return res;
   } catch (error) {
-    return {status: false, error}
+    return {status: false}
   }
 
 }
