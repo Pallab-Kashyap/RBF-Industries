@@ -12,8 +12,7 @@ interface ContactFormData {
   message: string;
 }
 
-// const ContactForm: React.FC<any> = ({setShowPopup, setPopMessage}) => {
-const ContactForm: React.FC = () => {
+const ContactForm: React.FC<any> = ({setShowPopup, setPopMessage}) => {
 
   const [ emailState, setEmailState ] = useState(false)
 
@@ -34,13 +33,12 @@ const ContactForm: React.FC = () => {
     e.preventDefault();
     setEmailState(true)
 
-    await sendMail(formData)
-    // const popMsg = res.status ? 'Email sent successfully we will contact you soon' : 'Oops something went wrong please try later'
-    // const res = await sendMail(formData)
-   // const popMsg = res.status ? 'Email sent successfully we will contact you soon' : 'Oops something went wrong please try later'
-    // setPopMessage(popMsg)
+
+    const res = await sendMail(formData)
+   
+    setPopMessage(res.status)
     setEmailState(false)
-    // setShowPopup(true)
+    setShowPopup(true)
   };
 
   return (
