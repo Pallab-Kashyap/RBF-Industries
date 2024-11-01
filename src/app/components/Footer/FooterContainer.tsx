@@ -9,7 +9,7 @@ import { useState } from "react";
 
 const HomePage: React.FC = () => {
 
-  const [showPopup, setShowPopup] = useState(true);
+  const [showPopup, setShowPopup] = useState(false);
   const [popMessage, setPopMessage] = useState(false)
 
   return (
