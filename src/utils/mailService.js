@@ -12,7 +12,7 @@ const sendMail = async (data) => {
    .then(res => res.json())
 
    return res;
-  } catch (error) {
+  } catch {
     return {status: false}
   }
 
