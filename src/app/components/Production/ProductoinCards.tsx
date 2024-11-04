@@ -124,11 +124,13 @@ const ProductionCards: React.FC<ProductionCardProps> = ({ prop }) => {
 
               <div className="flex flex-col items-center">
                 <div
-                  className={`w-16 h-16 rounded-full border-2 flex items-center justify-center text-3xl font-bold mt-10 mb-6 transition-all duration-300 ease-in-out ${
-                    isActive
-                      ? "border-white text-white "
-                      : "border-gray-200 text-gray-600"
-                  }`}
+                  className={`w-16 h-16 rounded-full border-2 flex items-center justify-center text-3xl font-bold mt-10 mb-6 transition-all duration-300 ease-in-out text-white`
+                    // ${
+                  //   isActive
+                  //     ? "border-white text-white "
+                  //     : "border-gray-200 text-gray-600"
+                  // }
+                }
                 >
                   {stepNo}
                 </div>
@@ -165,11 +167,13 @@ const ProductionCards: React.FC<ProductionCardProps> = ({ prop }) => {
 
               <div className="flex flex-col items-center">
                 <div
-                  className={`w-16 h-16 rounded-full  border-2 flex items-center justify-center text-3xl font-bold mt-10 mb-6 transition-all duration-300 ease-in-out ${
-                    isActive
-                      ? "border-white text-white"
-                      : "border-gray-200 text-gray-600"
-                  }`}
+                  className={`w-16 h-16 rounded-full border-2 flex items-center justify-center text-3xl font-bold mt-10 mb-6 transition-all duration-300 ease-in-out text-white`
+                    // ${
+                  //   isActive
+                  //     ? "border-white text-white "
+                  //     : "border-gray-200 text-gray-600"
+                  // }
+                }
                 >
                   {stepNo}
                 </div>
