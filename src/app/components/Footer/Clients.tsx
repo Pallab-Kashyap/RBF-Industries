@@ -51,8 +51,8 @@ const Clients = () => {
   }, []);
 
   return (
-    <div className="bg-[#1B4449] p-4 sm:px-12 2xl:px-0">
-      <h1 className="text-center text-2xl sm:text-4xl p-3 sm:p-6 text-white">
+    <div className=" p-4 sm:px-12 2xl:px-0">
+      <h1 className="text-center text-2xl sm:text-4xl p-3 sm:p-6 text-black">
         Our Past Clients
       </h1>
 
