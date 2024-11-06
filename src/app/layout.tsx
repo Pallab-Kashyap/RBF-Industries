@@ -17,8 +17,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.rbfindustries.in'),
-  keywords: ["ravi bio fuel industries", "ravi", "rbf industries", "rbf", "Biofuel Hyderabad", "biomass briquettes", "industrial fuel", "eco-friendly biofuel", "biomass fuel for factories"],
+  metadataBase: new URL('https://rbfindustries.in'),
+  keywords: ["ravi bio fuel industries", "ravi", "rbf industries", "rbf", "Biofuel Hyderabad", "biomass briquettes","biomass briquettes in hyderabad", "industrial fuel", "eco-friendly biofuel", "biomass fuel for factories"],
   title: "Ravi Bio Fuel Industries",
   description: "Based in Hyderabad, we provide sustainable biomass briquettes for industrial fuel needs. Our eco-friendly biofuel solutions offer efficient, cleaner-burning energy for factories, helping reduce carbon footprints. Choose us for high-quality biomass briquettes and support a sustainable future.",
   openGraph: {
