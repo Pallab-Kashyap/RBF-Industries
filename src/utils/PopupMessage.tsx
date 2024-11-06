@@ -24,7 +24,7 @@ const PopupMessage = ({ message, duration = 4000, onClose }: {message: boolean, 
 
   
   return (
-    <div className={`absolute right-6 bottom-3 bg-white shadow-lg border-2 ${message ? 'border-green-500' : 'border-red-500'} rounded-lg overflow-hidden max-w-96`}>
+    <div className={`absolute top-0 mr-4 sm:mr-0 sm:top-72 sm:right-6  bg-white shadow-lg border-2 ${message ? 'border-green-500' : 'border-red-500'} rounded-lg overflow-hidden max-w-96`}>
       <p className="text-gray-900 text-lg p-4">{message ? 'Email sent successfully we will contact you soon' : 'Oops something went wrong please try again later'}</p>
       <div className="w-full h-[6px]">
         <div

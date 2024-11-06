@@ -1,6 +1,6 @@
 
 const sendMail = async (data) => {
-
+  return {status: true}
   try {
     const res = await fetch('https://email-service-zeta.vercel.app', {
       method: 'post',
