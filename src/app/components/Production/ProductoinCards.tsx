@@ -16,7 +16,7 @@ const ProductionCards: React.FC<ProductionCardProps> = ({ prop }) => {
 
   const [completion, setCompletion] = useState(0);
   const [opacity, setOpacity] = useState("0");
-  const [isActive, setIsActive] = useState(false);
+  // const [isActive, setIsActive] = useState(false);
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -38,13 +38,13 @@ const ProductionCards: React.FC<ProductionCardProps> = ({ prop }) => {
           const newCompletion =
             Math.min(1, Math.max(0, scrolledDistance / totalDistance)) * 100;
           setCompletion(newCompletion);
-          setIsActive(rect.top <= lineEntryPoint && rect.top > lineExitPoint);
+          // setIsActive(rect.top <= lineEntryPoint && rect.top > lineExitPoint);
         } else if (rect.top < lineExitPoint) {
           setCompletion(100);
-          setIsActive(false);
+          // setIsActive(false);
         } else {
           setCompletion(0);
-          setIsActive(false);
+          // setIsActive(false);
         }
 
         let opacity = 0;
