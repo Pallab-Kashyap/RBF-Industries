@@ -1,30 +1,38 @@
-"use client"
+"use client";
 
 import Footer from "./Footer";
 import ContactForm from "./ContactForm";
-import Clients from "./Clients";
 import Link from "next/link";
 import PopupMessage from "@/utils/PopupMessage";
 import { useState } from "react";
 
 const HomePage: React.FC = () => {
-
   const [showPopup, setShowPopup] = useState(false);
-  const [popMessage, setPopMessage] = useState(false)
+  const [popMessage, setPopMessage] = useState(false);
 
   return (
     <>
-      <Clients />
-      <div className="relative sm:flex justify-between px-4 sm:px-12 2xl:px-0 py-8 max-w-[1280px] m-auto">
-        <ContactForm setShowPopup={setShowPopup} setPopMessage={setPopMessage}/>
-        <Footer />
-        {showPopup && (
-        <PopupMessage
-          message={popMessage}
-          duration={4000} 
-          onClose={() => setShowPopup(false)}
-        />
-      )}
+      <div className="px-4 sm:px-12 2xl:px-0 py-8 max-w-[1280px] m-auto ">
+        <div
+          className="relative  flex flex-col  sm:flex-row justify-between gap-5 sm:gap-1  w-full p-1 rounded-2xl "
+          style={{ boxShadow: "0px 0px 20px 1px rgba(0, 0, 0, 0.2);" }}
+        >
+
+            <ContactForm
+              setShowPopup={setShowPopup}
+              setPopMessage={setPopMessage}
+            />
+
+            <Footer />
+
+          {showPopup && (
+            <PopupMessage
+              message={popMessage}
+              duration={4000}
+              onClose={() => setShowPopup(false)}
+            />
+          )}
+        </div>
       </div>
       <div className="sm:flex justify-between px-8 sm:px-12  border-t pb-6 border-gray-300 py-6 ">
         <p className="text-[14px] text-gray-600 mb-4 sm:mb-0">

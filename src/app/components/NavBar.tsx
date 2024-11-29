@@ -14,6 +14,8 @@ function Navbar() {
   const menu = useRef(null);
   const [displayMenu, setDisplayMenu] = useState(false);
 
+
+
   useGSAP(() => {
     gsap.from(logoRef.current, {
       y: -200,
@@ -47,7 +49,7 @@ function Navbar() {
   }, [displayMenu]);
 
   return (
-    <header className="">
+    <header className=" fixed w-full top-0 z-50 bg-white shadow-md">
       <nav className="nav flex py-3 px-4 justify-between items-center sm:px-12 relative z-20 max-w-[1280px] m-auto">
         <div ref={logoRef} className=" w-24 sm:w-36">
           <Image src={logo} alt="Company Logo" />
@@ -56,20 +58,25 @@ function Navbar() {
           ref={navLinksRef}
           className="nav-links sm:flex items-center gap-8 hidden text-lg"
         >
-          <li>
-            <Link href="#about">About Us</Link>
+          <li className="group relative">
+            <Link href="/#about" >About Us</Link>
+            <div className="w-0 bg-green-500 h-[3px] transition-all  rounded-2xl absolute group-hover:w-full"></div>
           </li>
-          <li>
-            <Link href="#production">Production</Link>
+          <li className="group relative">
+            <Link href="/#production">Production</Link>
+            <div className="w-0 bg-green-500 h-[3px] transition-all  rounded-2xl absolute group-hover:w-full"></div>
           </li>
-          <li>
-            <Link href="#blogs">Blogs</Link>
+          <li className="group relative">
+            <Link href="/#blogs">Blogs</Link>
+            <div className="w-0 bg-green-500 h-[3px] transition-all  rounded-2xl absolute group-hover:w-full"></div>
           </li>
-          <li>
-            <Link href="#benefits">Benefits</Link>
+          <li className="group relative">
+            <Link href="/#benefits">Benefits</Link>
+            <div className="w-0 bg-green-500 h-[3px] transition-all  rounded-2xl absolute group-hover:w-full"></div>
           </li>
-          <li>
-            <Link href="#footer">Our Clients</Link>
+          <li className="group relative">
+            <Link href="/#footer">Our Clients</Link>
+            <div className="w-0 bg-green-500 h-[3px] transition-all rounded-2xl absolute group-hover:w-full"></div>
           </li>
         </ul>
 
@@ -78,7 +85,7 @@ function Navbar() {
           className="cta-button flex items-center gap-3 sm:gap-8"
         >
           <Link
-            href="#footer"
+            href="/#footer"
             className="bg-[#0FB300] text-white p-1 px-2 rounded-md sm:p-3 hidden sm:block"
           >
             Contact Us
@@ -100,21 +107,21 @@ function Navbar() {
               className="nav-links flex flex-col items-center text-lg w-full px-6 "
             >
               <li className="border-b-2 border-gray-400/25 w-full py-4">
-                <Link href="#about" className="">
+                <Link href="/#about" className="">
                   About Us
                 </Link>
               </li>
               <li className="border-b-2 border-gray-400/25 w-full py-4">
-                <Link href="#production">Production</Link>
+                <Link href="/#production">Production</Link>
               </li>
               <li className="border-b-2 border-gray-400/25 w-full py-4">
-                <Link href="#blogs">Blogs</Link>
+                <Link href="/#blogs">Blogs</Link>
               </li>
               <li className="border-b-2 border-gray-400/25 w-full py-4">
-                <Link href="#benefits">Benefits</Link>
+                <Link href="/#benefits">Benefits</Link>
               </li>
               <li className=" w-full py-4">
-                <Link href="#footer">Our Clients</Link>
+                <Link href="/#footer">Our Clients</Link>
               </li>
             </ul>
             <div className="text-center py-4">

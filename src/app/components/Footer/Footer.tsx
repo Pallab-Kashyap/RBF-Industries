@@ -1,51 +1,17 @@
 // components/Footer.tsx
-import Image from 'next/image';
-import React from 'react';
+
+import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="mt-10 sm:mt-0 ">
-      <div className='pb-10 sm:block hidden'>
-        <Image 
-          src={'/assets/logo.svg'}
-          alt = 'logo'
-          width={150}
-          height={150}
-        />
-      </div>
-      <div className="flex flex-col gap-8 sm:flex-row sm:gap-12 px-4 sm:px-0">
-        {/* Products Section */}
-        <div className="text-left">
-          <h4 className="font-semibold text-lg mb-3">PRODUCTS</h4>
-          <ul className="space-y-3">
-            <li>Biomass Briquettes</li>
-            <li>Sawdust</li>
-            <li>Agri Waste</li>
-          </ul>
-        </div>
-
-        {/* Company Section */}
-        <div className="text-left">
-          <h4 className="font-semibold text-lg mb-3">COMPANY</h4>
-          <ul className="space-y-3">
-            <li>About Us</li>
-            <li>Benefits</li>
-            <li>Blogs</li>
-          </ul>
-        </div>
-
-        {/* Social Networks Section */}
-        <div className="text-left">
-          <h4 className="font-semibold text-lg mb-3">SOCIAL </h4>
-          <ul className="space-y-3">
-            <li>About Us</li>
-            <li>Benefits</li>
-            <li>Blogs</li>
-          </ul>
-        </div>
-      </div>
-
-    </footer>
+    <div className="overflow-hidden rounded-xl flex-1">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15215.986943133721!2d78.3448502!3d17.5553421!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8ddfba9644c9%3A0x21080c4023d9f489!2sRavi%20Bio%20Fuel%20Industries!5e0!3m2!1sen!2sin!4v1732715301521!5m2!1sen!2sin"
+        className="h-[60vh] sm:h-full w-full"
+        style={{ border: "0" }}
+        loading="lazy"
+      ></iframe>
+    </div>
   );
 };
 

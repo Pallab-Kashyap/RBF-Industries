@@ -1,35 +1,46 @@
-import React, { forwardRef } from 'react'
-import Image from 'next/image'
+import React, { forwardRef } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { Blog } from "./Blogs";
 
-const BlogCard = forwardRef<HTMLDivElement>((props, ref) => {
+interface BlogCardProps {
+  blog: Blog;
+  blogNo: number
+}
+
+const BlogCard = forwardRef<HTMLDivElement, BlogCardProps>(({ blog, blogNo }, ref) => {
   return (
-    <div 
-    ref={ref}
-    className="bg-[#6456E4] rounded-xl overflow-hidden shadow-md sm:shadow-2xl">
-    {/* <img src="./assets/blog_img.png" alt="Blog Image"
+    <div
+      ref={ref}
+      className="bg-[#6456E4] rounded-xl overflow-hidden shadow-md sm:shadow-2xl sm:max-w-[360px]"
+    >
+      {/* <img src="./assets/blog_img.png" alt="Blog Image"
     className=''
     /> */}
-    <div className="relative">
-      <Image 
-        src="https://images.unsplash.com/photo-1726931467680-713bb3f432f5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="Blog Image"
-        width={2070}
-        height={1380}
-        className='rounded-xl shadow-2xl'
-      />
+      <div className="relative overflow-hidden h-[210px]">
+        <Image
+          src={blog.img}
+          alt="Blog Image"
+          className="rounded-xl shadow-2xl h-full w-full"
+        />
+      </div>
+      <div className="blog-content p-3 px-5 text-white">
+        <h3 className="text-2xl pt-8 font-semibold ">{blog.title}</h3>
+        <p className="py-6 overflow-hidden line-clamp-3 max-h-[calc(4*1.5rem)] leading-6">
+          {blog.description}
+        </p>
+        <div className="group mt-5 pb-8 w-fit">
+          <Link href={`/blogs/${blogNo}`}
+           className="blog-btn text-sm  ">
+            Learn more &#8594;
+          </Link>
+          <div className="w-0 bg-white h-[1px] transition-all duration-300 rounded-2xl absolute group-hover:w-[100px]"></div>
+        </div>
+      </div>
     </div>
-    <div className="blog-content p-5 px-3 text-white">
-      <h3 className='text-2xl pt-8 font-semibold'>EAM - Enterprise Asset Management</h3>
-      <p className='py-6 '>
-        Manage your physical assets, buildings, field teams and suppliers
-        on a single platform.
-      </p>
-      <button className="blog-btn pb-8">Learn more</button>
-    </div>
-  </div>
-  )
-})
+  );
+});
 
 BlogCard.displayName = "BlogCard";
 
-export default BlogCard
+export default BlogCard;

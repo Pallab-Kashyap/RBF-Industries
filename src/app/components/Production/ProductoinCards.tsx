@@ -1,17 +1,11 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import { Step } from "./Production";
 
-interface ProductionCardProps {
-  prop: {
-    title: string;
-    description: string;
-    image: string;
-    stepNo: number;
-  };
-}
 
-const ProductionCards: React.FC<ProductionCardProps> = ({ prop }) => {
+
+const ProductionCards = ({ prop }: {prop: Step}) => {
   const { title, description, image, stepNo } = prop;
 
   const [completion, setCompletion] = useState(0);
@@ -75,6 +69,7 @@ const ProductionCards: React.FC<ProductionCardProps> = ({ prop }) => {
     return () => window.removeEventListener("scroll", smoothScrollHandler);
   }, [stepNo]);
 
+
   return (
     <div
       id={`production-card-${stepNo}`}
@@ -106,9 +101,10 @@ const ProductionCards: React.FC<ProductionCardProps> = ({ prop }) => {
             />
           </div>
         </div>
+        
 
         {/* Desktop layout */}
-        <div className="hidden sm:flex min-h-[50vh] flex-row">
+        {/* <div className="hidden sm:flex min-h-[50vh] flex-row">
           {stepNo % 2 !== 0 ? (
             <>
               <div className="sm:w-1/2 pr-16 flex-1 sm:text-balance">
@@ -173,6 +169,94 @@ const ProductionCards: React.FC<ProductionCardProps> = ({ prop }) => {
                   //     ? "border-white text-white "
                   //     : "border-gray-200 text-gray-600"
                   // }
+                }
+                >
+                  {stepNo}
+                </div>
+                <div className="complitionLine bg-gray-600 flex-1 w-1 relative ">
+                  <div
+                    id={`completion-line-${stepNo}`}
+                    className="absolute top-0 w-full bg-white "
+                    style={{ height: `${completion}%` }}
+                  ></div>
+                </div>
+              </div>
+
+              <div className="w-full sm:w-1/2 flex-1 text-balance ">
+                <div className="sm:ml-16">
+                  <h2
+                    className="text-2xl font-bold mb-4 mt-14"
+                  >
+                    {title}
+                  </h2>
+                  <p
+                    className=""
+                  >
+                    {description}
+                  </p>
+                </div>
+              </div>
+            </>
+          )} */}
+
+<div className="hidden sm:flex">
+          {stepNo % 2 !== 0 ? (
+            <>
+              <div className="pr-16 flex-1 ">
+                <h2
+                  className="text-2xl font-bold mb-4 mt-14"
+                >
+                  {title}
+                </h2>
+                <p className="" >
+                  {description}
+                </p>
+              </div>
+
+              <div className="flex flex-col items-center">
+                <div
+                  className={`w-16 h-16 rounded-full border-2 flex items-center justify-center text-3xl font-bold mt-10 mb-6 transition-all duration-300 ease-in-out text-white`
+  
+                }
+                >
+                  {stepNo}
+                </div>
+                <div className="completionLine bg-gray-600 flex-1 w-1">
+                  <div
+                    id={`completion-line-${stepNo}`}
+                    className="w-full bg-white"
+                    style={{ height: `${completion}%` }}
+                  ></div>
+                </div>
+              </div>
+
+              <div className="flex-1 pl-16">
+                <Image
+                  src={image}
+                  alt={title}
+                  width={500}
+                  height={300}
+                  className="w-full h-auto rounded-lg"
+                />
+              </div>
+            </>
+          ) 
+          :
+         (
+            <>
+              <div className="flex-1">
+                <Image
+                  src={image}
+                  alt={title}
+                  width={500}
+                  height={300}
+                  className=" rounded-lg"
+                />
+              </div>
+
+              <div className="flex flex-col items-center">
+                <div
+                  className={`w-16 h-16 rounded-full border-2 flex items-center justify-center text-3xl font-bold mt-10 mb-6 transition-all duration-300 ease-in-out text-white`
                 }
                 >
                   {stepNo}

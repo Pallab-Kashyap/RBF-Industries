@@ -4,14 +4,24 @@ import About from "./components/About";
 import Blogs from "./components/Blogs/Blogs";
 import Production from "./components/Production/Production";
 import Benifits from "./components/Benefits/Benefits";
-import FooterContainer from "./components/Footer/FooterContainer";
+import Figures from "./components/Number/Figures";
+
+import { Poppins } from 'next/font/google';
+import Clients from "./components/Footer/Clients";
+
+const poppins = Poppins({
+  weight: ['400', '600', '700'], 
+  subsets: ['latin'],           
+  display: 'swap',              
+})
 
 export default function Home() {
   return (
-    <main className="">
-      <section className="hero flex flex-col h-screen">
+    <main className={poppins.className}>
+      <section className="hero flex flex-col sm:min-h-screen">
         <Navbar />
         <Hero />
+        <Figures />
       </section>
 
       <section
@@ -23,7 +33,7 @@ export default function Home() {
 
       <section
         id="production"
-        className="production min-h-screen "
+        className="production min-h-screen bg-[#1B4449]"
       >
         <Production />
       </section>
@@ -40,7 +50,9 @@ export default function Home() {
       </section>
 
       <section id="footer" className="footer">
-        <FooterContainer />
+              <Clients /> 
+      <div className="h-[2px] w-[50%] bg-gray-500/20 m-auto" ></div>
+        {/* <FooterContainer /> */}
       </section>
     </main>
   );
