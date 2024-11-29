@@ -211,7 +211,7 @@ const Figures = () => {
             </defs>
           </svg>
 
-          <div className=" flex w-full justify-around sm:gap-10 px-10 items-center">
+          <div className=" flex w-full justify-around items-center">
             {dataList.map((data) => (
               <Number key={data.number} data={data} />
             ))}
