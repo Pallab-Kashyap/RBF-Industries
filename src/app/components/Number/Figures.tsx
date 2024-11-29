@@ -13,11 +13,11 @@ const dataList: Data[] = [
   },
   {
     number: 3000,
-    text: "TONS OF BIOMASS BRIQUETTES PRODUCED",
+    text: "COMPANIES SERVICED",
   },
   {
     number: 4000,
-    text: "TONS OF CARBON EMISSION SAVED COMAPARED TO COAL",
+    text: "COMPANIES SERVICED",
   },
 ];
 
@@ -408,7 +408,7 @@ const Figures = () => {
 
         <div className="w-full py-5">
           {dataList.map((data) => (
-            <Number data={data} />
+            <Number key={data.number} data={data} />
           ))}
         </div>
         </div>
