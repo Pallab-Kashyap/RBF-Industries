@@ -3,7 +3,7 @@ import { Data } from "./Figures";
 
 const Number = ({ data }: { data: Data }) => {
   return (
-    <div key={data.number} className="px-3 max-w-96 relative">
+    <div  className="px-3 max-w-96 relative">
       <div className="flex items-center justify-between">
         <p className=" text-3xl sm:text-5xl font-sans text-white mb-5 ">{`${data.number}+`}</p>
         <p className="text-white whitespace-nowrap block sm:hidden ">

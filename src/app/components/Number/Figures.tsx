@@ -213,7 +213,7 @@ const Figures = () => {
 
           <div className=" flex w-full justify-around sm:gap-10 px-10 items-center">
             {dataList.map((data) => (
-              <Number data={data} />
+              <Number key={data.number} data={data} />
             ))}
           </div>
         </div>
