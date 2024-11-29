@@ -11,7 +11,7 @@ const Number = ({ data }: { data: Data }) => {
         </p>
       </div>
       <div className="w-full h-0.5 sm:h-1 bg-white/60 sm:bg-white mb-3"></div>
-      <p className="text-white/75 whitespace-nowrap hidden sm:block text-wrap text-xs  min-h-[4ch]">
+      <p className="text-white/75 whitespace-nowrap hidden sm:block text-wrap text-xs  ">
         {data.text}
       </p>
     </div>
