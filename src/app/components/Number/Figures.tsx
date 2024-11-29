@@ -8,16 +8,16 @@ export interface Data {
 
 const dataList: Data[] = [
   {
-    number: 50,
-    text: "YEARS OF EXPERIENCE",
+    number: 10,
+    text: "COMPANIES SERVICED",
   },
   {
-    number: 50,
-    text: "YEARS OF EXPERIENCE",
+    number: 3000,
+    text: "TONS OF BIOMASS BRIQUETTES PRODUCED",
   },
   {
-    number: 50,
-    text: "YEARS OF EXPERIENCE",
+    number: 4000,
+    text: "TONS OF CARBON EMISSION SAVED COMAPARED TO COAL",
   },
 ];
 
@@ -25,7 +25,8 @@ const Figures = () => {
   return (
     <>
       {/* LAPTOP */}
-      <div className="absolute -bottom-20 z-10 w-full hidden sm:block">
+      <div
+       className="absolute -bottom-20 z-10 w-full hidden sm:block ">
         <div className="flex bg-[#0B8900] w-[85%] h-[170px] mx-auto rounded-3xl">
 
           <svg
@@ -210,7 +211,7 @@ const Figures = () => {
             </defs>
           </svg>
 
-          <div className=" flex w-full justify-around items-center">
+          <div className=" flex w-full justify-around sm:gap-10 px-10 items-center">
             {dataList.map((data) => (
               <Number data={data} />
             ))}
