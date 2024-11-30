@@ -14,7 +14,7 @@ const HomePage: React.FC = () => {
     <>
       <div className="px-4 sm:px-12 2xl:px-0 py-8 max-w-[1280px] m-auto ">
         <div
-          className="relative  flex flex-col  sm:flex-row justify-between gap-5 sm:gap-1  w-full p-1 rounded-2xl "
+          className="relative  flex flex-col  sm:flex-row justify-between gap-2 sm:gap-1  w-full p-1 rounded-2xl "
           style={{ boxShadow: "0px 0px 20px 1px rgba(0, 0, 0, 0.2);" }}
         >
 
