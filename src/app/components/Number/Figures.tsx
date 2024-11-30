@@ -13,11 +13,11 @@ const dataList: Data[] = [
   },
   {
     number: 3000,
-    text: "COMPANIES SERVICED",
+    text: "TONS OF BIOMASS BRIQUETTES PRODUCED",
   },
   {
     number: 4000,
-    text: "COMPANIES SERVICED",
+    text: "TONS OF CARBON EMISSOIN SAVED COMPARED TO COAL",
   },
 ];
 
