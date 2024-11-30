@@ -1,14 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
-import {
-  blogImg1,
-  blogImg2,
-  blogImg3,
-  blogImg4,
-  blogImg5,
-  blogImg6,
-} from "../../../../public/assets/blogImg";
 
 import { blogList } from "../../components/Blogs/Blogs";
 
