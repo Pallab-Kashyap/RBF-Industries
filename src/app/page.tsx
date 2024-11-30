@@ -18,7 +18,9 @@ const poppins = Poppins({
 export default function Home() {
   return (
     <main className={poppins.className}>
-      <section className="hero flex flex-col sm:min-h-screen">
+      <section
+      id="hero"
+       className="hero flex flex-col sm:min-h-screen">
         <Navbar />
         <Hero />
         <Figures />

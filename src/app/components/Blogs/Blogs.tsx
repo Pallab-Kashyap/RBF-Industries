@@ -4,7 +4,6 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { StaticImageData } from "next/image";
-import { blogImg1, blogImg2, blogImg3, blogImg4, blogImg5, blogImg6 } from "../../../../public/assets/blogImg";
 import BlogCard from "./BlogCard";
 import { blogList } from "@/app/blogs/[blogId]/page";
 

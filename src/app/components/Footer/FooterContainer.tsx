@@ -34,6 +34,8 @@ const HomePage: React.FC = () => {
           )}
         </div>
       </div>
+
+      {/* footer */}
       <div className="sm:flex justify-between px-8 sm:px-12  border-t pb-6 border-gray-300 py-6 ">
         <p className="text-[14px] text-gray-600 mb-4 sm:mb-0">
           © 2024 Ravi Bio Fuel Industries. All rights reserved.
