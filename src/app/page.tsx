@@ -20,7 +20,7 @@ export default function Home() {
     <main className={poppins.className}>
       <section
       id="hero"
-       className="hero flex flex-col sm:min-h-screen">
+       className="hero relative flex flex-col sm:min-h-screen">
         <Navbar />
         <Hero />
         <Figures />

@@ -64,7 +64,7 @@ function About() {
   }, []);
 
   return (
-    <div className="w-full px-4 sm:px-12 max-w-[1280px] mx-auto mt-40 sm:mt-32">
+    <div className="w-full px-4 sm:px-12 max-w-[1280px] mx-auto h-sm:mt-56 h-md:mt-60 mt-64 sm:mt-32">
       <div className="about-us-heading text-center space-y-10 ">
         <h1 ref={heading} className="text-3xl sm:text-5xl font-medium ">
           Get to know Ravi Bio Fuel Industries

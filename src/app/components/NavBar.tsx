@@ -106,26 +106,38 @@ function Navbar() {
               ref={navLinksRef}
               className="nav-links flex flex-col items-center text-lg w-full px-6 "
             >
-              <li className="border-b-2 border-gray-400/25 w-full py-4">
+              <li 
+              onClick={() => setDisplayMenu(false)}
+              className="border-b-2 border-gray-400/25 w-full py-4">
                 <Link href="/#about" className="">
                   About Us
                 </Link>
               </li>
-              <li className="border-b-2 border-gray-400/25 w-full py-4">
+              <li 
+              onClick={() => setDisplayMenu(false)}
+              className="border-b-2 border-gray-400/25 w-full py-4">
                 <Link href="/#production">Production</Link>
               </li>
-              <li className="border-b-2 border-gray-400/25 w-full py-4">
+              <li 
+              onClick={() => setDisplayMenu(false)}
+              className="border-b-2 border-gray-400/25 w-full py-4">
                 <Link href="/#blogs">Blogs</Link>
               </li>
-              <li className="border-b-2 border-gray-400/25 w-full py-4">
+              <li 
+              onClick={() => setDisplayMenu(false)}
+              className="border-b-2 border-gray-400/25 w-full py-4">
                 <Link href="/#benefits">Benefits</Link>
               </li>
-              <li className=" w-full py-4">
+              <li 
+              onClick={() => setDisplayMenu(false)}
+              className=" w-full py-4">
                 <Link href="/#footer">Our Clients</Link>
               </li>
             </ul>
             <div className="text-center py-4">
               <Link
+              onClick={() => setDisplayMenu(false)}
+
                 href="#footer"
                 className="bg-[#0FB300] text-white rounded-md p-3 px-10 align-middle"
               >

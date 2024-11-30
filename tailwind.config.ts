@@ -11,9 +11,11 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        'h-sm': { raw: '(max-height: 640px)' }, // Target height <= 640px
-        'h-md': { raw: '(max-height: 800px)' }, // Target height <= 800px
-        'h-lg': { raw: '(min-height: 801px)' }, // Target height > 800px
+        'h-sm': { raw: '(max-height: 600px)' }, // Target height <= 600px
+        'h-md': { raw: '(max-height: 650px)' }, // Target height <= 650px
+        'h-lg': { raw: '(max-height: 700px)' }, // Target height > 700px
+        'h-xl': { raw: '(max-height: 750px)' }, // Target height > 750px
+        'h-2xl': { raw: '(min-height: 750px)' }, // Target height > 800px
       },
     },
   },
