@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { StaticImageData } from "next/image";
 import { blogImg1, blogImg2, blogImg3, blogImg4, blogImg5, blogImg6 } from "../../../../public/assets/blogImg";
 import BlogCard from "./BlogCard";
+import { blogList } from "@/app/blogs/[blogId]/page";
 
 export interface Blog {
   img: StaticImageData,
@@ -14,44 +15,13 @@ export interface Blog {
   content?:string
 }
 
+
 function Blogs() {
   
   const heading = useRef(null);
   const blogCards = useRef<(HTMLDivElement | null)[]>([]);
 
- const blogList: Blog[] = [
-    {
-      img: blogImg1,
-      title: 'What Are Biomass Briquettes',
-      description: 'Biomass briquettes are cylindrical blocks made from organic materials like agricultural residue, forestry waste, or organic industrial by-products.'
-    },
-    {
-      img: blogImg2,
-      title: `Fueling India's Green Future`,
-      description: `India, a nation grappling with energy security and environmental concerns, is increasingly turning towards sustainable alternatives. One such promising solution is biomass briquettes, a clean and efficient fuel source derived from agricultural residues. The Indian government has recognized the potential of biomass briquettes and has implemented several policies to promote their adoption.`,
-      
-    },
-    {
-      img: blogImg3,
-      title: '',
-      description: '',
-    },
-    {
-      img: blogImg4,
-      title: '',
-      description: '',
-    },
-    {
-      img: blogImg5,
-      title: '',
-      description: '',
-    },
-    {
-      img: blogImg6,
-      title: '',
-      description: '',
-    },
-  ]
+ 
 
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);

@@ -25,7 +25,7 @@ const BlogCard = forwardRef<HTMLDivElement, BlogCardProps>(({ blog, blogNo }, re
         />
       </div>
       <div className="blog-content p-3 px-5 text-white">
-        <h3 className="text-2xl pt-8 font-semibold ">{blog.title}</h3>
+        <h3 className="text-2xl pt-8 font-semibold min-h-24">{blog.title}</h3>
         <p className="py-6 overflow-hidden line-clamp-3 max-h-[calc(4*1.5rem)] leading-6">
           {blog.description}
         </p>
