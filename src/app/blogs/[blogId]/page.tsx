@@ -12,9 +12,8 @@ import {
 
 import { Blog } from "../../components/Blogs/Blogs";
 
-const page = ({ params }: { params: { blogId: string } }) => {
-
-  const blogId = params.blogId
+const page = async ({ params }: { params: { blogId: string } }) => {
+  const blogId = params.blogId;
 
   const blogNumber = blogId ? Number(blogId) : NaN;
 
@@ -65,46 +64,38 @@ const page = ({ params }: { params: { blogId: string } }) => {
       img: blogImg2,
       title: `Fueling India's Green Future`,
       description: `India, a nation grappling with energy security and environmental concerns, is increasingly turning towards sustainable alternatives. One such promising solution is biomass briquettes, a clean and efficient fuel source derived from agricultural residues. The Indian government has recognized the potential of biomass briquettes and has implemented several policies to promote their adoption.`,
-      content: `India, a nation grappling with energy security and environmental concerns, is increasingly turning towards sustainable alternatives. One such promising solution is biomass briquettes, a clean and efficient fuel source derived from agricultural residues. The Indian government has recognized the potential of biomass briquettes and has implemented several policies to promote their adoption.
-    
-    **Understanding Biomass Briquettes**
-    
-    Biomass briquettes are compressed blocks of agricultural waste, such as rice husks, sugarcane bagasse, and wood shavings. They offer several advantages over traditional fuels like firewood and coal:
-    
-    - **Cleaner Combustion:** Biomass briquettes burn more cleanly, reducing harmful emissions like particulate matter and carbon monoxide.
-    - **Higher Energy Density:** They have a higher energy density compared to traditional fuels, making them more efficient.
-    - **Sustainable Fuel Source:** By utilizing agricultural waste, biomass briquettes promote sustainable waste management and reduce deforestation.
-    - **Affordable Alternative:** They are often more affordable than conventional fuels, making them accessible to rural households.
-    
-    **Government Initiatives Supporting Biomass Briquette Adoption**
-    
-    The Indian government has taken significant steps to promote the production and utilization of biomass briquettes:
-    
-    1. **Ministry of New and Renewable Energy (MNRE) Programs:**
-        - **National Bioenergy Programme:** This program aims to promote the use of biomass for energy generation, including biomass briquettes. It provides financial incentives and technical support to businesses and individuals involved in biomass production and utilization.
-        - **Biomass Programme:** This program specifically targets the production of briquettes and pellets, offering financial assistance for setting up manufacturing plants.
-    2. **State-Level Policies:**
-        - Many Indian states, particularly those with significant agricultural production, have implemented their own policies to encourage the use of biomass briquettes. These policies may include subsidies, tax breaks, and awareness campaigns.
-    3. **Clean Cooking Initiatives:**
-        - Programs like the Pradhan Mantri Ujjwala Yojana aim to provide clean cooking fuel to rural households. Biomass briquettes can be a viable option for these households, reducing their reliance on polluting fuels like firewood and kerosene.
-    
-    **Challenges and Future Prospects**
-    
-    Despite these government initiatives, the widespread adoption of biomass briquettes still faces several challenges:
-    
-    - **Lack of Awareness:** Many people, especially in rural areas, are unaware of the benefits of biomass briquettes.
-    - **Technical Challenges:** The quality and efficiency of briquette production and utilization need to be improved.
-    - **Supply Chain Issues:** A reliable and efficient supply chain for biomass feedstock is crucial.
-    
-    To address these challenges, further government support, technological advancements, and public awareness campaigns are essential. By overcoming these hurdles, India can unlock the full potential of biomass briquettes and contribute to a cleaner and more sustainable future.
-    
-    **References:**
-    
-    - Ministry of New and Renewable Energy, Government of India: https://mnre.gov.in/
-    - National Bioenergy Programme: https://mnre.gov.in/bio-mass/
-    - Biomass Programme: https://mnre.gov.in/bio-mass/
-    
-    By promoting the use of biomass briquettes, India can reduce its dependence on fossil fuels, improve air quality, and empower rural communities. This sustainable solution offers a promising pathway towards a greener and more prosperous future`,
+      content: `<h1 >Introduction</h1>
+        <p>
+            In the quest for sustainable energy solutions, biomass briquettes have emerged as a promising alternative to traditional fossil fuels. These compacted blocks of organic waste material offer a renewable and environmentally friendly fuel source, making them a key player in the transition towards a greener future<sup>1</sup>.
+        </p>
+
+        <h2>The Process</h2>
+        <p>
+            Biomass briquettes are produced by compacting various loose biomass sources, such as rice husk, groundnut shell, sawdust, cashew shells, coffee husk, coir pith, cotton stalks, wood waste, peanut husk, bagasse, and municipal wastes. The specific composition of biomass briquettes varies depending on the raw material availability in a particular geographical area<sup>2</sup>.
+        </p>
+
+        <h2>Environmental Benefits</h2>
+        <p>
+            The utilization of bio briquettes offers several environmental advantages over traditional fuels. They are considered a carbon-neutral fuel since they utilize organic waste materials that would otherwise decompose and emit greenhouse gases (GHGs) like methane<sup>1</sup>. By converting this waste into a usable fuel source, bio briquettes help mitigate GHG emissions and combat climate change. Additionally, they help preserve valuable forest ecosystems and biodiversity by minimizing the impact on deforestation<sup>1</sup>.
+        </p>
+
+        <h2>Applications</h2>
+        <p>
+            Biomass briquettes can be used for heating, cooking, and energy production. They provide an effective solution for managing agricultural waste and other organic residues, preventing their burning which causes further pollution<sup>1</sup>. By converting these materials into a valuable energy resource, bio briquettes address the challenge of waste disposal while simultaneously reducing reliance on non-renewable energy sources.
+        </p>
+
+        <h2>Conclusion</h2>
+        <p>
+            Bio briquettes represent a sustainable and eco-friendly alternative to conventional fossil fuels. Their production and utilization not only contribute to environmental conservation but also support the global effort towards a greener future<sup>1</sup>.
+        </p>
+
+        <h2>References</h2>
+        <ul>
+            <li><a href="#">"From Trash to Treasure: The Journey of Biomass Briquettes from Bio-waste to Biofuel." My Waste Solution Blog.</a></li>
+            <li><a href="#">"Insight into the Biomass-Based Briquette Generation from Agro-Residues: Challenges, Perspectives, and Innovations." BioEnergy Research.</a></li>
+            <li><a href="#">"Potential of Bio Briquettes: A Sustainable Fuel for a Greener Future." EKI Energy Services Limited.</a></li>
+            <li><a href="#">"Biomass Briquettes as an Alternative Fuel: A Comprehensive Review." Manipal Researcher.</a></li>
+        </ul>`,
     },
     {
       img: blogImg3,
@@ -149,11 +140,15 @@ const page = ({ params }: { params: { blogId: string } }) => {
         </div>
 
         <div className="prose prose-lg max-w-none">
-          <p className="text-gray-700 leading-relaxed mb-4">
-            {blogList[blogNumber].content}
-          </p>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: blogList[blogNumber].content || "",
+            }}
+          />
+          {/* {blogList[blogNumber].content} */}
         </div>
-      </article>
+
+  </article>
 
       <p className="mt-10 text-center text-lg font-semibold">
         For more blogs{" "}
@@ -164,5 +159,4 @@ const page = ({ params }: { params: { blogId: string } }) => {
     </div>
   );
 };
-
 export default page;

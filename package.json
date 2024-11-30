@@ -16,8 +16,10 @@
     "dotenv": "^16.4.5",
     "gsap": "^3.12.5",
     "next": "14.2.13",
+    "notion-client": "^7.1.5",
     "react": "^18",
     "react-dom": "^18",
+    "react-notion": "^0.10.0",
     "resend": "^4.0.0"
   },
   "devDependencies": {

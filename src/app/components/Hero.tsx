@@ -4,7 +4,7 @@ import homeImg from "../../../public/assets/hero-background.jpg"
 
 function Hero() {
   return (
-    <div className="hero-container h-[750px] sm:h-screen overflow-hidden relative">
+    <div className="hero-container h-[90vh] sm:h-screen overflow-hidden relative">
 
       <Image 
         src={homeImg}

@@ -220,7 +220,7 @@ const Figures = () => {
       </div>
 
       {/* MOBILE */}
-      <div className="absolute bottom-12 z-30 sm:hidden w-full">
+      <div className="absolute bottom-[-10vh] h-lg:bottom-[-3vh] z-30 sm:hidden w-full">
         <div className="bg-[#0B8900] w-[88%] mx-auto relative rounded-3xl">
         <svg
         className="absolute -top-2 -left-2"
