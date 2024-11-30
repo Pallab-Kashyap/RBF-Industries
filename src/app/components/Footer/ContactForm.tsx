@@ -42,7 +42,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
     setEmailState(true);
 
     const res: { status: boolean } = await sendMail(formData);
-
+    console.log(res);
     setPopMessage(res.status);
     setEmailState(false);
     setShowPopup(true);
