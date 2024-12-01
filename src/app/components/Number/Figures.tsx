@@ -29,7 +29,7 @@ const Figures = () => {
         <div className="flex bg-[#0B8900] w-[85%] h-[170px] mx-auto rounded-3xl">
           {/* <div className="flex items-start bg-black"> */}
             <svg
-            className="w-[439px] h-[172px] 2xl:w-[399px]"
+            className="w-[439px] h-[172px] 2xl:w-[405px] 2xl:h-[172px]"
               viewBox="0 0 464 255"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
