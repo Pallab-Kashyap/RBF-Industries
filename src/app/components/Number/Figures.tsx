@@ -27,9 +27,10 @@ const Figures = () => {
       {/* LAPTOP */}
       <div className="absolute -bottom-[10vh] z-10 w-full hidden sm:block ">
         <div className="flex bg-[#0B8900] w-[85%] h-[170px] mx-auto rounded-3xl">
-          {/* <div className="flex items-start bg-black"> */}
+          <div className="relative min-w-[300px] 2xl:min-w-[350px]">
             <svg
-            className="w-[439px] h-[172px] 2xl:w-[405px] 2xl:h-[172px]"
+            // className="w-[439px] h-[172px] 2xl:w-[405px] 2xl:h-[172px]"
+            className="w-[439px] h-[172px] absolute -left-16"
               viewBox="0 0 464 255"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -208,7 +209,7 @@ const Figures = () => {
                 </clipPath>
               </defs>
             </svg>
-          {/* </div> */}
+          </div>
           <div className=" flex w-full justify-around items-center">
             {dataList.map((data) => (
               <Number key={data.number} data={data} />
