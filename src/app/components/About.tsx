@@ -5,7 +5,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
-import aboutImage from "../../../public/assets/about_section_img.jpeg";
+import aboutImage from "../../../public/assets/about_section_img.jpg";
 
 function About() {
   const image = useRef(null);

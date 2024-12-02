@@ -128,16 +128,18 @@ const ContactForm: React.FC<ContactFormProps> = ({
 
         <div className="pt-2 flex flex-col sm:flex-row gap-5 sm:gap-0 justify-between">
 
-          <div className="flex gap-2">
-            <img src="/assets/contactUsCallSVG.svg" alt="" className="h-11 " />
+          <div className="flex gap-3 sm:gap-2 items-center">
+            <img src="/assets/contactUsCallSVG.svg" alt="" className="h-11 hidden sm:block" />
+            <img src="/assets/contactUsCallSVGMobile.svg" alt="" className="h-8 sm:hidden" />
             <div className=" text-base sm:text-sm">
               <p>Phone</p>
               <p>+91 9666357917</p>
             </div>
           </div>
 
-          <div className="flex gap-2">
-            <img src="/assets/contactUsMailSVG.svg" alt="" className="h-11" />
+          <div className="flex gap-3 sm:gap-2 items-center">
+            <img src="/assets/contactUsMailSVG.svg" alt="" className="h-11 hidden sm:block "/>
+            <img src="/assets/contactUsMailSVGMobile.svg" alt="" className="h-7 sm:hidden" />
             <div className="text-base sm:text-sm">
               <p>Email</p>
               <p>info@rbfindustries.in</p>
