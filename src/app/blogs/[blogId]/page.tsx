@@ -5,13 +5,17 @@ import { blogImg1, blogImg2, blogImg3, blogImg4, blogImg5, blogImg6 } from "../.
 import { Blog } from "@/app/components/Blogs/Blogs";
 import ReactMarkdown from 'react-markdown'
 
+
 const blogList: Blog[] = [
   {
     img: blogImg1,
     title: "What Are Biomass Briquettes",
     description:
       "Biomass briquettes are cylindrical blocks made from organic materials like agricultural residue, forestry waste, or organic industrial by-products.",
-    content: `Biomass briquettes are cylindrical blocks made from organic materials like agricultural residue, forestry waste, or organic industrial by-products. They are manufactured by compressing these materials at high pressure to create a dense, compact fuel source. Unlike coal, petroleum, and natural gas, biomass briquettes are renewable and produce fewer greenhouse gases, making them a sustainable alternative for heating and energy generation.
+    content: `# **Introduction**
+
+  
+Biomass briquettes are cylindrical blocks made from organic materials like agricultural residue, forestry waste, or organic industrial by-products. They are manufactured by compressing these materials at high pressure to create a dense, compact fuel source. Unlike coal, petroleum, and natural gas, biomass briquettes are renewable and produce fewer greenhouse gases, making them a sustainable alternative for heating and energy generation.
 
 These briquettes can be created using a variety of organic waste materials, including:
 
@@ -52,16 +56,18 @@ Biomass briquettes offer several advantages over conventional fossil fuels and e
     img: blogImg2,
     title: `Fueling India's Green Future`,
     description: `India, a nation grappling with energy security and environmental concerns, is increasingly turning towards sustainable alternatives. One such promising solution is biomass briquettes, a clean and efficient fuel source derived from agricultural residues. The Indian government has recognized the potential of biomass briquettes and has implemented several policies to promote their adoption.`,
-    content: `India, a nation grappling with energy security and environmental concerns, is increasingly turning towards sustainable alternatives. One such promising solution is biomass briquettes, a clean and efficient fuel source derived from agricultural residues. The Indian government has recognized the potential of biomass briquettes and has implemented several policies to promote their adoption.
+    content: `**Introduction**
+  
+  India, a nation grappling with energy security and environmental concerns, is increasingly turning towards sustainable alternatives. One such promising solution is biomass briquettes, a clean and efficient fuel source derived from agricultural residues. The Indian government has recognized the potential of biomass briquettes and has implemented several policies to promote their adoption.
 
-**Understanding Biomass Briquettes**
+  **Understanding Biomass Briquettes**
 
-Biomass briquettes are compressed blocks of agricultural waste, such as rice husks, sugarcane bagasse, and wood shavings. They offer several advantages over traditional fuels like firewood and coal:
+  Biomass briquettes are compressed blocks of agricultural waste, such as rice husks, sugarcane bagasse, and wood shavings. They offer several advantages over traditional fuels like firewood and coal:
 
-- **Cleaner Combustion:** Biomass briquettes burn more cleanly, reducing harmful emissions like particulate matter and carbon monoxide.
-- **Higher Energy Density:** They have a higher energy density compared to traditional fuels, making them more efficient.
-- **Sustainable Fuel Source:** By utilizing agricultural waste, biomass briquettes promote sustainable waste management and reduce deforestation.
-- **Affordable Alternative:** They are often more affordable than conventional fuels, making them accessible to rural households.
+  - **Cleaner Combustion:** Biomass briquettes burn more cleanly, reducing harmful emissions like particulate matter and carbon monoxide.
+  - **Higher Energy Density:** They have a higher energy density compared to traditional fuels, making them more efficient.
+  - **Sustainable Fuel Source:** By utilizing agricultural waste, biomass briquettes promote sustainable waste management and reduce deforestation.
+  - **Affordable Alternative:** They are often more affordable than conventional fuels, making them accessible to rural households.
 
 **Government Initiatives Supporting Biomass Briquette Adoption**
 
@@ -87,9 +93,9 @@ To address these challenges, further government support, technological advanceme
 
 **References:**
 
-- Ministry of New and Renewable Energy, Government of India: https://mnre.gov.in/
-- National Bioenergy Programme: https://mnre.gov.in/bio-mass/
-- Biomass Programme: https://mnre.gov.in/bio-mass/
+- Ministry of New and Renewable Energy, Government of India: [https://mnre.gov.in](https://mnre.gov.in/)
+- National Bioenergy Programme: [https://mnre.gov.in/bio-mass](https://mnre.gov.in/bio-mass)
+- Biomass Programme: [https://mnre.gov.in/bio-mass](https://mnre.gov.in/bio-mass)
 
 By promoting the use of biomass briquettes, India can reduce its dependence on fossil fuels, improve air quality, and empower rural communities. This sustainable solution offers a promising pathway towards a greener and more prosperous future.`,
   },
@@ -97,7 +103,8 @@ By promoting the use of biomass briquettes, India can reduce its dependence on f
     img: blogImg3,
     title: "The Journey of Biomass",
     description: `In the quest for sustainable energy solutions, biomass briquettes have emerged as a promising alternative to traditional fossil fuels.`,
-    content: `**Introduction**
+    content:
+    `**Introduction**
 
 In the quest for sustainable energy solutions, biomass briquettes have emerged as a promising alternative to traditional fossil fuels. These compacted blocks of organic waste material offer a renewable and environmentally friendly fuel source, making them a key player in the transition towards a greener future1.
 
@@ -122,15 +129,14 @@ Bio briquettes represent a sustainable and eco-friendly alternative to conventio
 1. "From Trash to Treasure: The Journey of Biomass Briquettes from Bio-waste to Biofuel." My Waste Solution Blog. Link
 2. "Insight into the Biomass-Based Briquette Generation from Agro-Residues: Challenges, Perspectives, and Innovations." BioEnergy Research. Link
 3. "Potential of Bio Briquettes: A Sustainable Fuel for a Greener Future." EKI Energy Services Limited. Link
-4. "Biomass Briquettes as an Alternative Fuel: A Comprehensive Review." Manipal Researcher. Link
-
-I hope this blog captures the essence of the journey from agricultural waste to briquettes. If you need any more information or adjustments, feel free to let me know!`,
+4. "Biomass Briquettes as an Alternative Fuel: A Comprehensive Review." Manipal Researcher. Link`,
   },
   {
-    img: blogImg4,
     title: "Exploring Biomass Materials",
-    description: "Biomass materials play a crucial role in renewable energy, offering a sustainable alternative to traditional fossil fuels",
-    content: `**Introduction**
+    img: blogImg4,
+    description: '',
+    content: 
+`**Introduction**
 
 Biomass materials play a crucial role in renewable energy, offering a sustainable alternative to traditional fossil fuels. Agricultural and industrial residues can be transformed into briquettes, providing an efficient energy source while minimizing waste. In this blog, we’ll explore the typical characteristics of biomass materials, focusing on their ash content and calorific value, which are vital for briquette manufacturing.
 
@@ -179,7 +185,6 @@ Here is the complete table of biomass materials and their characteristics based 
 | Rice Straw | 21.20 | 3200K |
 | Tea Waste | 3.80 | 4237K |
 | Sunflower Stalk | 4.30 | 4300K |
-
 ---
 
 **Why These Characteristics Matter**
@@ -200,7 +205,7 @@ Here is the complete table of biomass materials and their characteristics based 
 
 **Conclusion**
 
-Understanding the properties of biomass materials helps optimize the briquette production process. By selecting the right mix of materials, manufacturers can achieve a balance of efficiency, cost-effectiveness, and sustainability, contributing to India’s green energy goals.`,
+Understanding the properties of biomass materials helps optimize the briquette production process. By selecting the right mix of materials, manufacturers can achieve a balance of efficiency, cost-effectiveness, and sustainability, contributing to India’s green energy goals.`
   },
   {
     img: blogImg5,
@@ -309,7 +314,16 @@ const page = async ({ params }: { params: { blogId: string } }) => {
 
         <div className="prose prose-lg max-w-none">
 
-          <ReactMarkdown>{blogList[blogNumber].content}</ReactMarkdown>
+          <ReactMarkdown
+          className="markdown"
+          components={{
+            a: ({ href, children }) => (
+              <a href={href} target="_blank" rel="noopener noreferrer">
+                {children}
+              </a>
+            ),
+          }}
+          >{blogList[blogNumber].content}</ReactMarkdown>
         </div>
 
   </article>

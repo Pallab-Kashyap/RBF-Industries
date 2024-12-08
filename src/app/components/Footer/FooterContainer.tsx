@@ -3,12 +3,8 @@
 import Footer from "./Footer";
 import ContactForm from "./ContactForm";
 import Link from "next/link";
-import PopupMessage from "@/utils/PopupMessage";
-import { useState } from "react";
 
 const HomePage: React.FC = () => {
-  const [showPopup, setShowPopup] = useState(false);
-  const [popMessage, setPopMessage] = useState(false);
 
   return (
     <>
@@ -18,20 +14,11 @@ const HomePage: React.FC = () => {
           style={{ boxShadow: "0px 0px 20px 1px rgba(0, 0, 0, 0.2);" }}
         >
 
-            <ContactForm
-              setShowPopup={setShowPopup}
-              setPopMessage={setPopMessage}
-            />
+            <ContactForm />
 
             <Footer />
 
-          {showPopup && (
-            <PopupMessage
-              message={popMessage}
-              duration={4000}
-              onClose={() => setShowPopup(false)}
-            />
-          )}
+
         </div>
       </div>
 

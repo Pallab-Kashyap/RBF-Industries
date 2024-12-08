@@ -3,6 +3,10 @@
 import sendMail from "@/utils/mailService";
 import React, { useState } from "react";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 interface ContactFormData {
   firstName: string;
   lastName: string;
@@ -11,15 +15,7 @@ interface ContactFormData {
   message: string;
 }
 
-interface ContactFormProps {
-  setShowPopup: (value: boolean) => void;
-  setPopMessage: (message: boolean) => void;
-}
-
-const ContactForm: React.FC<ContactFormProps> = ({
-  setShowPopup,
-  setPopMessage,
-}) => {
+const ContactForm = () => {
   const [emailState, setEmailState] = useState(false);
 
   const [formData, setFormData] = useState<ContactFormData>({
@@ -40,16 +36,20 @@ const ContactForm: React.FC<ContactFormProps> = ({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setEmailState(true);
-
     const res: { status: boolean } = await sendMail(formData);
-    console.log(res);
-    setPopMessage(res.status);
     setEmailState(false);
-    setShowPopup(true);
+
+    if(res.status)
+      toast.success("Email sent successfully we will contact you soon");
+    else toast.error("Oops something went wrong please try again later")
   };
 
   return (
-    <div className="space-y-5 bg-[#EEFFEE] rounded-xl px-6 py-8 sm:py-8 mx-auto sm:mx-none w-full  sm:w-[450px]">
+    <div className="relative space-y-5 bg-[#EEFFEE] rounded-xl px-6 py-8 sm:py-8 mx-auto sm:mx-none w-full  sm:w-[450px]">
+      <ToastContainer 
+        autoClose={3000}
+        position="top-right"
+      />
       <div>
         <p className="text-3xl font-semibold">Get in Touch</p>
         <p>You can reach us any time</p>
