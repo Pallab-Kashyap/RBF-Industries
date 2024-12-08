@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React from 'react'
+import React, { forwardRef } from 'react'
 
 export interface BenefitStr {
   icon : string;
@@ -7,10 +7,12 @@ export interface BenefitStr {
   content : string;
 }
 
-const BenifitCard: React.FC<BenefitStr> = ({ icon, heading, content }) => {
+const BenefitCard = forwardRef<HTMLDivElement,BenefitStr> (({ icon, heading, content }, ref) => {
     
   return (
-    <div className="px-5 py-10 flex flex-col gap-3 bg-[#c6e156] rounded-lg shadow-md hover:shadow-lg">
+    <div
+    ref={ref}
+    className="px-5 py-10 flex flex-col gap-3 bg-[#c6e156] rounded-lg shadow-md hover:shadow-lg">
           <Image 
             src={icon}
             alt='logo'
@@ -21,6 +23,8 @@ const BenifitCard: React.FC<BenefitStr> = ({ icon, heading, content }) => {
           <p>{content}</p>
     </div>
   )
-}
+})
 
-export default BenifitCard
+BenefitCard.displayName = "BenefitCard";
+
+export default BenefitCard

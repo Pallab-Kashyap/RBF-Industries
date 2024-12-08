@@ -9,6 +9,9 @@ import {
   productionImg3,
   productionImg4,
 } from "../../../../public/assets/productionImg";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
 
 export interface Step {
   title: string;
@@ -70,14 +73,33 @@ function Production() {
     });
   };
 
+  // ANIMATION
+  const heading = useRef(null);
+
+  useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(heading.current, {
+      x: -100,
+      opacity: 0,
+      duration: 0.4,
+
+      scrollTrigger: {
+        trigger: heading.current,
+        start: "top bottom",
+        end: "top center",
+        once: true,
+      },
+    });
+  });
+
   return (
     <div className="flex flex-col px-4 sm:px-12 py-6 min-h-screen relative sm:pb-10 text-white max-w-[1280px] mx-auto">
       <div className="about-us-heading pt-10 pb-4  sm:py-10 px-4 sm:px-0">
-        <h1 className="text-3xl sm:text-5xl font-medium ">
+        <h1 ref={heading} className="text-3xl sm:text-5xl font-medium ">
           Production Process
         </h1>
       </div>
-
 
       <div className="w-full relative sm:py-6">
         <div
@@ -86,15 +108,11 @@ function Production() {
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {steps.map((step) => (
-            <div
-              key={step.stepNo}
-              className="w-full flex-shrink-0 "
-            >
+            <div key={step.stepNo} className="w-full flex-shrink-0 ">
               <ProductionCards prop={step} />
             </div>
           ))}
         </div>
-
 
         {/* MOBILE */}
         <div className="sm:hidden flex justify-between items-center mt-4 px-4">

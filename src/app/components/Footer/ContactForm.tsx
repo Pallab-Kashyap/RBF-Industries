@@ -44,6 +44,10 @@ const ContactForm = () => {
     else toast.error("Oops something went wrong please try again later")
   };
 
+
+  // ANIMATION
+  
+
   return (
     <div className="relative space-y-5 bg-[#EEFFEE] rounded-xl px-6 py-8 sm:py-8 mx-auto sm:mx-none w-full  sm:w-[450px]">
       <ToastContainer 
@@ -56,15 +60,20 @@ const ContactForm = () => {
       </div>
       <form onSubmit={handleSubmit} className="space-y-5 ">
         <div className="flex flex-col sm:flex-row gap-5 text-black">
+          {/* <div className="sm:w-1/2 relative"> */}
           <input
             type="text"
             name="firstName"
             placeholder="First Name"
             value={formData.firstName}
             onChange={handleInputChange}
-            className="sm:w-1/2 px-4 py-1 rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="sm:w-full px-4 py-1 rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
+          <p 
+          className={` absolute top-[10%] left-4 hidden`}
+          >first name</p>
+          {/* </div> */}
           <input
             type="text"
             name="lastName"

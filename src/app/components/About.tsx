@@ -10,6 +10,7 @@ import aboutImage from "../../../public/assets/about_section_img.jpg";
 function About() {
   const image = useRef(null);
   const heading = useRef(null);
+  const headingText = useRef(null);
   const text = useRef(null);
   const text2 = useRef(null);
 
@@ -17,8 +18,8 @@ function About() {
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.from(image.current, {
-      y: 200,
-      duration: 0.6,
+      scale: 0,
+      duration: 1.3,
       opacity: 0,
       // ease: "power3.out",
       scrollTrigger: {
@@ -37,10 +38,19 @@ function About() {
     });
 
     tl.from(heading.current, {
-      x: -100,
+      y: 70,
+      opacity: 0,
       duration: 0.4,
       // ease: "power3.out",
     })
+    .from(
+      headingText.current,
+      {
+        y: 70,
+        opacity: 0,
+        duration: 0.4
+      }
+    )
       .from(
         text.current,
         {
@@ -70,7 +80,9 @@ function About() {
           Get to know Ravi Bio Fuel Industries
         </h1>
 
-        <p className="text-xl">
+        <p
+        ref={headingText}
+        className="text-xl">
           Hilco Industrial Acquisitions – a Hilco Global Company – is a premiere
           purchaser of machinery and equipment utilized across the manufacturing
           industry

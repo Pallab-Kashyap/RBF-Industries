@@ -53,7 +53,7 @@ const Clients = () => {
   return (
     <div className=" p-4 sm:px-12 2xl:px-0 bg-white">
       <h1 className="text-center text-2xl sm:text-4xl p-3 sm:p-6 text-black">
-        Our Past Clients
+        Our Clients
       </h1>
 
       <div className="relative overflow-hidden  max-w-[1280px] sm:mx-auto ">
