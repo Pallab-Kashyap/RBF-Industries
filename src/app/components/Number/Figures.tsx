@@ -25,7 +25,7 @@ const Figures = () => {
   return (
     <>
       {/* LAPTOP */}
-      <div className="absolute -bottom-[10vh] z-10 w-full hidden sm:block ">
+      <div className="absolute -bottom-[11vh] z-10 w-full hidden sm:block ">
         <div className="flex bg-[#0B8900] w-[85%] h-[170px] mx-auto rounded-3xl">
           <div className="relative min-w-[300px] 2xl:min-w-[350px]">
             <svg
