@@ -10,7 +10,7 @@ const Number = ({ data }: { data: Data }) => {
   const duration = 2300;
 
   useEffect(() => {
-    let animationFrameId: number;
+
     let startTimestamp: number | null = null;
 
     const step = (timestamp: number) => {
