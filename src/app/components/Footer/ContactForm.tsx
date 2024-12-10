@@ -67,12 +67,12 @@ const ContactForm = () => {
             placeholder="First Name"
             value={formData.firstName}
             onChange={handleInputChange}
-            className="sm:w-full px-4 py-1 rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="sm:w-1/2 px-4 py-1 rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
-          <p 
+          {/* <p 
           className={` absolute top-[10%] left-4 hidden`}
-          >first name</p>
+          >first name</p> */}
           {/* </div> */}
           <input
             type="text"

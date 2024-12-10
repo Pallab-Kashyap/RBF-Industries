@@ -108,7 +108,7 @@ function Benifits() {
   ];
 
   return (
-    <div className="px-8 sm:px-12 py-6 sm:py-12  bg-[#B5D823]">
+    <div className="px-8 sm:px-12 py-6 sm:py-12  bg-[#B5D823] overflow-hidden">
       <div className="max-w-[1280px] m-auto">
         <div className="blogs-heading py-8 pb-10 sm:pb-12">
           <h2 ref={heading} className="text-3xl sm:text-5xl font-medium">
