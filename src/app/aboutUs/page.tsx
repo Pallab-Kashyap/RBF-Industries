@@ -6,12 +6,12 @@ import abtSec2 from "@/../public/assets/aboutUsPage/aboutSec-2.jpg";
 import owner1 from "@/../public/assets/aboutUsPage/owner-1.jpg";
 import owner2 from "@/../public/assets/aboutUsPage/owner-2.jpg";
 
-interface LeadershipCardProps {
-  image: string;
-  name: string;
-  title: string;
-  quote: string;
-}
+// interface LeadershipCardProps {
+//   image: string;
+//   name: string;
+//   title: string;
+//   quote: string;
+// }
 
 // const LeadershipCard: React.FC<LeadershipCardProps> = ({
 //   image,
