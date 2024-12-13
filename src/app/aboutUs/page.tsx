@@ -13,25 +13,25 @@ interface LeadershipCardProps {
   quote: string;
 }
 
-const LeadershipCard: React.FC<LeadershipCardProps> = ({
-  image,
-  name,
-  title,
-  quote,
-}) => {
-  return (
-    <div className="flex flex-col items-center text-center bg-gray-100 rounded-lg p-6 shadow-md">
-      <img
-        src={image}
-        alt={name}
-        className="w-32 h-32 rounded-full object-cover mb-4"
-      />
-      <h3 className="text-lg font-semibold">{name}</h3>
-      <p className="text-sm text-gray-500">{title}</p>
-      <p className="text-gray-600 mt-4">{quote}</p>
-    </div>
-  );
-};
+// const LeadershipCard: React.FC<LeadershipCardProps> = ({
+//   image,
+//   name,
+//   title,
+//   quote,
+// }) => {
+//   return (
+//     <div className="flex flex-col items-center text-center bg-gray-100 rounded-lg p-6 shadow-md">
+//       <img
+//         src={image}
+//         alt={name}
+//         className="w-32 h-32 rounded-full object-cover mb-4"
+//       />
+//       <h3 className="text-lg font-semibold">{name}</h3>
+//       <p className="text-sm text-gray-500">{title}</p>
+//       <p className="text-gray-600 mt-4">{quote}</p>
+//     </div>
+//   );
+// };
 
 const AboutSection: React.FC = () => {
   return (
