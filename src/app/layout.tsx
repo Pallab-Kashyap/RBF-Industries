@@ -20,7 +20,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://rbfindustries.in'),
-  keywords: ["ravi bio fuel industries", "rbf industries", "rbf", "Biofuel Hyderabad", "biomass briquettes","biomass briquettes in hyderabad", "industrial fuel",  "biomass fuel for factories"],
+  keywords: ["ravi bio fuel industries", "rbf industries", "Biofuel Hyderabad", "biomass briquettes","biomass briquettes in hyderabad", "industrial fuel",  "biomass fuel for factories"],
   title: "Ravi Bio Fuel Industries",
   description: "Based in Hyderabad, we provide sustainable biomass briquettes for industrial fuel needs. Our eco-friendly biofuel solutions offer efficient, cleaner-burning energy for factories, helping reduce carbon footprints. Choose us for high-quality biomass briquettes and support a sustainable future.",
   openGraph: {
@@ -48,10 +48,6 @@ export default function RootLayout({
        
         {/* Add the favicon link */}
         <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest"></link>
       </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

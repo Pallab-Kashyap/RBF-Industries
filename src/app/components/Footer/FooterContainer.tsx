@@ -31,7 +31,7 @@ const HomePage: React.FC = () => {
           <div>
             <Link
               href="#hero"
-              className="text-[14px] text-gray-600 hover:underline"
+              className="text-[13px] text-gray-600 hover:text-black"
             >
               Home
             </Link>
@@ -39,7 +39,7 @@ const HomePage: React.FC = () => {
           <div>
             <a
               href="#about"
-              className="text-[13px] text-gray-600 hover:underline"
+              className="text-[13px] text-gray-600 hover:text-black"
             >
               About Us
             </a>
@@ -47,7 +47,7 @@ const HomePage: React.FC = () => {
           <div>
             <a
               href="#production"
-              className="text-[13px] text-gray-600 hover:underline"
+              className="text-[13px] text-gray-600 hover:text-black"
             >
               Production Process
             </a>
@@ -55,7 +55,7 @@ const HomePage: React.FC = () => {
           <div>
             <a
               href="#blogs"
-              className="text-[13px] text-gray-600 hover:underline"
+              className="text-[13px] text-gray-600 hover:text-black"
             >
               Blogs on Biomass Briquettes
             </a>
@@ -63,7 +63,7 @@ const HomePage: React.FC = () => {
           <div>
             <a
               href="#benefits"
-              className="text-[13px] text-gray-600 hover:underline"
+              className="text-[13px] text-gray-600 hover:text-black"
             >
               Benefits of Biomass Briquettes
             </a>

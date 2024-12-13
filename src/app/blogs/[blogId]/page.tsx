@@ -5,7 +5,6 @@ import { blogImg1, blogImg2, blogImg3, blogImg4, blogImg5, blogImg6 } from "../.
 import { Blog } from "@/app/components/Blogs/Blogs";
 import ReactMarkdown from 'react-markdown'
 
-
 const blogList: Blog[] = [
   {
     img: blogImg1,
