@@ -12,15 +12,14 @@ function Hero() {
         fill
         priority
       />
-      <div className="hero-overlay bg-transparent absolute top-0 flex justify-center sm:justify-between items-center flex-wrap sm:flex-nowrap w-full h-full px-6 sm:px-12 2xl:max-w-[1280px] 2xl:right-40 z-20">
+      <div className="hero-overlay bg-transparent absolute top-0 flex justify-center sm:justify-between items-center flex-wrap sm:flex-nowrap w-full h-full px-6 sm:px-12 2xl:px-2 2xl:max-w-[1280px] 2xl:right-40 z-20">
         <div className="sm:mt-40">
           <h1 className="text-black/10">rbf industries</h1>
           <h1 className="uppercase text-4xl sm:text-7xl leading-snug sm:leading-none font-semibold text-white mb-6">
             Ravi Bio Fuel industries
           </h1>
           <p className="text-white text-xl sm:text-4xl font-medium">
-            The Turnkey Solution for Disposition of Manufacturing Industry
-            Assets Worldwide
+          Driving sustainability with renewable energy for a cleaner, greener future.
           </p>
         </div>
       </div>

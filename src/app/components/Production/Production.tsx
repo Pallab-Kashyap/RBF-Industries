@@ -94,7 +94,7 @@ function Production() {
   });
 
   return (
-    <div className="flex flex-col px-4 sm:px-12 py-6 min-h-screen relative sm:pb-10 text-white max-w-[1280px] mx-auto">
+    <div className="flex flex-col px-4 sm:px-12 2xl:px-2 py-6 min-h-screen relative sm:pb-10 text-white max-w-[1280px] mx-auto">
       <div className="about-us-heading pt-10 pb-4  sm:py-10 px-4 sm:px-0">
         <h1 ref={heading} className="text-3xl sm:text-5xl font-medium ">
           Production Process

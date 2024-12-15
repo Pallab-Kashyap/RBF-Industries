@@ -6,6 +6,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import aboutImage from "../../../public/assets/about_section_img.jpg";
+import Link from "next/link";
 
 function About() {
   const image = useRef(null);
@@ -74,7 +75,7 @@ function About() {
   }, []);
 
   return (
-    <div className="w-full px-4 sm:px-12 max-w-[1280px] mx-auto h-sm:mt-56 h-md:mt-60 mt-64 sm:mt-32">
+    <div className="w-full px-4 sm:px-12 2xl:px-2 max-w-[1280px] mx-auto h-sm:mt-56 h-md:mt-60 mt-64 sm:mt-32">
       <div className="about-us-heading text-center space-y-10 ">
         <h1 ref={heading} className="text-3xl sm:text-5xl font-medium ">
           Get to know Ravi Bio Fuel Industries
@@ -83,14 +84,12 @@ function About() {
         <p
         ref={headingText}
         className="text-xl">
-          Hilco Industrial Acquisitions – a Hilco Global Company – is a premiere
-          purchaser of machinery and equipment utilized across the manufacturing
-          industry
+        Ravi Bio Fuel Industries specializes in transforming agricultural waste into eco-friendly briquettes, fueling sustainable growth across industries
         </p>
       </div>
 
       <div className="about-container sm:flex justify-between gap-28 sm:py-20">
-        <div className="about-image flex justify-center order-1 sm:order-2 mt-12 sm:mt-10">
+        <div className="about-image flex justify-center order-1 sm:order-2 mt-12 sm:mt-0">
           <Image
             ref={image}
             src={aboutImage}
@@ -133,18 +132,11 @@ function About() {
 
           <div className="space-y-2 sm:space-y-1 mt-8 sm:mt-0 mb-16 sm:mb-0">
 
-            <div className="flex items-center bg-black text-white w-fit py-4 px-8 sm:px-6 rounded-full gap-4 group cursor-pointer">
-              <div className="">
-                Learn More About Hilco Industrial Acquisitions
-              </div>
+            <div className="flex items-center bg-black text-white w-fit py-4 px-8 sm:px-6 rounded-full gap-4 group cursor-pointer sm:mt-10">
+              <Link href='/about-us'>
+                Learn More About Ravi Bio Fuel Industries
+              </Link>
               <p className=" text-xl font-bold text-blue-500 relative right-0 transition-all duration-500 group-hover:-right-3 ">&#8599;</p>
-            </div>
-
-            <div className="flex items-center bg-black text-white w-fit py-4 px-8 sm:px-6 rounded-full gap-4 group cursor-pointer">
-              <div className="">
-                Click Here for Current Sales with Hilco Industrial Acquisitions
-              </div>
-              <p className=" text-xl font-bold text-blue-500  relative right-0 transition-all duration-500 group-hover:-right-3">&#8599;</p>
             </div>
           </div>
         </div>

@@ -52,7 +52,9 @@ function Navbar() {
     <header className=" fixed w-full top-0 z-50 bg-white shadow-md">
       <nav className="nav flex py-3 px-4 justify-between items-center sm:px-12 2xl:px-0 relative z-20 max-w-[1280px] m-auto">
         <div ref={logoRef} className=" w-24 sm:w-36">
+          <Link href='/'>
           <Image src={logo} alt="Company Logo" />
+          </Link>
         </div>
         <ul
           ref={navLinksRef}
