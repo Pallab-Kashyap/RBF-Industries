@@ -53,9 +53,9 @@ const AboutSection: React.FC = () => {
               className="rounded-lg sm:h-3/4 2xl:h-2/4 z-10"
             />
 
-            <div className="text-left max-w-[38ch] sm:max-w-[73ch] relative -top-32 sm:-top-0 bg-white">
+            <div className="text-left max-w-[38ch] sm:max-w-[73ch] relative -top-32 sm:-top-0 bg-white space-y-6">
 
-              <h2 className="text-xl sm:text-4xl font text-gray-800">
+              <h2 className="text-xl sm:text-4xl font text-gray-800 ">
                 Your Trusted Partner in Sustainable Energy Solutions for a
                 Better and Greener Tomorrow
               </h2>
@@ -87,8 +87,8 @@ const AboutSection: React.FC = () => {
             Leading the Renewable Energy Revolution
           </h2>
           <div className="md:flex">
-            <div className="flex h-screen w-screen justify-between">
-              <div className="text-left  max-w-[78ch]">
+            <div className="flex h-screen w-screen justify-between ">
+              <div className="text-left  max-w-[78ch] space-y-6">
                 <h2 className="text-4xl font text-gray-800">
                   Your Trusted Partner in Sustainable Energy Solutions for a
                   Better and Greener Tomorrow
