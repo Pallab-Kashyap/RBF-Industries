@@ -47,7 +47,7 @@ const AboutSection = () => {
             Build for a Sustainable Future
           </h1>
 
-          <div className="relative sm:space-y-20">
+          <div className="relative sm:space-y-16">
             <div className="hidden md:block bg-[#0FB3001A] sm:w-2/6 2xl:w-1/2 h-[575px] rounded-r-lg absolute sm:-left-20 2xl:-left-96 sm:-top-7 2xl:-top-7 z-0"></div>
 
             <div className="sm:flex justify-between h-[120vh] sm:h-fit">
@@ -92,7 +92,7 @@ const AboutSection = () => {
           <h2 className="sm:mb-0 text-2xl border-b-2 border-gray-600 w-fit ml-[5vw] sm:mx-0 pr-4 mr-16 mb-4 ">
             Leading the Renewable Energy Revolution
           </h2>
-          <div className="md:flex">
+          <div className="md:flex ">
             <div className="flex justify-center w-full sm:justify-between pr-px relative h-[125vh] sm:h-fit">
               <div className="text-left  max-w-[38ch] sm:max-w-[73ch] space-y-6 bg-white absolute sm:relative bottom-10 sm:bottom-0 z-20 mx-auto sm:mx-0 px-4 py-6 sm:p-0 rounded-md">
                 <h2 className="text-xl sm:text-4xl leading-normal  sm:text-gray-600 ">
@@ -147,7 +147,7 @@ const AboutSection = () => {
               <Image
                 src={owner1}
                 alt="Sustainable Future"
-                className="object-cover sm:object-fill rounded-t-lg sm:rounded-lg h-[45vh]  sm:h-3/4 2xl:h-2/4 z-10 sm:object-center object-[center_8%]"
+                className="object-cover sm:object-fill rounded-t-lg sm:rounded-lg h-[43vh]  sm:h-3/4 2xl:h-2/4 z-10 sm:object-center object-[center_0%]"
               />
               <div className="text-left max-w-[72ch] relative flex flex-col-reverse sm:block">
                 <div className="bg-[#0FB3001A] rounded-b-lg sm:rounded-none sm:bg-white relative px-4 pb-5 sm:p-0">
@@ -179,7 +179,7 @@ const AboutSection = () => {
                     &nbsp;&nbsp;&nbsp; Ravi Bio Fuel Industries is guided by a vision to promote sustainability and renewable energy solutions. By transforming agricultural waste into eco-friendly biomass briquettes, we aim to reduce carbon emissions, minimize environmental impact, and contribute to a cleaner, greener planet. My mission is to ensure our efforts leave a lasting positive impact for future generations while addressing today&apos;s energy challenges
                   </p>
                 </div>
-                <div className="bg-[#0FB3001A] py-4 px-8 space-y-px  sm:rounded-md pt-5 sm:pt-0 sm:mt-5 w-full sm:w-4/5">
+                <div className="bg-[#0FB3001A] py-4 px-6 space-y-px  sm:rounded-md sm:px-8 sm:mt-5 w-full sm:w-4/5">
                   <p className="text-2xl sm:text-xl">
                     <strong>Dhanraj Tiwari</strong>
                   </p>
@@ -218,10 +218,10 @@ const AboutSection = () => {
                     </svg>
                   </div>
                   <p className="mt-6 text-xl sm:text-3xl tracking-wide leading-relaxed text-gray-600 pl-4 italic">
-                    &nbsp;&nbsp;&nbsp; At Ravi Bio Fuel Industries, every operation is rooted in efficiency, quality, and sustainability. Through carefully crafted policies and innovative processes, I ensure we deliver superior biomass briquettes while meeting customer expectations. My focus remains on driving operational excellence, fostering responsible growth, and aligning our goals with the broader mission of environmental responsibility and a sustainable energy future.
+                    &nbsp;&nbsp;&nbsp; At Ravi Bio Fuel Industries, every operation is rooted in efficiency, quality, and sustainability. Through crafted policies and innovative processes, I ensure we deliver superior biomass briquettes while meeting customer expectations. My focus remains on driving excellence, fostering responsible growth, and aligning our goals with the mission of environmental responsibility and a sustainable energy future.
                   </p>
                 </div>
-                <div className="bg-[#0FB3001A] py-4 px-8 space-y-px sm:rounded-md pt-5 sm:pt-0  sm:mt-5 w-full sm:w-4/5">
+                <div className="bg-[#0FB3001A] py-4 px-6 space-y-px sm:rounded-md sm:px-8  sm:mt-5 w-full sm:w-4/5">
                   <p className="text-2xl sm:text-xl">
                     <strong>Ravi Tiwari</strong>
                   </p>
@@ -234,7 +234,7 @@ const AboutSection = () => {
               <Image
                 src={owner2}
                 alt="Sustainable Future"
-                className="object-cover sm:object-fill rounded-t-lg sm:rounded-xl h-[45vh]  sm:h-3/4 2xl:h-2/4 z-10 sm:object-center object-[center_8%]"
+                className="object-cover sm:object-fill rounded-t-lg sm:rounded-xl h-[42vh]  sm:h-3/4 2xl:h-2/4 z-10 sm:object-center object-[center_0%]"
               />
             </div>
 
