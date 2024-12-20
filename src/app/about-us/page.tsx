@@ -1,10 +1,11 @@
 import Image from "next/image";
 import React from "react";
 import aboutUsImg from "@/../public/assets/aboutUsPage/aboutUs-hero.jpeg";
-import abtSec1 from "@/../public/assets/aboutUsPage/aboutSec-1.jpeg";
-import abtSec2 from "@/../public/assets/aboutUsPage/aboutSec-2.jpeg";
-import owner1 from "@/../public/assets/aboutUsPage/owner-1.jpeg";
-import owner2 from "@/../public/assets/aboutUsPage/owner-2.jpeg";
+import abtSec2Mob from "@/../public/assets/aboutUsPage/aboutSec-2.jpeg";
+import abtSec1 from "@/../public/assets/aboutUsPage/aboutSec-1.jpg";
+import abtSec2 from "@/../public/assets/aboutUsPage/aboutSec-2.jpg";
+import owner1 from "@/../public/assets/aboutUsPage/owner-1.jpg";
+import owner2 from "@/../public/assets/aboutUsPage/owner-2.jpg";
 import Clients from "../components/Footer/Clients";
 
 // interface LeadershipCardProps {
@@ -50,11 +51,12 @@ const AboutSection = () => {
           <div className="relative sm:space-y-20">
             <div className="hidden md:block bg-[#0FB3001A] sm:w-2/6 2xl:w-1/2 h-[575px] rounded-r-lg absolute sm:-left-20 2xl:-left-96 sm:-top-7 2xl:-top-7 z-0"></div>
 
-            <div className="sm:flex justify-between h-[140vh] sm:h-fit">
+            <div className="sm:flex justify-between h-[120vh] sm:h-fit">
               <Image
                 src={abtSec1}
                 alt="Sustainable Future"
-                className="sm:rounded-lg h-[80vh] w sm:h-[76vh] sm:w-[32vw] z-10"
+                // className="sm:rounded-lg h-[80vh] w sm:h-[76vh] sm:w-[32vw] z-10"
+                className="sm:rounded-lg sm:h-3/4 2xl:h-2/4 z-10"
               />
 
               <div className="text-left max-w-[38ch] sm:max-w-[73ch] relative -top-32 sm:-top-0 bg-white space-y-6 mx-auto sm:mx-0 px-4 py-6 sm:p-0 rounded-md">
@@ -74,12 +76,12 @@ const AboutSection = () => {
                 <p className="text-lg sm:text-xl hidden sm:block">
                   Through relentless innovation and a commitment to
                   sustainability, we aim to address the global energy challenge
-                  by promoting cleaner practices. Whether it’s powering
+                  by promoting cleaner practices. Whether it&apos;s powering
                   industrial operations or providing heating solutions for
                   homes, our products cater to diverse energy needs. Join us in
                   embracing a greener future and reducing carbon footprints by
                   making the switch to renewable energy with Ravi Bio
-                  Fuel Industries.
+                  Fuel Industries.
                 </p>
               </div>
             </div>
@@ -106,22 +108,27 @@ const AboutSection = () => {
                   environmental conservation and empower communities
                 </p>
                 <p className="text-lg sm:text-xl hidden sm:block">
-                  Our mission extends beyond energy production; it’s about
+                  Our mission extends beyond energy production; it&apos;s about
                   fostering positive change for the planet and future
                   generations. Through innovative practices and a commitment to
                   reducing carbon footprints, we support industrial growth while
-                  safeguarding the environment. Together, we’re building a
+                  safeguarding the environment. Together, we&apos;re building a
                   sustainable future where renewable energy solutions enhance
                   efficiency, drive progress, and preserve natural resources.
                   Join us in making a lasting impact with eco-friendly
-                  energy alternatives.
+                  energy alternatives.
                 </p>
               </div>
 
               <Image
                 src={abtSec2}
                 alt="Sustainable Future"
-                className="sm:rounded-lg h-[80vh] sm:h-[76vh] sm:w-[32vw] z-10"
+                className="sm:rounded-xl sm:h-3/4 2xl:h-2/4 z-10 hidden sm:block"
+              />
+              <Image
+                src={abtSec2Mob}
+                alt="Sustainable Future"
+                className="sm:rounded-lg h-[80vh] sm:h-[76vh] sm:w-[32vw] z-10 sm:hidden"
               />
             </div>
             <div className="hidden md:block bg-[#1B4449] sm:w-2/6 2xl:w-1/2 h-[575px] rounded-l-lg absolute sm:-right-20 2xl:-right-96 sm:top-11 z-0"></div>
@@ -141,7 +148,7 @@ const AboutSection = () => {
               <Image
                 src={owner1}
                 alt="Sustainable Future"
-                className="object-cover sm:object-fill rounded-t-lg sm:rounded-lg h-[45vh] w-full sm:h-[76vh] sm:w-[32vw] z-10 sm:object-center object-[center_8%]"
+                className="object-cover sm:object-fill rounded-t-lg sm:rounded-lg h-[45vh]  sm:h-3/4 2xl:h-2/4 z-10 sm:object-center object-[center_8%]"
               />
               <div className="text-left max-w-[72ch] relative flex flex-col-reverse sm:block">
                 <div className="bg-[#0FB3001A] rounded-b-lg sm:rounded-none sm:bg-white relative px-4 pb-5 sm:p-0">
@@ -170,7 +177,7 @@ const AboutSection = () => {
                     </svg>
                   </div>
                   <p className="mt-6 text-xl sm:text-3xl tracking-wide leading-relaxed text-gray-600  pl-2 italic ">
-                    &nbsp;&nbsp;&nbsp; "Ravi Bio Fuel Industries is guided by a vision to promote sustainability and renewable energy solutions. By transforming agricultural waste into eco-friendly biomass briquettes, we aim to reduce carbon emissions, minimize environmental impact, and contribute to a cleaner, greener planet. My mission is to ensure our efforts leave a lasting positive impact for future generations while addressing today’s energy challenges
+                    &nbsp;&nbsp;&nbsp; "Ravi Bio Fuel Industries is guided by a vision to promote sustainability and renewable energy solutions. By transforming agricultural waste into eco-friendly biomass briquettes, we aim to reduce carbon emissions, minimize environmental impact, and contribute to a cleaner, greener planet. My mission is to ensure our efforts leave a lasting positive impact for future generations while addressing today&apos;s energy challenges
                   </p>
                 </div>
                 <div className="bg-[#0FB3001A] py-4 px-8 space-y-px  sm:rounded-md pt-5 sm:pt-0 sm:mt-5 w-full sm:w-4/5">
@@ -212,7 +219,7 @@ const AboutSection = () => {
                     </svg>
                   </div>
                   <p className="mt-6 text-xl sm:text-3xl tracking-wide leading-relaxed text-gray-600 pl-4 italic">
-                    &nbsp;&nbsp;&nbsp; At Ravi Bio Fuel Industries, every operation is rooted in efficiency, quality, and sustainability. Through carefully crafted policies and innovative processes, I ensure we deliver superior biomass briquettes while meeting customer expectations. My focus remains on driving operational excellence, fostering responsible growth, and aligning our goals with the broader mission of environmental responsibility and a sustainable energy future.
+                    &nbsp;&nbsp;&nbsp; At Ravi Bio Fuel Industries, every operation is rooted in efficiency, quality, and sustainability. Through carefully crafted policies and innovative processes, I ensure we deliver superior biomass briquettes while meeting customer expectations. My focus remains on driving operational excellence, fostering responsible growth, and aligning our goals with the broader mission of environmental responsibility and a sustainable energy future.
                   </p>
                 </div>
                 <div className="bg-[#0FB3001A] py-4 px-8 space-y-px sm:rounded-md pt-5 sm:pt-0  sm:mt-5 w-full sm:w-4/5">
@@ -228,7 +235,7 @@ const AboutSection = () => {
               <Image
                 src={owner2}
                 alt="Sustainable Future"
-                className="object-cover sm:object-fill rounded-t-lg sm:rounded-lg h-[45vh] w-full sm:h-[76vh] sm:w-[32vw] z-10 sm:object-center object-[center_8%]"
+                className="object-cover sm:object-fill rounded-t-lg sm:rounded-xl h-[45vh]  sm:h-3/4 2xl:h-2/4 z-10 sm:object-center object-[center_8%]"
               />
             </div>
 
@@ -251,8 +258,8 @@ const HeroSection = () => {
         />
         <div className="absolute w-1/2 inset-0 bg-gradient-to-r from-[#030701] to-transparent"></div>
         <div
-          className="text-2xl sm:text-7xl font-semibold text-white relative top-8 sm:top-24 ml-[5vw] sm:border-l-4 border-l-2 border-green-500 px-2 sm:px-10 max-w-[1280px] 2xl:mx-auto h-9 sm:h-fit
-        flex items-center"
+          className="text-2xl sm:text-7xl font-semibold text-white relative top-8 sm:top-24 ml-[5vw] sm:ml-0 sm:border-l-4 border-l-2 border-green-500 px-2 sm:px-10 max-w-[1180px] 2xl:max-w-[1280px] xl:mx-auto h-9 sm:h-fit
+        flex items-center " 
         >
           <h1>About Us</h1>
         </div>
