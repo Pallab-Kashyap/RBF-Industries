@@ -38,8 +38,7 @@ import Clients from "../components/Footer/Clients";
 const AboutSection = () => {
   return (
     <section
-      className="bg-white overflow-x-hidden mt-10 sm:mt-20 mb-5 sm:mb-10 sm:pb-10 
-    "
+      className="bg-white overflow-x-hidden mt-10 sm:mt-20 mb-5 sm:mb-10 sm:pb-10"
     >
       <div className="sm:px-12 2xl:px-1 sm:space-y-20  max-w-[1280px] xl:mx-auto">
         {/* First Block */}
@@ -177,7 +176,7 @@ const AboutSection = () => {
                     </svg>
                   </div>
                   <p className="mt-6 text-xl sm:text-3xl tracking-wide leading-relaxed text-gray-600  pl-2 italic ">
-                    &nbsp;&nbsp;&nbsp; "Ravi Bio Fuel Industries is guided by a vision to promote sustainability and renewable energy solutions. By transforming agricultural waste into eco-friendly biomass briquettes, we aim to reduce carbon emissions, minimize environmental impact, and contribute to a cleaner, greener planet. My mission is to ensure our efforts leave a lasting positive impact for future generations while addressing today&apos;s energy challenges
+                    &nbsp;&nbsp;&nbsp; Ravi Bio Fuel Industries is guided by a vision to promote sustainability and renewable energy solutions. By transforming agricultural waste into eco-friendly biomass briquettes, we aim to reduce carbon emissions, minimize environmental impact, and contribute to a cleaner, greener planet. My mission is to ensure our efforts leave a lasting positive impact for future generations while addressing today&apos;s energy challenges
                   </p>
                 </div>
                 <div className="bg-[#0FB3001A] py-4 px-8 space-y-px  sm:rounded-md pt-5 sm:pt-0 sm:mt-5 w-full sm:w-4/5">
