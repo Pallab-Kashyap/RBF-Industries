@@ -53,7 +53,7 @@ export default function Home() {
 
       <section id="footer" className="footer">
               <Clients /> 
-      <div className="h-[2px] w-[50%] bg-gray-500/20 m-auto" ></div>
+      <div className="h-[2px] w-[50%] bg-gray-500/20 mx-auto my-4" ></div>
         {/* <FooterContainer /> */}
       </section>
     </main>

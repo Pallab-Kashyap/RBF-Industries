@@ -335,7 +335,7 @@ function Blogs() {
             Blogs on Biomass Briquettes
           </h2>
         </div>
-        <div className="grid sm:grid-cols-3 gap-10 mt-2 pb-10 sm:pb-4">
+        <div className="grid sm:grid-cols-3 gap-12 mt-2 pb-10 sm:pb-4">
           {blogList.map((item, index) => (
             <BlogCard
               key={index}

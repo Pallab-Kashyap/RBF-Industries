@@ -108,13 +108,15 @@ function Benifits() {
   ];
 
   return (
-    <div className="px-8 sm:px-12 py-6 sm:py-12  bg-[#B5D823] overflow-hidden">
+    <div className="px-8 sm:px-12 py-6 sm:py-12 bg-[#B5D823] overflow-hidden">
       <div className="max-w-[1280px] m-auto">
         <div className="blogs-heading py-8 pb-10 sm:pb-12">
           <h2 ref={heading} className="text-3xl sm:text-5xl font-medium">
             Benefits of Biomass Briquettes
           </h2>
         </div>
+
+        {/* Mobile */}
         <div className="sm:hidden grid gap-8 pb-4">
         {benifits.map((benefit, index) => (
                 <BenefitCard
@@ -128,7 +130,9 @@ function Benifits() {
               />
                 ))}
         </div>
-        <div className="hidden sm:grid grid-cols-3 gap-16 pb-4">
+
+        {/* Laptop */}
+        <div className="hidden sm:grid grid-cols-3 gap-12 pb-4">
           {benifits.map((benefit, index) => {
             if (index === 0 || index === 3)
               return (
