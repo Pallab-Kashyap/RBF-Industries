@@ -145,7 +145,7 @@ const AboutSection = () => {
               />
               <div className="text-left max-w-[72ch] relative flex flex-col-reverse sm:block">
                 <div className="bg-[#0FB3001A] rounded-b-lg sm:rounded-none sm:bg-white relative px-4 pb-5 sm:p-0">
-                  <div className="absolute flex top-4 sm:-left-2 sm:top-0">
+                  <div className="absolute flex top-4 sm:-left-2 sm:-top-4">
                     <svg
                       className="w-[15px] h-[25px] sm:w-[20px] sm:h-[46px]"
                       viewBox="0 0 30 46"
@@ -170,11 +170,7 @@ const AboutSection = () => {
                     </svg>
                   </div>
                   <p className="mt-6 text-xl sm:text-3xl tracking-wide leading-relaxed text-gray-600  pl-2 italic ">
-                    &nbsp;&nbsp;&nbsp; As the founder of Ravi Bio Fuel
-                    Industries, I am deeply committed to sustainability and
-                    environmental stewardship. Our focus is on developing
-                    renewable energy solutions that not only meet today’s energy
-                    needs but also preserve the planet for future generations.
+                    &nbsp;&nbsp;&nbsp; "Ravi Bio Fuel Industries is guided by a vision to promote sustainability and renewable energy solutions. By transforming agricultural waste into eco-friendly biomass briquettes, we aim to reduce carbon emissions, minimize environmental impact, and contribute to a cleaner, greener planet. My mission is to ensure our efforts leave a lasting positive impact for future generations while addressing today’s energy challenges
                   </p>
                 </div>
                 <div className="bg-[#0FB3001A] py-4 px-8 space-y-px  sm:rounded-md pt-5 sm:pt-0 sm:mt-5 w-full sm:w-4/5">
@@ -191,7 +187,7 @@ const AboutSection = () => {
             <div className="flex flex-col-reverse md:flex-row justify-between pr-px">
               <div className="text-left  max-w-[72ch]  relative sm:mt-4 2xl:mt-6 flex flex-col-reverse sm:block">
                 <div className="bg-[#0FB3001A] sm:bg-white relative px-4 pb-5 sm:p-0  rounded-b-lg sm:rounded-none">
-                  <div className="absolute flex top-4 left-2 sm:-left-2 sm:top-0 px-4 pb-5 sm:p-0">
+                  <div className="absolute flex top-4 left-2 sm:left-0 sm:-top-4 px-4 pb-5 sm:p-0">
                     <svg
                       className="w-[15px] h-[25px] sm:w-[20px] sm:h-[46px] "
                       viewBox="0 0 30 46"
@@ -216,11 +212,7 @@ const AboutSection = () => {
                     </svg>
                   </div>
                   <p className="mt-6 text-xl sm:text-3xl tracking-wide leading-relaxed text-gray-600 pl-4 italic">
-                    &nbsp;&nbsp;&nbsp; At Ravi Bio Fuel Industries, our policy
-                    is built on operational excellence and integrity. I lead
-                    with a focus on efficiency, innovation, and customer
-                    satisfaction, ensuring that our practices align with our
-                    core values of sustainability and responsible growth.
+                    &nbsp;&nbsp;&nbsp; At Ravi Bio Fuel Industries, every operation is rooted in efficiency, quality, and sustainability. Through carefully crafted policies and innovative processes, I ensure we deliver superior biomass briquettes while meeting customer expectations. My focus remains on driving operational excellence, fostering responsible growth, and aligning our goals with the broader mission of environmental responsibility and a sustainable energy future.
                   </p>
                 </div>
                 <div className="bg-[#0FB3001A] py-4 px-8 space-y-px sm:rounded-md pt-5 sm:pt-0  sm:mt-5 w-full sm:w-4/5">
