@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import aboutImage from "../../../public/assets/about_section_img.jpg";
 import Link from "next/link";
+import MoveToTop from "./MoveToTop";
 
 function About() {
   const image = useRef(null);
@@ -75,7 +76,7 @@ function About() {
   }, []);
 
   return (
-    <div className="w-full px-4 sm:px-12 2xl:px-2 max-w-[1280px] mx-auto h-sm:mt-56 h-md:mt-60 mt-64 sm:mt-32">
+    <div className="w-full px-4 sm:px-12 2xl:px-2 max-w-[1280px] mx-auto h-sm:mt-56 h-md:mt-60 pt-64 sm:pt-32">
       <div className="about-us-heading text-center space-y-10 ">
         <h1 ref={heading} className="text-3xl sm:text-5xl font-medium ">
           Get to know Ravi Bio Fuel Industries

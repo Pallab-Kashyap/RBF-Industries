@@ -77,24 +77,32 @@ const HomePage: React.FC = () => {
 
         {/* Socials */}
         <div className=" flex items-center mt-1 sm:mt-0">
-          <FontAwesomeIcon
-            icon={faFacebook}
-            className=" hover:text-[#1877F2] hover:scale-125 p-[6px] cursor-pointer"
-          />
-          <FontAwesomeIcon
-            icon={faLinkedin}
-            className=" hover:text-[#1877F2] hover:scale-125 p-[6px] cursor-pointer"
-          />
-          <FontAwesomeIcon
-            icon={faInstagram}
-            className="instagram-gradient hover:text-white  rounded-full p-[6px] cursor-pointer"
-          />
-          <span className="p-[4px]">
+          <Link href={'https://www.instagram.com/rbfindustries?igsh=MWduM2ljaXZ5NG51cA=='} target="_blank">
             <FontAwesomeIcon
-              icon={faXTwitter}
-              className="hover:bg-black hover:text-white p-[1px] cursor-pointer"
+              icon={faFacebook}
+              className=" hover:text-[#4477b9] hover:scale-150 p-[6px] cursor-pointer"
             />
-          </span>
+          </Link>
+          <Link href={'https://www.instagram.com/rbfindustries?igsh=MWduM2ljaXZ5NG51cA=='} target="_blank">
+            <FontAwesomeIcon
+              icon={faLinkedin}
+              className=" hover:text-[#1877F2] hover:scale-150 p-[6px] cursor-pointer"
+            />
+          </Link>
+          <Link href={'https://www.instagram.com/rbfindustries?igsh=MWduM2ljaXZ5NG51cA=='} target="_blank">
+            <FontAwesomeIcon
+              icon={faInstagram}
+              className="instagram-gradient hover:text-white  rounded-full p-[6px] cursor-pointer"
+            />
+          </Link>
+          <Link href={'https://www.instagram.com/rbfindustries?igsh=MWduM2ljaXZ5NG51cA=='} target="_blank">
+            <span className="p-[4px]">
+              <FontAwesomeIcon
+                icon={faXTwitter}
+                className="hover:bg-black hover:text-white hover:scale-125 p-[1px] cursor-pointer"
+              />
+            </span>
+          </Link>
         </div>
       </div>
     </>

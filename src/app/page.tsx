@@ -8,6 +8,7 @@ import Figures from "./components/Number/Figures";
 
 import { Poppins } from 'next/font/google';
 import Clients from "./components/Footer/Clients";
+import MoveToTop from "./components/MoveToTop";
 
 const poppins = Poppins({
   weight: ['400', '600', '700'], 
@@ -20,7 +21,7 @@ export default function Home() {
     <main className={poppins.className}>
       <section
       id="hero"
-       className="hero relative flex flex-col sm:min-h-screen">
+       className="hero relative flex flex-col sm:min-h-screen z-50">
         <Navbar />
         <Hero />
         <Figures />
@@ -28,7 +29,7 @@ export default function Home() {
 
       <section
         id="about"
-        className="about-us min-h-screen "
+        className="about-us min-h-screen relative z-40 bg-white"
       >
         <About />
       </section>
@@ -37,6 +38,7 @@ export default function Home() {
         id="production"
         className="production min-h-screen bg-[#1B4449]"
       >
+        <MoveToTop />
         <Production />
       </section>
 
