@@ -7,7 +7,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import aboutImage from "../../../public/assets/about_section_img.jpg";
 import Link from "next/link";
-import MoveToTop from "./MoveToTop";
 
 function About() {
   const image = useRef(null);
