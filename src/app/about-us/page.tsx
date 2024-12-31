@@ -50,7 +50,7 @@ const AboutSection = () => {
           <div className="relative sm:space-y-16">
             <div className="hidden md:block bg-[#0FB3001A] sm:w-2/6 2xl:w-1/2 h-[575px] rounded-r-lg absolute sm:-left-20 2xl:-left-96 sm:-top-7 2xl:-top-7 z-0"></div>
 
-            <div className="sm:flex justify-between h-[120vh] sm:h-fit">
+            <div className="sm:flex justify-between h-[900px] sm:h-fit">
               <Image
                 src={abtSec1}
                 alt="Sustainable Future"
@@ -89,7 +89,7 @@ const AboutSection = () => {
 
         {/* Second Block */}
         <div className="relative sm:space-y-10">
-          <h2 className="sm:mb-0 text-2xl border-b-2 border-gray-600 w-fit ml-[5vw] sm:mx-0 pr-4 mr-16 mb-4 ">
+          <h2 className="sm:mb-0 text-2xl border-b-2 border-gray-600 w-fit ml-[5vw] sm:mx-0  mr-20 mb-4 ">
             Leading the Renewable Energy Revolution
           </h2>
           <div className="md:flex ">

@@ -3,9 +3,16 @@
 import Footer from "./Footer";
 import ContactForm from "./ContactForm";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faLinkedin,
+  faLinkedinIn,
+  faInstagram,
+  faXTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 
 const HomePage: React.FC = () => {
-
   return (
     <>
       <div className="px-4 sm:px-12 2xl:px-0 py-8 max-w-[1280px] m-auto ">
@@ -13,20 +20,19 @@ const HomePage: React.FC = () => {
           className="relative  flex flex-col  sm:flex-row justify-between gap-2 sm:gap-1  w-full p-1 rounded-2xl "
           style={{ boxShadow: "0px 0px 20px 1px rgba(0, 0, 0, 0.2);" }}
         >
+          <ContactForm />
 
-            <ContactForm />
-
-            <Footer />
-
-
+          <Footer />
         </div>
       </div>
 
       {/* footer */}
       <div className="sm:flex justify-between px-8 sm:px-12  border-t pb-6 border-gray-300 py-6 ">
-        <p className="text-[14px] text-gray-600 mb-4 sm:mb-0">
-          © 2024 Ravi Bio Fuel Industries. All rights reserved.
-        </p>
+        <div>
+          <p className="text-[14px] text-gray-600 mb-4 sm:mb-0">
+            © 2024 Ravi Bio Fuel Industries. All rights reserved.
+          </p>
+        </div>
         <div className="flex flex-col sm:flex-row gap-1 sm:gap-4 flex-wrap justify-evenly">
           <div>
             <Link
@@ -68,6 +74,28 @@ const HomePage: React.FC = () => {
               Benefits of Biomass Briquettes
             </a>
           </div>
+        </div>
+
+        {/* Socials */}
+        <div className=" flex items-center sm:mt-2">
+          <FontAwesomeIcon
+            icon={faFacebook}
+            className=" hover:text-[#1877F2] hover:scale-125 p-[6px] cursor-pointer"
+          />
+          <FontAwesomeIcon
+            icon={faLinkedin}
+            className=" hover:text-[#1877F2] hover:scale-125 p-[6px] cursor-pointer"
+          />
+          <FontAwesomeIcon
+            icon={faInstagram}
+            className="instagram-gradient hover:text-white  rounded-full p-[6px] cursor-pointer"
+          />
+          <span className="p-[4px]">
+            <FontAwesomeIcon
+              icon={faXTwitter}
+              className="hover:bg-black hover:text-white p-[1px] cursor-pointer"
+            />
+          </span>
         </div>
       </div>
     </>
