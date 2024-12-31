@@ -7,7 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
   faLinkedin,
-  faLinkedinIn,
   faInstagram,
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
@@ -77,7 +76,7 @@ const HomePage: React.FC = () => {
         </div>
 
         {/* Socials */}
-        <div className=" flex items-center sm:mt-2">
+        <div className=" flex items-center mt-1 sm:mt-0">
           <FontAwesomeIcon
             icon={faFacebook}
             className=" hover:text-[#1877F2] hover:scale-125 p-[6px] cursor-pointer"
