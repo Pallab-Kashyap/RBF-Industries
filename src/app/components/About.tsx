@@ -132,12 +132,14 @@ function About() {
 
           <div className="space-y-2 sm:space-y-1 mt-8 sm:mt-0 mb-16 sm:mb-0">
 
-            <div className="flex items-center bg-black text-white w-fit py-4 px-8 sm:px-6 rounded-full gap-4 group cursor-pointer sm:mt-10">
-              <Link href='/about-us'>
+            <Link 
+            href='/about-us'
+            className="flex items-center bg-black text-white w-fit py-4 px-8 sm:px-6 rounded-full gap-4 group cursor-pointer sm:mt-10">
+              <div >
                 Learn More About Ravi Bio Fuel Industries
-              </Link>
+              </div>
               <p className=" text-xl font-bold text-blue-500 relative right-0 transition-all duration-500 group-hover:-right-3 ">&#8599;</p>
-            </div>
+            </Link>
           </div>
         </div>
       </div>
