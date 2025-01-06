@@ -292,9 +292,9 @@ In conclusion, biomass briquettes offer a sustainable and efficient solution to 
 ];
 
 const page = async ({ params }: { params: { blogId: string } }) => {
+  
   const blogId = params.blogId;
-
-  const blogNumber = blogId ? Number(blogId) : NaN;
+  const blogNumber = blogId ? Number(blogId[0]) : NaN;
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-4xl mt-24 ">
@@ -317,14 +317,6 @@ const page = async ({ params }: { params: { blogId: string } }) => {
           <ReactMarkdown
           className="markdown sm:min-w-[80ch]"
           remarkPlugins={[remarkGfm]}
-          // components={{
-          //   a: ({ href, children }) => (
-          //     <a href={href} target="_blank" rel="noopener noreferrer">
-          //       {children}
-          //     </a>
-          //   ),
-          // }}
-          // escapeHtml={false}
           >{blogList[blogNumber].content}</ReactMarkdown>
         </div>
 
