@@ -83,7 +83,7 @@ const HomePage: React.FC = () => {
               className=" hover:text-[#4477b9] hover:scale-150 p-[6px] cursor-pointer"
             />
           </Link>
-          <Link href={'https://www.instagram.com/rbfindustries?igsh=MWduM2ljaXZ5NG51cA=='} target="_blank">
+          <Link href={'https://www.linkedin.com/company/ravi-bio-fuel-industries'} target="_blank">
             <FontAwesomeIcon
               icon={faLinkedin}
               className=" hover:text-[#1877F2] hover:scale-150 p-[6px] cursor-pointer"

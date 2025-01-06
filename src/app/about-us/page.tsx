@@ -8,33 +8,6 @@ import owner1 from "@/../public/assets/aboutUsPage/owner-1.jpg";
 import owner2 from "@/../public/assets/aboutUsPage/owner-2.jpg";
 import Clients from "../components/Footer/Clients";
 
-// interface LeadershipCardProps {
-//   image: string;
-//   name: string;
-//   title: string;
-//   quote: string;
-// }
-
-// const LeadershipCard: React.FC<LeadershipCardProps> = ({
-//   image,
-//   name,
-//   title,
-//   quote,
-// }) => {
-//   return (
-//     <div className="flex flex-col items-center text-center bg-gray-100 rounded-lg p-6 shadow-md">
-//       <img
-//         src={image}
-//         alt={name}
-//         className="w-32 h-32 rounded-full object-cover mb-4"
-//       />
-//       <h3 className="text-lg font-semibold">{name}</h3>
-//       <p className="text-sm text-gray-500">{title}</p>
-//       <p className="text-gray-600 mt-4">{quote}</p>
-//     </div>
-//   );
-// };
-
 const AboutSection = () => {
   return (
     <section
@@ -48,7 +21,7 @@ const AboutSection = () => {
           </h1>
 
           <div className="relative sm:space-y-16">
-            <div className="hidden md:block bg-[#0FB3001A] sm:w-2/6 2xl:w-1/2 h-[575px] rounded-r-lg absolute sm:-left-20 2xl:-left-96 sm:-top-7 2xl:-top-7 z-0"></div>
+            <div className="hidden md:block bg-[#0FB3001A] sm:w-2/6 2xl:w-1/2 h-[578px] rounded-r-lg absolute sm:-left-20 2xl:-left-96 sm:-top-8 2xl:-top-8 z-0"></div>
 
             <div className="sm:flex justify-between h-[900px] sm:h-fit">
               <Image
@@ -141,7 +114,7 @@ const AboutSection = () => {
           </h1>
 
           <div className="relative rounded-lg ">
-            <div className="hidden md:block bg-[#0FB3001A] sm:w-2/6 2xl:w-1/2 h-[575px] rounded-r-lg absolute sm:-left-20 2xl:-left-96 sm:-top-7 2xl:-top-7 z-0"></div>
+            <div className="hidden md:block bg-[#0FB3001A] sm:w-2/6 2xl:w-1/2 h-[578px] rounded-r-lg absolute sm:-left-20 2xl:-left-96 sm:-top-8 2xl:-top-8 z-0"></div>
 
             <div className="md:flex justify-between">
               <Image

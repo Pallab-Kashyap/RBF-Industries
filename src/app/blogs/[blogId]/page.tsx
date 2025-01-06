@@ -4,6 +4,7 @@ import Link from "next/link";
 import { blogImg1, blogImg2, blogImg3, blogImg4, blogImg5, blogImg6 } from "../../../../public/assets/blogImg";
 import { Blog } from "@/app/components/Blogs/Blogs";
 import ReactMarkdown from 'react-markdown'
+import remarkGfm from "remark-gfm";
 
 const blogList: Blog[] = [
   {
@@ -11,9 +12,8 @@ const blogList: Blog[] = [
     title: "What Are Biomass Briquettes",
     description:
       "Biomass briquettes are cylindrical blocks made from organic materials like agricultural residue, forestry waste, or organic industrial by-products.",
-    content: `# **Introduction**
+    content: `### Introduction
 
-  
 Biomass briquettes are cylindrical blocks made from organic materials like agricultural residue, forestry waste, or organic industrial by-products. They are manufactured by compressing these materials at high pressure to create a dense, compact fuel source. Unlike coal, petroleum, and natural gas, biomass briquettes are renewable and produce fewer greenhouse gases, making them a sustainable alternative for heating and energy generation.
 
 These briquettes can be created using a variety of organic waste materials, including:
@@ -55,7 +55,7 @@ Biomass briquettes offer several advantages over conventional fossil fuels and e
     img: blogImg2,
     title: `Fueling India's Green Future`,
     description: `India, a nation grappling with energy security and environmental concerns, is increasingly turning towards sustainable alternatives. One such promising solution is biomass briquettes, a clean and efficient fuel source derived from agricultural residues. The Indian government has recognized the potential of biomass briquettes and has implemented several policies to promote their adoption.`,
-    content: `**Introduction**
+    content: `### Introduction
   
   India, a nation grappling with energy security and environmental concerns, is increasingly turning towards sustainable alternatives. One such promising solution is biomass briquettes, a clean and efficient fuel source derived from agricultural residues. The Indian government has recognized the potential of biomass briquettes and has implemented several policies to promote their adoption.
 
@@ -103,7 +103,7 @@ By promoting the use of biomass briquettes, India can reduce its dependence on f
     title: "The Journey of Biomass",
     description: `In the quest for sustainable energy solutions, biomass briquettes have emerged as a promising alternative to traditional fossil fuels.`,
     content:
-    `**Introduction**
+    `### Introduction
 
 In the quest for sustainable energy solutions, biomass briquettes have emerged as a promising alternative to traditional fossil fuels. These compacted blocks of organic waste material offer a renewable and environmentally friendly fuel source, making them a key player in the transition towards a greener future1.
 
@@ -134,12 +134,10 @@ Bio briquettes represent a sustainable and eco-friendly alternative to conventio
     title: "Exploring Biomass Materials",
     img: blogImg4,
     description: '',
-    content: 
-`**Introduction**
+    content: `
+### Introduction
 
 Biomass materials play a crucial role in renewable energy, offering a sustainable alternative to traditional fossil fuels. Agricultural and industrial residues can be transformed into briquettes, providing an efficient energy source while minimizing waste. In this blog, we’ll explore the typical characteristics of biomass materials, focusing on their ash content and calorific value, which are vital for briquette manufacturing.
-
----
 
 **Biomass Materials and Their Properties**
 
@@ -148,7 +146,7 @@ Below is a detailed table highlighting various biomass materials, their ash cont
 Here is the complete table of biomass materials and their characteristics based on the provided image:
 
 | **Biomass** | **Ash Content (%)** | **Calorific Value (Kcal/kg)** |
-| --- | --- | --- |
+| :---: | :---: | :---: |
 | Bagasse | 1.80 | 4380K |
 | Castor Seed Shell | 8.00 | 3862K |
 | Castor Stick | 5.40 | 4300K |
@@ -184,7 +182,6 @@ Here is the complete table of biomass materials and their characteristics based 
 | Rice Straw | 21.20 | 3200K |
 | Tea Waste | 3.80 | 4237K |
 | Sunflower Stalk | 4.30 | 4300K |
----
 
 **Why These Characteristics Matter**
 
@@ -193,24 +190,25 @@ Here is the complete table of biomass materials and their characteristics based 
 2. **Calorific Value**:
     - This indicates the energy released during combustion. Higher calorific values make a material more effective as a fuel source.
 
----
-
 **Applications in Briquette Production**
 
 - Materials like **Bagasse** and **Groundnut Shells** are ideal for high-quality briquettes due to their low ash content and high calorific value.
 - High ash content materials like **Rice Husk** and **Tobacco Waste** may require blending with other materials for better performance.
 
----
 
 **Conclusion**
 
-Understanding the properties of biomass materials helps optimize the briquette production process. By selecting the right mix of materials, manufacturers can achieve a balance of efficiency, cost-effectiveness, and sustainability, contributing to India’s green energy goals.`
-  },
+Understanding the properties of biomass materials helps optimize the briquette production process. By selecting the right mix of materials, manufacturers can achieve a balance of efficiency, cost-effectiveness, and sustainability, contributing to India’s green energy goals.
+`},
   {
     img: blogImg5,
     title: "Biomass Briquettes vs. Traditional Fuels",
     description: "As industries worldwide strive to reduce their environmental impact and operational costs, the choice of fuel for boilers becomes increasingly significant",
-    content: `As industries worldwide strive to reduce their environmental impact and operational costs, the choice of fuel for boilers becomes increasingly significant. While traditional fuels like coal and wood have been the mainstay for decades, biomass briquettes are emerging as a compelling alternative. Let's delve into a scientific comparison of these fuel sources to understand their impact on industrial operations.
+    content: `
+
+## Introduction
+
+As industries worldwide strive to reduce their environmental impact and operational costs, the choice of fuel for boilers becomes increasingly significant. While traditional fuels like coal and wood have been the mainstay for decades, biomass briquettes are emerging as a compelling alternative. Let's delve into a scientific comparison of these fuel sources to understand their impact on industrial operations.
 
 ### Environmental Impact
 
@@ -252,7 +250,10 @@ Biomass briquettes have emerged as a promising alternative to traditional fuels 
     img: blogImg6,
     title: "A Step Towards Net Zero",
     description: "India, a nation striving for sustainable development, is increasingly exploring renewable energy sources to reduce its reliance on fossil fuels and achieve its net-zero emissions goals",
-    content: `India, a nation striving for sustainable development, is increasingly exploring renewable energy sources to reduce its reliance on fossil fuels and achieve its net-zero emissions goals. Among these, biomass briquettes have emerged as a promising solution, offering a cleaner and more efficient alternative to traditional fuels like coal and wood.
+    content: `
+### Introduction
+    
+India, a nation striving for sustainable development, is increasingly exploring renewable energy sources to reduce its reliance on fossil fuels and achieve its net-zero emissions goals. Among these, biomass briquettes have emerged as a promising solution, offering a cleaner and more efficient alternative to traditional fuels like coal and wood.
 
 **What are Biomass Briquettes?**
 
@@ -296,8 +297,8 @@ const page = async ({ params }: { params: { blogId: string } }) => {
   const blogNumber = blogId ? Number(blogId) : NaN;
 
   return (
-    <div className="container mx-auto px-4 py-8 max-w-4xl mt-24">
-      <article className="prose lg:prose-xl">
+    <div className="container mx-auto px-4 py-8 max-w-4xl mt-24 ">
+      <article className="">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center ">
           {blogList[blogNumber].title}
         </h1>
@@ -311,17 +312,19 @@ const page = async ({ params }: { params: { blogId: string } }) => {
           />
         </div>
 
-        <div className="prose prose-lg max-w-none">
+        <div className="prose lg:prose-xl max-w-none ">
 
           <ReactMarkdown
-          className="markdown"
-          components={{
-            a: ({ href, children }) => (
-              <a href={href} target="_blank" rel="noopener noreferrer">
-                {children}
-              </a>
-            ),
-          }}
+          className="markdown sm:min-w-[80ch]"
+          remarkPlugins={[remarkGfm]}
+          // components={{
+          //   a: ({ href, children }) => (
+          //     <a href={href} target="_blank" rel="noopener noreferrer">
+          //       {children}
+          //     </a>
+          //   ),
+          // }}
+          // escapeHtml={false}
           >{blogList[blogNumber].content}</ReactMarkdown>
         </div>
 
