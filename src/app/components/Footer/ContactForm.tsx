@@ -49,7 +49,7 @@ const ContactForm = () => {
   
 
   return (
-    <div className="relative space-y-5 bg-[#EEFFEE] rounded-xl px-6 py-8 sm:py-8 mx-auto sm:mx-none w-full  sm:w-[450px]">
+    <div className="relative space-y-5 bg-[#f9f9f9] rounded-xl px-6 py-8 sm:py-8 mx-auto sm:mx-none w-full  sm:w-[450px]">
       <ToastContainer 
         autoClose={3000}
         position="top-right"
@@ -138,8 +138,8 @@ const ContactForm = () => {
         <div className="pt-2 flex flex-col sm:flex-row gap-5 sm:gap-0 justify-between">
 
           <div className="flex gap-3 sm:gap-2 items-center">
-            <img src="/assets/contactUsCallSVG.svg" alt="" className="h-11 hidden sm:block" />
-            <img src="/assets/contactUsCallSVGMobile.svg" alt="" className="h-8 sm:hidden" />
+            <img src="/assets/contactUsCallSVG.svg" alt="" className="h-9 hidden sm:block" />
+            <img src="/assets/contactUsCallSVGMobile.svg" alt="" className="h-7 sm:hidden" />
             <div className=" text-base sm:text-sm">
               <p>Phone</p>
               <p>+91 9666357917</p>
@@ -147,11 +147,11 @@ const ContactForm = () => {
           </div>
 
           <div className="flex gap-3 sm:gap-2 items-center">
-            <img src="/assets/contactUsMailSVG.svg" alt="" className="h-11 hidden sm:block "/>
+            <img src="/assets/contactUsMailSVG.svg" alt="" className="h-10 hidden sm:block "/>
             <img src="/assets/contactUsMailSVGMobile.svg" alt="" className="h-7 sm:hidden" />
             <div className="text-base sm:text-sm">
               <p>Email</p>
-              <p>info@rbfindustries.in</p>
+              <a href="mailto:info@rbfindustries.in">info@rbfindustries.in</a>
             </div>
           </div>
 

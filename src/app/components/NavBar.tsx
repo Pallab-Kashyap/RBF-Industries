@@ -102,7 +102,7 @@ function Navbar() {
         {displayMenu ? (
           <div
             ref={menu}
-            className="w-screen absolute top-16 left-0 z-10 bg-[#f7faed] py-6"
+            className="w-screen absolute top-16 left-0 z-10 bg-white py-6"
           >
             <ul
               ref={navLinksRef}

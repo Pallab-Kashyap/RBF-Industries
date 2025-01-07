@@ -8,7 +8,6 @@ import {
   faFacebook,
   faLinkedin,
   faInstagram,
-  faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 
 const HomePage: React.FC = () => {
@@ -35,7 +34,7 @@ const HomePage: React.FC = () => {
         <div className="flex flex-col sm:flex-row gap-1 sm:gap-4 flex-wrap justify-evenly">
           <div>
             <Link
-              href="#hero"
+              href="/#hero"
               className="text-[13px] text-gray-600 hover:text-black"
             >
               Home
@@ -43,7 +42,7 @@ const HomePage: React.FC = () => {
           </div>
           <div>
             <a
-              href="#about"
+              href="/#about"
               className="text-[13px] text-gray-600 hover:text-black"
             >
               About Us
@@ -51,7 +50,7 @@ const HomePage: React.FC = () => {
           </div>
           <div>
             <a
-              href="#production"
+              href="/#production"
               className="text-[13px] text-gray-600 hover:text-black"
             >
               Production Process
@@ -59,7 +58,7 @@ const HomePage: React.FC = () => {
           </div>
           <div>
             <a
-              href="#blogs"
+              href="/#blogs"
               className="text-[13px] text-gray-600 hover:text-black"
             >
               Blogs on Biomass Briquettes
@@ -67,7 +66,7 @@ const HomePage: React.FC = () => {
           </div>
           <div>
             <a
-              href="#benefits"
+              href="/#benefits"
               className="text-[13px] text-gray-600 hover:text-black"
             >
               Benefits of Biomass Briquettes
@@ -94,14 +93,6 @@ const HomePage: React.FC = () => {
               icon={faInstagram}
               className="instagram-gradient hover:text-white  rounded-full p-[6px] cursor-pointer"
             />
-          </Link>
-          <Link href={'https://www.instagram.com/rbfindustries?igsh=MWduM2ljaXZ5NG51cA=='} target="_blank">
-            <span className="p-[4px]">
-              <FontAwesomeIcon
-                icon={faXTwitter}
-                className="hover:bg-black hover:text-white hover:scale-125 p-[1px] cursor-pointer"
-              />
-            </span>
           </Link>
         </div>
       </div>

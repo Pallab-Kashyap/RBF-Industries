@@ -14,7 +14,7 @@ const BlogCard = forwardRef<HTMLDivElement, BlogCardProps>(
     return (
       <div
         ref={ref}
-        className="bg-[#6456E4] rounded-xl overflow-hidden shadow-md sm:shadow-2xl sm:max-w-[360px]"
+        className="bg-[#1B4449] rounded-xl overflow-hidden shadow-md sm:shadow-2xl sm:max-w-[360px]"
       >
         {/* <img src="./assets/blog_img.png" alt="Blog Image"
     className=''
